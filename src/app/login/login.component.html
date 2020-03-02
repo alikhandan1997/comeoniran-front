@@ -1,0 +1,76 @@
+<!-- login form  -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="login-page" *ngIf="isLogin">
+                <div class="form">
+                  <form class="login-form">
+                    <h4>Account Login</h4>
+                    <input type="text" placeholder="username"/>
+                    <input type="password" placeholder="password"/>
+                    <p class="forgot">Forgot <a href="/" onclick="return false;" (click)="urlChange('forgot')">pasword?</a></p>
+                    <button>login</button>
+                    <p class="message">Not registered? <a href="/" onclick="return false;" (click)="urlChange('register')">Create an account</a></p>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- register form  -->
+
+<div class="container-fluid" *ngIf="isRegister">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="register-page">
+                <div class="form">
+                    <form class="login-form">
+                        <h4>Account Register</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="full name"/>
+                                <input type="email" placeholder="email"/>
+                                <input type="text" placeholder="country"/>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="username"/>
+                                <input type="password" placeholder="password"/>
+                                <select class="form-control gender" name="gender" form="register-form">
+                                    <option value="" selected disabled hidden>gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                <input type="text" id="age" placeholder="age">
+                            </div>
+                        </div>
+                        <button>create</button>
+                        <p class="message">Already registered? <a href="login" (click)="urlChange('register')">Sign In</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<!-- Forgot password -->
+<div class="container-fluid" *ngIf="isReset">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="login-page">
+                <div class="form">
+                  <form class="login-form">
+                    <h4>Reset Password</h4>
+                    <input type="email" placeholder="email"/>
+                    <button>Reset</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
