@@ -18,14 +18,16 @@ export class LoginComponent implements OnInit {
   }
 
   urlChange = (a) => {
-    if(a == 'forgot'){
+    if (a == 'forgot'){
+      
       this.location.replaceState('/ResetPassword');
       this.isReset = true;
       this.isLogin = false;
     } else if (a == 'register'){
-    this.location.replaceState('/register');
-    this.isLogin = !this.isLogin;
-    this.isRegister = !this.isRegister;
+
+      this.location.replaceState('/register');
+      this.isLogin = !this.isLogin;
+      this.isRegister = !this.isRegister;
     }
     
   }
