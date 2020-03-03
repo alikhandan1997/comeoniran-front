@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   isLogin: boolean = true;
   isReset: boolean = false;
   isRegister: boolean = false;
+  isConfirm: boolean = false;
 
   constructor(private location: Location) { }
 
@@ -28,6 +29,10 @@ export class LoginComponent implements OnInit {
       this.location.replaceState('/register');
       this.isLogin = !this.isLogin;
       this.isRegister = !this.isRegister;
+    } else if (a == 'reset') {
+
+      this.isLogin = !this.isLogin;
+      this.isReset = !this.isReset;
     }
     
   }

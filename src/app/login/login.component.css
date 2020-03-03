@@ -76,6 +76,7 @@ h4 {
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
+    margin-bottom: 10px;
   }
   .form button:hover,.form button:active,.form button:focus {
     background: #43A047;
@@ -91,12 +92,17 @@ h4 {
   }
 
   .forgot {
-      float: right;
+    float: right;
     color: #b3b3b3;
     font-size: 12px;
   }
 
   .forgot a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+
+  .closeReset{
     color: #4CAF50;
     text-decoration: none;
   }
