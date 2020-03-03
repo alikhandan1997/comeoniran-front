@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   urlChange = (a) => {
     if (a == 'forgot'){
       
-      this.location.replaceState('/ResetPassword');
+      this.location.replaceState('/resetpassword');
       this.isReset = true;
       this.isLogin = false;
     } else if (a == 'register'){
