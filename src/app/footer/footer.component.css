@@ -1,7 +1,11 @@
-footer {
-    background-color: rgb(68, 66, 66);
+.footer_part {
+    background-color: rgb(43, 41, 41);
 }
 
-div {
-    color: white;
+.footer_part h4 {
+    color: gray;
+}
+
+.footer_part p, .footer_part li a {
+    color: rgb(214, 210, 210);
 }
