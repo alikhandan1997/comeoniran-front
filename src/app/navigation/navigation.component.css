@@ -1,7 +1,58 @@
+nav {
+    border-bottom: 1px solid rgb(224, 220, 220);
+}
+
 nav a {
     color: black;
 }
 
 nav li {
     margin: 0px 10px 0px 10px;
+}
+
+.cities {
+    height: 250px;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+
+.best-cities {
+    margin-top: 7%;
+}
+
+.destination-content .cities-name span {
+    border: 1px solid rgb(185, 183, 183);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.destination-content .cities-name span a {
+    color: black;
+}
+
+.destination-content .cities-name span:hover {
+    background-color: rgb(233, 232, 232);
+}
+
+
+.destination-content .cities-name span:first-of-type {
+    background-color: rgb(14, 165, 14);
+    color: white;
+}
+
+.best-cities img {
+    height: 120px;
+    width: 120px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.best-cities a {
+    border: 1px solid black;
+    display: inline;
+}
+
+.trip {
+    height: 100px;
 }

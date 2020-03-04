@@ -28,6 +28,9 @@ export class NavigationComponent implements OnInit {
       this.showDestination = !this.showDestination;
     } else if(div == 'triptypes') {
       this.showTripTypes = !this.showTripTypes;
+      if(this.showDestination == true) {
+        this.showDestination = !this.showDestination;
+      }
     }
   }
 
