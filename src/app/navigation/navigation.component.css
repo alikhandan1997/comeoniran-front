@@ -11,30 +11,40 @@ nav li {
 }
 
 .cities {
-    height: 250px;
-    margin-top: 3%;
-    margin-left: 7%;
+    height: 300px;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.cities a {
+    color: rgb(14, 165, 14);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cities a:hover {
+    color: rgb(9, 121, 9);
 }
 
 .best-cities {
-    margin-top: 7%;
+    margin-top: 3%;
 }
 
-.destination-content .cities-name span {
-    border: 1px solid rgb(185, 183, 183);
+.destination-content {
+    background-color: rgb(248, 249, 250);
+}
+
+.destination-content .cities-name li {
+    border: 1px solid rgb(219, 218, 218);
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px;margin-top: 10px;
     margin: 5px;
+    height: 50%;
 }
 
 .destination-content .cities-name span a {
     color: black;
 }
-
-.destination-content .cities-name span:hover {
-    background-color: rgb(233, 232, 232);
-}
-
 
 .destination-content .cities-name span:first-of-type {
     background-color: rgb(14, 165, 14);
@@ -53,6 +63,21 @@ nav li {
     display: inline;
 }
 
-.trip {
-    height: 100px;
-}
+.cities-name {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .cities-name li {
+    float: left;
+  }
+  
+  .cities-name li:first-of-type {
+    background-color: rgb(15, 219, 15);
+  }
+
+  .cities-name li:hover {
+    background-color: rgb(248, 246, 246);
+  }

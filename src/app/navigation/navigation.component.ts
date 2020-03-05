@@ -26,6 +26,9 @@ export class NavigationComponent implements OnInit {
   mouseEnter(div : string){
     if (div == 'destination') {
       this.showDestination = !this.showDestination;
+      if(this.showTripTypes == true ){
+        this.showTripTypes = !this.showTripTypes;
+      }
     } else if(div == 'triptypes') {
       this.showTripTypes = !this.showTripTypes;
       if(this.showDestination == true) {

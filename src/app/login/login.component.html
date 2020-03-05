@@ -32,19 +32,24 @@
                         <h4>Account Register</h4>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="full name"/>
+                                <input type="text" placeholder="first name"/>
                                 <input type="email" placeholder="email"/>
                                 <input type="text" placeholder="country"/>
+                                <input type="text" placeholder="region">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" placeholder="username"/>
+                                <input type="text" placeholder="last name"/>
                                 <input type="password" placeholder="password"/>
+                                <input type="date" id="age" placeholder="age">
+                                <select class="form-control isServicer" name="isServicer" form="register-form">
+                                    <option value="male" selected>not servicer</option>
+                                    <option value="female">isServicer</option>
+                                </select>
                                 <select class="form-control gender" name="gender" form="register-form">
                                     <option value="" selected disabled hidden>gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
-                                <input type="text" id="age" placeholder="age">
                             </div>
                         </div>
                         <button>create</button>

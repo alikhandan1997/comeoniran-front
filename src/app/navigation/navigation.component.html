@@ -8,11 +8,11 @@
       <ul class="navbar-nav mr-auto">
 
         <li class="nav-item" (mouseenter)="mouseEnter('destination')">
-          <a class="nav-link" href="#">Destination</a>
+          <a class="nav-link" href="/destinations">Destination</a>
         </li>
 
-        <li class="nav-item" (mouseenter)="mouseEnter('triptypes')" (mouseleave)="mouseLeave('triptypes')">
-          <a class="nav-link" href="#">Trip Types</a>
+        <li class="nav-item" (mouseenter)="mouseEnter('triptypes')">
+          <a class="nav-link" href="triptypes">Trip Types</a>
         </li>
 
         <li class="nav-item">
@@ -30,15 +30,15 @@
     </div>
   </nav>
 
-  <div class="container destination-content" *ngIf="showDestination" (mouseleave)="mouseLeave('destination')">
+  <div class="container-fluid destination-content" *ngIf="showDestination" (mouseleave)="mouseLeave('destination')">
     <div class="row">
       <div class="cities">
-        <div class="cities-name">
-          <span><a href="">All</a></span>
-          <span><a href="">Tehran</a></span>
-          <span><a href="">Yazd</a></span>
-          <span><a href="">Esfahan</a></span>
-        </div>
+        <ul class="cities-name">
+          <li>All</li>
+          <li>Tehran</li>
+          <li>Yazd</li>
+          <li>Esfahan</li>
+        </ul>
         <div class="best-cities">
           <h4>Top destinations of the moment in iran</h4>
           <div class="best-cities-pic">
@@ -46,13 +46,14 @@
             <span><img src="../../assets/city.jpg" alt=""></span>
             <span><img src="../../assets/city.jpg" alt=""></span>
           </div>
+        </div>
+        <br>
+        <a href="">SEE ALL TRAVEL DESTINATIONS ></a>
       </div>
-      <ul>
-      </ul>
     </div>
   </div>
 
-  <div class="container trip-types-content" *ngIf="showTripTypes">
+  <div class="container-fluid trip-types-content" *ngIf="showTripTypes" (mouseleave)="mouseLeave('triptypes')">
     <div class="trip">afdjkh</div>
   </div>
 
