@@ -9,6 +9,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { TripTypesComponent } from './trip-types/trip-types.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { CitiesComponent } from './cities/cities.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TripTypesComponent } from './trip-types/trip-types.component';
     HomePageComponent,
     FooterComponent,
     DestinationsComponent,
-    TripTypesComponent
+    TripTypesComponent,
+    AboutUsComponent,
+    CitiesComponent
   ],
   imports: [
     BrowserModule,
