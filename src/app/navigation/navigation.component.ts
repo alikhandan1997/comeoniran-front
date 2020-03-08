@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -12,10 +13,15 @@ export class NavigationComponent implements OnInit {
   showLogin: boolean = true;
   showDestination: boolean = false;
   showTripTypes: boolean = false;
+  showCollapse: boolean = false;
+  justDestinations: boolean = true;
+  justTripType: boolean = true;
+  pageSize: number;
+  cityname: string = 'iran';
 
-  constructor() { }
+  constructor( public router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(){
     this.href = window.location.href;
     this.hrefPart = this.href.split('/');
     if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'resetpassword') {
@@ -23,26 +29,42 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  mouseEnter(div : string){
-    if (div == 'destination') {
-      this.showDestination = !this.showDestination;
-      if(this.showTripTypes == true ){
-        this.showTripTypes = !this.showTripTypes;
-      }
-    } else if(div == 'triptypes') {
-      this.showTripTypes = !this.showTripTypes;
-      if(this.showDestination == true) {
+  mouseEnter = (div : string) => {
+    if(this.showCollapse == false) {
+      if (div == 'destination') {
         this.showDestination = !this.showDestination;
+        this.showTripTypes = false;
+      } else if(div == 'triptypes') {
+        this.showTripTypes = !this.showTripTypes;
+        this.showDestination = false;
       }
     }
   }
 
-  mouseLeave(div : string){
-    if (div == 'destination') {
-      this.showDestination = !this.showDestination;
-    } else if(div == 'triptypes') {
-      this.showTripTypes = !this.showTripTypes;
+  mouseLeave = (div : string) => {
+    if(this.showCollapse == false) {
+      if (div == 'destination') {
+        this.showDestination = !this.showDestination;
+      } else if(div == 'triptypes') {
+        this.showTripTypes = !this.showTripTypes;
+      }
     }
+  }
+
+  collapseClick = ( e: string) => {
+    if(e == 'collapse') {
+      this.showCollapse = !this.showCollapse;
+    } else if(e == 'destination') {
+      this.showDestination = !this.showDestination;
+      this.showTripTypes = false;
+    } else if(e == 'triptypes') {
+      this.showTripTypes = !this.showTripTypes;
+      this.showDestination = false;
+    }
+  }
+
+  cityClick = (city: string) => {
+    this.cityname = city;
   }
 
 }
