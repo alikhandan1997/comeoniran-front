@@ -5988,14 +5988,13 @@ h6 {
 
 /* line 65, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_footer.scss */
 .footer_part .single_footer_part .list-unstyled {
-  column-count: 2;
+  column-count: 1;
 }
 
 /* line 68, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_footer.scss */
 .footer_part .single_footer_part .list-unstyled li a {
   color: #7a7a7a;
   margin-bottom: 20px;
-  display: inline-block;
 }
 
 /* line 73, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_footer.scss */
