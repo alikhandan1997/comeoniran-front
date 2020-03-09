@@ -33,26 +33,26 @@
       </div>
     </div>
   </div>
-  <div class="header-head-collapse" *ngIf="this.showCollapse" (click)="collapseClick('collapse')">
+  <div class="header-head-collapse" *ngIf="showCollapse" (click)="collapseClick('collapse')">
     <ul>
-      <li class="destination-collapse" *ngIf="this.justTripType">
+      <li class="destination-collapse" *ngIf="justTripType">
         <a href="/" onclick="return false" (click)="collapseClick('destination')" >
           Destinations
           <i class="fa fa-close" *ngIf="showDestination"></i>
-          <i class="fa fa-angle-right" *ngIf="this.justDestinations"></i>
+          <i class="fa fa-angle-right" *ngIf="justDestinations"></i>
         </a>
       </li>
-      <li class="triptype-collapse" *ngIf="this.justDestinations">
+      <li class="triptype-collapse" *ngIf="justDestinations">
         <a href="/" onclick="return false" (click)="collapseClick('triptypes')">
           Trip Types
           <i class="fa fa-close" *ngIf="showTripTypes"></i>
-          <i class="fa fa-angle-right" *ngIf="this.justTripType"></i>
+          <i class="fa fa-angle-right" *ngIf="justTripType"></i>
         </a>
       </li>
-      <li class="about-us-collapse" *ngIf="this.justDestinations && this.justTripType">
+      <li class="about-us-collapse" *ngIf="justDestinations && justTripType">
         <a href="about-us">About Us</a>
       </li>
-      <li class="login-collapse" *ngIf="this.justDestinations && this.justTripType">
+      <li class="login-collapse" *ngIf="justDestinations && justTripType">
         <a href="login">
           Sign in to my Account
         </a>
@@ -86,29 +86,21 @@
 
     <div class="triptype-content" *ngIf="showTripTypes" (mouseleave)="mouseLeave('triptypes')">
       <div class="row">
-        <div class="trip-types">
-          <div class="trip-types-head">
-            <h4>Browse our tour ideas by category</h4>
-            <input type="submit" value="See all tour ideas"> 
-          </div>
-          <div class="trip-types-list">
-            <ul>
-              <li>
-                <img src="../../assets/city.jpg" alt="">
-              </li>
-              <li>
-                <img src="../../assets/city.jpg" alt="">
-              </li>
-              <li>
-                <img src="../../assets/city.jpg" alt="">
-              </li>
-              <li>
-                <img src="../../assets/city.jpg" alt="">
-              </li>
-            </ul>
-          </div>
+        <div class="trip-types-head col-md-6">
+          <h4>Browse our tour ideas by category</h4>
+        </div>
+        <div class="col-md-6 trip-types-head-button">
+          <a href="where-to-go"><input type="submit" value="See all tour ideas"></a>
         </div>
       </div>
+      <!-- <div class="row" style="border: 1px solid black;">
+        <div class="col-lg-6">
+          ajkdsfhl
+        </div>
+        <div class="col-lg-6">
+          a.fkjddshl
+        </div>
+      </div> -->
     </div>
 
   </div>
