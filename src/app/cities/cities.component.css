@@ -1,0 +1,66 @@
+.city-img {
+    position: relative;
+    background-image: url(../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+
+.type-box h5 {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    color: white;
+}
+
+.type-box .type-content {
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 45%;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+
+.type-box .type-content h4 {
+    margin-left: 20%;
+    margin-top: 4%;
+}
+
+.type-box .type-content p {
+    margin-left: 10%;
+}
+
+.type-box .type-content .type {
+    width: 130px;
+}
+
+.type-form {
+    margin-top: 20px;
+}
+
+.type-form .form-inline .row {
+    width: 100%;
+}
+
+.type-form .form-inline .first label {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.type-form .form-inline .first select {
+    margin-left: 4px;
+}
+
+.type-form .form-inline .seacond label {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.type-form .form-inline .seacond select {
+    margin-left: 30px;
+}
+
+.type-form .form-inline .btn {
+}
