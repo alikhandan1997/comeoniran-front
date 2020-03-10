@@ -9,12 +9,23 @@ export class NavigationComponent implements OnInit {
 
   href: string;
   hrefPart: string[];
+
   showLogin: boolean = true;
   showDestinations: boolean = false;
   showTripTypes: boolean = false;
+
   showCollapse: boolean = false;
+
   showTripTypesCollapse: boolean = false;
   showDestinationsCollapse: boolean = false;
+
+  TripTypeChild: boolean = true;
+
+  showTripTypesFirst: boolean = false;
+  showTripTypesSeacond: boolean = false;
+  showTripTypesThird: boolean = false;
+  showTripTypesFourth: boolean = false;
+
   cityname: string = 'iran';
 
   constructor() { }
@@ -49,7 +60,7 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  collapseClick = ( e: string) => {
+  collapseClick = (e: string) => {
     if(e == 'collapse') {
       this.showCollapse = !this.showCollapse;
     } else if(e == 'destination') {
@@ -58,7 +69,27 @@ export class NavigationComponent implements OnInit {
     } else if(e == 'triptypes') {
       this.showTripTypesCollapse = !this.showTripTypesCollapse;
       this.showDestinationsCollapse = false;
+    } else if(e == 'close') {
+      this.showCollapse = !this.showCollapse;
+      this.showDestinationsCollapse = false;
+      this.showTripTypesCollapse = false;
     }
+  }
+
+  tripTypesClick = (e: string) => {
+    if(e == 'first') {
+      this.showTripTypesFirst = !this.showTripTypesFirst;
+      this.TripTypeChild = !this.TripTypeChild;
+    } else if (e == 'seacond') {
+      this.showTripTypesSeacond = !this.showTripTypesSeacond;
+      this.TripTypeChild = !this.TripTypeChild;
+    } else if (e == 'third') {
+      this.showTripTypesThird = !this.showTripTypesThird;
+      this.TripTypeChild = !this.TripTypeChild;
+    } else if (e == 'fourth') {
+      this.showTripTypesFourth = !this.showTripTypesFourth;
+      this.TripTypeChild = !this.TripTypeChild;
+    } 
   }
 
   cityClick = (city: string) => {

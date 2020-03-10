@@ -42,16 +42,18 @@
     <ul>
       <li class="destination-collapse" *ngIf="!showTripTypesCollapse && showCollapse">
         <a href="/" onclick="return false" (click)="collapseClick('destination')" >
+          <i class="fa fa-angle-left" style="float: none;padding-right: 10px;" *ngIf="showDestinationsCollapse"></i>
           Destinations
-          <i class="fa fa-close"></i>
-          <i class="fa fa-angle-right"></i>
+          <i class="fa fa-close" (click)="collapseClick('close')" *ngIf="showDestinationsCollapse"></i>
+          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse"></i>
         </a>
       </li>
-      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse">
+      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse && TripTypeChild">
         <a href="/" onclick="return false" (click)="collapseClick('triptypes')">
+          <i class="fa fa-angle-left"  style="float: none;padding-right: 10px;" *ngIf="showTripTypesCollapse"></i>
           Trip Types
-          <i class="fa fa-close"></i>
-          <i class="fa fa-angle-right"></i>
+          <i class="fa fa-close" (click)="collapseClick('close')" *ngIf="showTripTypesCollapse"></i>
+          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse"></i>
         </a>
       </li>
       <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse">
@@ -226,31 +228,125 @@
     </div>
     <!-- end trip types content  -->
 
+    <!-- start collapse destinations content  -->
+      <div class="destinations-content-collapse" *ngIf="showDestinationsCollapse && showCollapse">
+        <div class="row">
+          <div class="cities">
+            <ul class="cities-name">
+              <li><a href="/" onclick="return false;" (click)="cityClick('Iran')">All</a></li>
+              <li><a href="/" onclick="return false;" (click)="cityClick('Tehran')">Tehran</a></li>
+              <li><a href="/" onclick="return false;" (click)="cityClick('Yazd')">Yazd</a></li>
+              <li><a href="/" onclick="return false;" (click)="cityClick('Esfahan')">Esfahan</a></li>
+            </ul>
+            <div class="best-cities">
+              <h4>Top destinations of the moment in {{cityname}}</h4>
+              <div class="row best-cities-pic">
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+                <span><img src="../../assets/city.jpg" alt=""></span>
+              </div>
+            </div>
+            <br>
+            <a href="destinations">SEE ALL TRAVEL DESTINATIONS ></a>
+          </div>
+        </div>
+      </div>
+    <!-- end collapse destinations content  -->
+
     <!-- start collapse trip types content  -->
-    <div class="triptype-content-collapse" *ngIf="showTripTypesCollapse" (mouseleave)="mouseLeave('triptypes')">
+    <div class="triptype-content-collapse" *ngIf="showTripTypesCollapse && showCollapse">
       <ul>
-        <li>
-          <a href="/" onclick="return false" >
-            Destinations
-            <i class="fa fa-angle-right"></i>
+        <li *ngIf="!showTripTypesSeacond && !showTripTypesThird && !showTripTypesFourth">
+          <a href="/" onclick="return false" (click)="tripTypesClick('first')">
+            Travel Style
+            <i class="fa fa-angle-left" *ngIf="showTripTypesFirst"></i>
+            <i class="fa fa-angle-right" *ngIf="!showTripTypesFirst"></i>
           </a>
         </li>
-        <li>
-          <a href="/" onclick="return false">
-            Trip Types
+        <li *ngIf="!showTripTypesFirst && !showTripTypesThird && !showTripTypesFourth">
+          <a href="/" onclick="return false" (click)="tripTypesClick('seacond')">
+            Interests and Activities
+            <i class="fa fa-angle-left"  *ngIf="showTripTypesSeacond"></i>
+            <i class="fa fa-angle-right" *ngIf="!showTripTypesSeacond"></i>
           </a>
         </li>
-        <li>
-          <a href="/" onclick="return false">About Us</a>
+        <li *ngIf="! showTripTypesFirst && !showTripTypesSeacond && !showTripTypesFourth">
+          <a href="/" onclick="return false" (click)="tripTypesClick('third')">
+            Tour Ideas by Month
+            <i class="fa fa-angle-left" *ngIf="showTripTypesThird"></i>
+            <i class="fa fa-angle-right" *ngIf="!showTripTypesThird"></i>
+          </a>
         </li>
-        <li>
-          <a href="/" onclick="return false">
-            Sign in to my Account
+        <li *ngIf="!showTripTypesFirst && !showTripTypesSeacond && !showTripTypesThird">
+          <a href="/" onclick="return false" (click)="tripTypesClick('fourth')">
+            Tour Ideas by Month
+            <i class="fa fa-angle-left" *ngIf="showTripTypesFourth"></i>
+            <i class="fa fa-angle-right" *ngIf="!showTripTypesFourth"></i>
           </a>
         </li>
       </ul>
+      <a href="where-to-go" *ngIf="!showTripTypesFirst && !showTripTypesSeacond && !showTripTypesThird && !showTripTypesFourth"><input type="submit" value="See all tour ideas"></a>
     </div>
     <!-- end collapse trip types content  -->
+
+    <!-- start collapse trip types collapse content  -->
+      <div class="triptype-content-collapse-content" *ngIf="showTripTypesCollapse && showCollapse">
+        <div class="showTripTypesFirst">
+          <ul *ngIf="showTripTypesFirst">
+            <li><a href="">Couples</a></li>
+            <li><a href="">Sport & Adventure</a></li>
+            <li><a href="">Families</a></li>
+            <li><a href="">Classic</a></li>
+            <li><a href="">Friends & Private Groups</a></li>
+            <li><a href="">Luxury</a></li>
+            <li><a href="">Solo Travelers</a></li>
+            <li><a href="">Off The Beaten Track</a></li>
+          </ul>
+        </div>
+        <div class="showTripTypesSeacond">
+          <ul *ngIf="showTripTypesSeacond">
+            <li><a href="">Couples</a></li>
+            <li><a href="">Sport & Adventure</a></li>
+            <li><a href="">Families</a></li>
+            <li><a href="">Classic</a></li>
+            <li><a href="">Friends & Private Groups</a></li>
+            <li><a href="">Luxury</a></li>
+            <li><a href="">Solo Travelers</a></li>
+            <li><a href="">Off The Beaten Track</a></li>
+          </ul>
+        </div>
+        <div class="showTripTypesThird">
+          <ul *ngIf="showTripTypesThird">
+            <li><a href="">Couples</a></li>
+            <li><a href="">Sport & Adventure</a></li>
+            <li><a href="">Families</a></li>
+            <li><a href="">Classic</a></li>
+            <li><a href="">Friends & Private Groups</a></li>
+            <li><a href="">Luxury</a></li>
+            <li><a href="">Solo Travelers</a></li>
+            <li><a href="">Off The Beaten Track</a></li>
+          </ul>
+        </div>
+        <div class="showTripTypesFourth">
+          <ul *ngIf="showTripTypesFourth">
+            <li><a href="">Couples</a></li>
+            <li><a href="">Sport & Adventure</a></li>
+            <li><a href="">Families</a></li>
+            <li><a href="">Classic</a></li>
+            <li><a href="">Friends & Private Groups</a></li>
+            <li><a href="">Luxury</a></li>
+            <li><a href="">Solo Travelers</a></li>
+            <li><a href="">Off The Beaten Track</a></li>
+          </ul>
+        </div>
+      </div>
+    <!-- end collapse trip types collapse content  -->
 
   </div>
   <!-- end content container  -->

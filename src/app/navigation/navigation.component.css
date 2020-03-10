@@ -71,7 +71,7 @@
 }
 
 .header-head-collapse li {
-    height: 70px;
+    height: 60px;
     border-bottom: 1px solid rgb(214, 212, 212);
 }
   
@@ -112,6 +112,24 @@
     height: 300px;
     margin-top: 1%;
     margin-left: 10%;
+}
+
+@media screen and (max-width:1125px) {
+    .cities {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .cities {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width:419px) {
+    .cities {
+        height: 800px;
+    }
 }
 
 .cities a {
@@ -254,5 +272,78 @@
     .triptype-content-collapse {
         display: block;
     }
+}
+
+.destinations-content-collapse {
+    display: none;
+}
+
+@media screen and (max-width:1125px) {
+    .destinations-content-collapse {
+        display: block;
+    }
+}
+
+.triptype-content-collapse ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.triptype-content-collapse li {
+    height: 60px;
+    border-bottom: 1px solid rgb(214, 212, 212);
+}
+
+.triptype-content-collapse li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.triptype-content-collapse li a i {
+    font-size: 20px;
+    float: right;
+}
+
+.triptype-content-collapse input {
+    font-size: 14px;
+    background-color: rgb(19, 211, 19);
+    height: 40px;
+    width: 170px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    margin-left: 45%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.triptype-content-collapse-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.triptype-content-collapse-content li {
+    height: 60px;
+    border-bottom: 1px solid rgb(214, 212, 212);
+}
+
+.triptype-content-collapse-content a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
