@@ -3,7 +3,7 @@
     border-bottom: 1px solid rgb(214, 212, 212);
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:1125px) {
     .header-head-left .header-head-link{
         display: none;
     }
@@ -49,14 +49,18 @@
     bottom: 10px;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:1125px) {
     .header .header-head .header-head-left #collapse{
         display: block;
     }
 }
 
-.header-view-container > * {
+.header-view-container .destination-content {
     height: 300px;
+}
+
+.header-view-container .triptype-content {
+    height: 480px;
 }
 
 .header-head-collapse ul {
@@ -86,9 +90,24 @@
     float: right;
 }
 
+.header-head-collapse {
+    display: none;
+}
+
+@media screen and (max-width:1125px){
+    .header-head-collapse {
+        display: block;
+    }
+}
+
 
 /* ----------------------------------------------destination content---------------------------------------------- */
 
+@media screen and (max-width:1125px) {
+    .destination-content {
+        display: none;
+    }
+}
 .cities {
     height: 300px;
     margin-top: 1%;
@@ -165,6 +184,12 @@
     background-color: rgb(248, 249, 250);
 }
 
+@media screen and (max-width:1125px) {
+    .triptype-content {
+        display: none;
+    }
+}
+
 .trip-types-head , .trip-types-head-button {
     margin-top: 20px;
 }
@@ -173,7 +198,7 @@
     margin-left: 10%;
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width:1125px) {
     .trip-types-head h4 {
         display: none;
     }
@@ -196,15 +221,38 @@
     border: 1px solid rgb(114, 112, 112);
 }
 
-.trip-types .trip-types-list img {
-    height: 120px;
-    width: 120px;
-    margin-top: 10px;
-    margin-right: 20px;
-    float: left;
+.triptype-content .triptype-item {
+    margin-top: 30px;
 }
 
-.trip-types .trip-types-list li {
-    margin-right: 100px;
+.triptype-content .triptype-item img {
+    width: 160px;
+    height: 160px;
+    margin-left: 10%;
+}
+
+.triptype-content .triptype-item table {
+    float: right;
+    width: 300px;
+    margin-right: 70px;
+}
+
+.triptype-content .triptype-item table th {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.triptype-content .triptype-item table td {
+    padding-top: 10px;
+}
+
+.triptype-content-collapse {
+    display: none;
+}
+
+@media screen and (max-width:1125px) {
+    .triptype-content-collapse {
+        display: block;
+    }
 }
 

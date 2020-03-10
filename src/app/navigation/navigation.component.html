@@ -1,4 +1,6 @@
 <div class="header">
+
+  <!-- start first naviagtion  -->
   <div class="container-fluid">
     <div class="header-head">
       <div class="header-head-left">
@@ -33,35 +35,42 @@
       </div>
     </div>
   </div>
-  <div class="header-head-collapse" *ngIf="showCollapse" (click)="collapseClick('collapse')">
+  <!-- end first navigation  -->
+
+  <!-- start navigation  -->
+  <div class="header-head-collapse" *ngIf="showCollapse">
     <ul>
-      <li class="destination-collapse" *ngIf="justTripType">
+      <li class="destination-collapse" *ngIf="!showTripTypesCollapse && showCollapse">
         <a href="/" onclick="return false" (click)="collapseClick('destination')" >
           Destinations
-          <i class="fa fa-close" *ngIf="showDestination"></i>
-          <i class="fa fa-angle-right" *ngIf="justDestinations"></i>
+          <i class="fa fa-close"></i>
+          <i class="fa fa-angle-right"></i>
         </a>
       </li>
-      <li class="triptype-collapse" *ngIf="justDestinations">
+      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse">
         <a href="/" onclick="return false" (click)="collapseClick('triptypes')">
           Trip Types
-          <i class="fa fa-close" *ngIf="showTripTypes"></i>
-          <i class="fa fa-angle-right" *ngIf="justTripType"></i>
+          <i class="fa fa-close"></i>
+          <i class="fa fa-angle-right"></i>
         </a>
       </li>
-      <li class="about-us-collapse" *ngIf="justDestinations && justTripType">
+      <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse">
         <a href="about-us">About Us</a>
       </li>
-      <li class="login-collapse" *ngIf="justDestinations && justTripType">
+      <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse">
         <a href="login">
           Sign in to my Account
         </a>
       </li>
     </ul>
   </div>
+  <!-- end collapse navigation  -->
 
+  <!-- start content container  -->
   <div class="header-view-container">
-    <div class="destination-content" *ngIf="showDestination" (mouseleave)="mouseLeave('destination')">
+
+    <!-- start destinations content  -->
+    <div class="destination-content" *ngIf="showDestinations"(mouseleave)="mouseLeave('destination')">
       <div class="row">
         <div class="cities">
           <ul class="cities-name">
@@ -72,7 +81,10 @@
           </ul>
           <div class="best-cities">
             <h4>Top destinations of the moment in {{cityname}}</h4>
-            <div class="best-cities-pic">
+            <div class="row best-cities-pic">
+              <span><img src="../../assets/city.jpg" alt=""></span>
+              <span><img src="../../assets/city.jpg" alt=""></span>
+              <span><img src="../../assets/city.jpg" alt=""></span>
               <span><img src="../../assets/city.jpg" alt=""></span>
               <span><img src="../../assets/city.jpg" alt=""></span>
               <span><img src="../../assets/city.jpg" alt=""></span>
@@ -83,25 +95,163 @@
         </div>
       </div>
     </div>
+    <!-- end destinations content  -->
 
+    <!-- start trip types content  -->
     <div class="triptype-content" *ngIf="showTripTypes" (mouseleave)="mouseLeave('triptypes')">
       <div class="row">
-        <div class="trip-types-head col-md-6">
+        <div class="trip-types-head  col-lg-6">
           <h4>Browse our tour ideas by category</h4>
         </div>
-        <div class="col-md-6 trip-types-head-button">
+        <div class="trip-types-head-button col-lg-6">
           <a href="where-to-go"><input type="submit" value="See all tour ideas"></a>
         </div>
       </div>
-      <!-- <div class="row" style="border: 1px solid black;">
-        <div class="col-lg-6">
-          ajkdsfhl
+      <div class="row">
+        <div class="triptype-item col-lg-6">
+          <img src="../../assets/city.jpg" alt="">
+          <span>
+            <table>
+              <tr>
+                <th colspan="3">Travel Style</th>
+              </tr>
+              <tr>
+                <td><a href="">Couples</a></td>
+                <td><a href="">Smith</a></td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+              </tr>
+            </table>
+          </span>
         </div>
-        <div class="col-lg-6">
-          a.fkjddshl
+        <div class="triptype-item col-lg-6">
+          <img src="../../assets/city.jpg" alt="">
+          <span>
+            <table>
+              <tr>
+                <th colspan="3">Interests and Activities</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+              </tr>
+            </table>
+          </span>
         </div>
-      </div> -->
+      </div>
+      <div class="row">
+        <div class="triptype-item col-lg-6">
+          <img src="../../assets/city.jpg" height="100" width="100" alt="">
+          <span>
+            <table>
+              <tr>
+                <th colspan="3">Tour Ideas by Month</th>
+              </tr>
+              <tr>
+                <td>January</td>
+                <td>February</td>
+                <td>March</td>
+              </tr>
+              <tr>
+                <td>April</td>
+                <td>May</td>
+                <td>June</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>August</td>
+                <td>September</td>
+              </tr>
+              <tr>
+                <td>October</td>
+                <td>November</td>
+                <td>December</td>
+              </tr>
+            </table>
+          </span>
+        </div>
+        <div class="triptype-item col-lg-6">
+          <img src="../../assets/city.jpg" height="100" width="100" alt="">
+          <span>
+            <table>
+              <tr>
+                <th colspan="3">Tour Ideas by Month</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>Smith</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>Smith</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Smith</td>
+              </tr>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Smith</td>
+              </tr>
+            </table>
+          </span>
+        </div>
+      </div>
     </div>
+    <!-- end trip types content  -->
+
+    <!-- start collapse trip types content  -->
+    <div class="triptype-content-collapse" *ngIf="showTripTypesCollapse" (mouseleave)="mouseLeave('triptypes')">
+      <ul>
+        <li>
+          <a href="/" onclick="return false" >
+            Destinations
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/" onclick="return false">
+            Trip Types
+          </a>
+        </li>
+        <li>
+          <a href="/" onclick="return false">About Us</a>
+        </li>
+        <li>
+          <a href="/" onclick="return false">
+            Sign in to my Account
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end collapse trip types content  -->
 
   </div>
+  <!-- end content container  -->
 </div>

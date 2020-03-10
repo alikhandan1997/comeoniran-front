@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -11,15 +10,14 @@ export class NavigationComponent implements OnInit {
   href: string;
   hrefPart: string[];
   showLogin: boolean = true;
-  showDestination: boolean = false;
+  showDestinations: boolean = false;
   showTripTypes: boolean = false;
   showCollapse: boolean = false;
-  justDestinations: boolean = true;
-  justTripType: boolean = true;
-  pageSize: number;
+  showTripTypesCollapse: boolean = false;
+  showDestinationsCollapse: boolean = false;
   cityname: string = 'iran';
 
-  constructor( public router: Router) { }
+  constructor() { }
 
   ngOnInit(){
     this.href = window.location.href;
@@ -32,11 +30,11 @@ export class NavigationComponent implements OnInit {
   mouseEnter = (div : string) => {
     if(this.showCollapse == false) {
       if (div == 'destination') {
-        this.showDestination = !this.showDestination;
+        this.showDestinations = !this.showDestinations;
         this.showTripTypes = false;
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
-        this.showDestination = false;
+        this.showDestinations = false;
       }
     }
   }
@@ -44,7 +42,7 @@ export class NavigationComponent implements OnInit {
   mouseLeave = (div : string) => {
     if(this.showCollapse == false) {
       if (div == 'destination') {
-        this.showDestination = !this.showDestination;
+        this.showDestinations = !this.showDestinations;
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
       }
@@ -55,11 +53,11 @@ export class NavigationComponent implements OnInit {
     if(e == 'collapse') {
       this.showCollapse = !this.showCollapse;
     } else if(e == 'destination') {
-      this.showDestination = !this.showDestination;
-      this.showTripTypes = false;
+      this.showDestinationsCollapse = !this.showDestinationsCollapse;
+      this.showTripTypesCollapse = false;
     } else if(e == 'triptypes') {
-      this.showTripTypes = !this.showTripTypes;
-      this.showDestination = false;
+      this.showTripTypesCollapse = !this.showTripTypesCollapse;
+      this.showDestinationsCollapse = false;
     }
   }
 
