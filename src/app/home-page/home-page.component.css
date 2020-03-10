@@ -1,0 +1,99 @@
+/* banner part start  */
+.banner_part {
+    position: relative;
+    background-image: url(../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    /* background-position: center; */
+    height: 800px;
+    background-color: #ffcc00;
+  }
+  
+  @media (max-width: 991px) {
+    .banner_part {
+      height: 500px;
+      background-size: 100% 100%;
+    }
+  }
+  
+  .banner_part .banner_text {
+    padding-top: 130px;
+  }
+  
+  
+  .banner_part .banner_text h5 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 34px;
+    margin-left: 10%;
+  }
+  
+  @media (max-width: 991px) {
+    .banner_part .banner_text h5 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+  }
+  /* banner part end  */
+/*---------------------------------------------------------------------------------------------------------------*/
+
+  /* search part start  */
+  .search_your_country {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: -1.717px 8.835px 85.56px 6.44px rgba(170, 170, 170, 0.29);
+    padding: 165px 0 100px;
+    position: relative;
+    margin-top: -254px;
+  }
+  
+  @media (max-width: 991px) {
+    .search_your_country {
+      padding: 50px 0;
+      margin-top: -70px;
+    }
+  }
+  
+  .search_your_country .container-fluid {
+    max-width: 980px;
+  }
+  
+  @media (max-width: 991px) {
+    .search_your_country .container-fluid {
+      max-width: 90%;
+    }
+  }
+  
+  .search_your_country .search_form {
+    background-color: #ffcc00;
+    padding: 20px 35px;
+    margin-bottom: 50px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    top: -235px;
+  }
+  
+  @media (max-width: 991px) {
+    .search_your_country .search_form {
+      padding: 5px;
+      left: 0;
+      margin-top: 130px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .search_your_country .search_form {
+      left: 0;
+    }
+  }
+
+  .donation {
+      margin-top: 10px;
+  }
+  /* search part end  */
+
+  /* ---------------------------------------------------------------------------------------------------------- */
