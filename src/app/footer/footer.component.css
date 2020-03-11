@@ -1,11 +1,14 @@
 .footer_part {
-    background-color: rgb(43, 41, 41);
+    background-color: rgb(39, 190, 249);
 }
 
 .footer_part h4 {
-    color: gray;
+    color: black;
 }
 
 .footer_part p, .footer_part li a {
-    color: rgb(214, 210, 210);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
 }
