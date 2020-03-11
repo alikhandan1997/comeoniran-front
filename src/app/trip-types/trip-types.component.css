@@ -1,0 +1,175 @@
+.chose-box-container {
+    position: relative;
+    background-image: url(../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}
+
+.chose-box {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 7%;
+    
+}
+
+.chose-box h2 {
+    color: white;
+    width: 100%;
+    padding-left: 25%;
+    padding-bottom: 30px;
+}
+
+.chose-box .date-box {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.chose-box .date-box h4 {
+    color: white;
+    font-size: 14px;
+}
+
+.chose-box .date-box span {
+    float: left;
+    width: 16%;
+    height: 40px;
+    background-color: white;
+    position: relative;
+}
+
+.chose-box .date-box span a {
+    position: absolute;
+    color: black;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.chose-box .date-box span a:hover {
+    color: gray;
+}
+
+.chose-box .type-box {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.chose-box .type-box h4 {
+    color: white;
+    font-size: 14px;
+}
+
+.chose-box .culture-box span {
+    float: left;
+    width: 20%;
+    height: 80px;
+    background-color: white;
+}
+
+.chose-box .culture-box span i {
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.chose-box .culture-box span p{
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 15px;
+}
+
+.chose-box .culture-box span a {
+    color: rgb(71, 70, 70);
+}
+
+.chose-box .culture-box span a:hover {
+    color: rgb(172, 169, 169);
+}
+
+.popular-trip {
+    width: 80%;
+}
+
+.popular-trip h3 {
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.popular-trip-box {
+    width: 80%;
+    margin-left: 10%;
+}
+
+@media screen and (max-width:991px) {
+    .popular-trip-box {
+        margin-left: 20%;
+    }
+}
+
+.popular-trip .popular-trip-item {
+    margin-top: 10%;
+    padding-bottom: 10%;
+}
+
+.popular-trip-item span {
+    width: 20%;
+}
+
+.popular-trip-item img {
+    width: 100%;
+    height: 200px;  
+}
+
+.popular-trip-item p {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(54, 53, 53);
+    padding-left: 30%;
+    padding-top: 10%;
+}
+
+.popular-trip-item .desc {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10%;
+    margin-bottom: 30px;
+    border-left: 1px solid rgb(216, 213, 213);
+    border-right: 1px solid rgb(216, 213, 213);
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.describtione  {
+    position: relative;
+    background-image: url(../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+}
+
+.describtione .desc-content-box {
+    position: absolute;
+    background-color: white;
+    width: 70%;
+    height: 60%;
+    left: 14%;
+    top: 20%;
+}
+
+.describtione .desc-content-box h3 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.describtione .desc-content-box p {
+    text-align: left;
+    width: 80%;
+    color: black;
+    margin-left: 10%;
+    font-size: 14px;
+}
