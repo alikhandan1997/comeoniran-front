@@ -112,7 +112,7 @@
 
 .popular-trip .popular-trip-item {
     margin-top: 10%;
-    padding-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .popular-trip-item span {
@@ -172,4 +172,82 @@
     color: black;
     margin-left: 10%;
     font-size: 14px;
+}
+
+.other-popular-trip {
+    width: 80%;
+}
+
+.other-popular-trip h3 {
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.other-popular-trip-box {
+    width: 80%;
+    margin-left: 10%;
+}
+
+@media screen and (max-width:991px) {
+    .other-popular-trip-box {
+        margin-left: 20%;
+    }
+}
+
+.other-popular-trip .other-popular-trip-item {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.other-popular-trip-item span {
+    width: 20%;
+}
+
+.other-popular-trip-item img {
+    width: 100%;
+    height: 200px;  
+}
+
+.other-popular-trip-item p {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(54, 53, 53);
+    padding-left: 30%;
+    padding-top: 10%;
+}
+
+.other-popular-trip-item .other-desc {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 10%;
+    margin-bottom: 30px;
+    border-left: 1px solid rgb(216, 213, 213);
+    border-right: 1px solid rgb(216, 213, 213);
+    border-bottom: 1px solid rgb(216, 213, 213);
+}
+
+.choose-help {
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 10%;
+    border: 1px solid rgb(216, 213, 213);
+}
+
+.choose-help h3 {
+    font-size: 23px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.choose-help h6 {
+    padding-left: 30px;
+    color: rgb(85, 84, 84);
+    font-weight: 600;
+}
+
+.choose-help p {
+    padding: 30px;
+    color: rgb(43, 42, 42);
+    font-size: 15px;
 }
