@@ -1,63 +1,101 @@
-.city-img {
+.design-trip {
     position: relative;
     background-image: url(../../assets/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px;
-  }
+    height: 350px;
+}
 
-.type-box h5 {
-    position: absolute;
-    top: 15%;
-    left: 45%;
+@media screen and (max-width:1125px) {
+    .design-trip {
+        height: 500px;
+    }
+}
+
+.design-trip-box {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 7%;
+}
+
+.design-trip-box h6 {
+    width: 100%;
+    margin-left: 40%;
     color: white;
 }
 
-.type-box .type-content {
-    background-color: rgb(255, 255, 255);
-    width: 60%;
-    height: 45%;
-    position: absolute;
-    top: 25%;
-    left: 20%;
+.design-trip-content {
+    background-color: white;
 }
 
-.type-box .type-content h4 {
-    margin-left: 20%;
-    margin-top: 4%;
+.design-trip-content h4 {
+    text-align: center;
+    margin-top: 3%;
 }
 
-.type-box .type-content p {
-    margin-left: 10%;
+.design-trip-content p {
+    text-align: center;
+    color: 15px;
 }
 
-.type-box .type-content .type {
-    width: 130px;
-}
-
-.type-form {
-    margin-top: 20px;
-}
-
-.type-form .form-inline .row {
+.design-trip-form {
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 7%;
 }
 
-.type-form .form-inline .first label {
-    font-size: 15px;
-    font-weight: 700;
-}
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
 
-.type-form .form-inline .first select {
-    margin-left: 4px;
-}
+  .form-inline select {
+      width: 30%;
+      padding-left: 2%;
+      margin-right: 10px;
+  }
 
-.type-form .form-inline .seacond label {
-    font-size: 15px;
-    font-weight: 700;
-}
+  @media screen and (max-width:1125px) {
+      .form-inline select {
+          width: 100%;
+      }
+  }
+  
+  .form-inline button {
+    padding: 10px 10px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 39px;
+  }
 
-.type-form .form-inline .seacond select {
-    margin-left: 30px;
-}
+  @media screen and (max-width:1125px) {
+      .form-inline button {
+        margin-left: 35%;
+        margin-top: 5%;
+      }
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+    
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
