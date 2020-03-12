@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { LoginService } from '../service/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +13,22 @@ export class LoginComponent implements OnInit {
   isReset: boolean = false;
   isRegister: boolean = false;
   isConfirm: boolean = false;
+  data: any;
 
-  constructor(private location: Location) { }
+  constructor(
+    private location: Location,
+    private loginService: LoginService
+    ) { }
 
   ngOnInit() {
+    this.data = {
+      username: "admfdjhin",
+      password: "admin"
+    }
+    this.loginService.checkUser(this.data)
+    .subscribe((data)=>{
+      console.log(data);
+    });
   }
 
   urlChange = (a) => {
@@ -34,7 +47,6 @@ export class LoginComponent implements OnInit {
       this.isLogin = !this.isLogin;
       this.isReset = !this.isReset;
     }
-    
   }
 
 }
