@@ -8,10 +8,10 @@
                 <div class="form">
                   <form class="login-form">
                     <h4>Account Login</h4>
-                    <input type="text" placeholder="username"/>
-                    <input type="password" placeholder="password"/>
+                    <input type="text" (keyup)="onKey($event,'username')" name="'username'" placeholder="username"/>
+                    <input type="password" (keyup)="onKey($event,'password')" placeholder="password"/>
                     <p class="forgot">Forgot <a href="/" onclick="return false;" (click)="urlChange('forgot')">pasword?</a></p>
-                    <button (click)="loginUser()">login</button>
+                    <a href="/" onclick="return false;"><button (click)="loginUser()">login</button></a>
                     <p class="message">Not registered? <a href="/" onclick="return false;" (click)="urlChange('register')">Create an account</a></p>
                   </form>
                 </div>
@@ -40,11 +40,7 @@
                             <div class="col-md-6">
                                 <input type="text" placeholder="last name"/>
                                 <input type="password" placeholder="password"/>
-                                <input type="date" id="age" placeholder="age">
-                                <select class="form-control isServicer" name="isServicer" form="register-form">
-                                    <option value="male" selected>not servicer</option>
-                                    <option value="female">isServicer</option>
-                                </select>
+                                <input type="text" id="age" placeholder="confirm password">
                                 <select class="form-control gender" name="gender" form="register-form">
                                     <option value="" selected disabled hidden>gender</option>
                                     <option value="male">Male</option>

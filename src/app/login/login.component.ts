@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { LoginService } from '../service/login/login.service';
+import { Router } from '@angular/router';
+import { error } from 'protractor';
 
 @Component({
   selector: 'app-login',
@@ -14,21 +16,17 @@ export class LoginComponent implements OnInit {
   isRegister: boolean = false;
   isConfirm: boolean = false;
   data: any;
+  username: string;
+  password: string;
+  status: number;
 
   constructor(
     private location: Location,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private router: Router
     ) { }
 
   ngOnInit() {
-    this.data = {
-      username: "admfdjhin",
-      password: "admin"
-    }
-    this.loginService.checkUser(this.data)
-    .subscribe((data)=>{
-      console.log(data);
-    });
   }
 
   urlChange = (a) => {
@@ -46,6 +44,34 @@ export class LoginComponent implements OnInit {
 
       this.isLogin = !this.isLogin;
       this.isReset = !this.isReset;
+    }
+  }
+
+  onKey(event, e) {
+    if(e == 'username') {
+      this.username = event.target.value;
+      console.log(this.username);
+    } else if (e == 'password') {
+      this.password = event.target.value;
+    }
+    this.data = {
+      username: this.username,
+      password: this.password
+    }
+    this.loginService.checkUser(this.data)
+    .subscribe((data)=>{
+      console.log(data);
+      this.status = data['status'];
+    },
+    (error) => {
+      console.log(error);
+      this.status = error['status'];
+    }); 
+  }
+
+  loginUser() {  
+    if(this.status == 200 ) {
+      this.router.navigate(['/']);  
     }
   }
 
