@@ -21,14 +21,6 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   status: number;
-  firstname;
-  lastname;
-  email;
-  regPassword;
-  confRegPassword;
-  country;
-  gender;
-  region;
 
   constructor(
     private location: Location,
@@ -58,10 +50,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onKeyLogin(event, e) {
+  onKey(event, e) {
     if(e == 'username') {
       this.username = event.target.value;
-      console.log(this.username);
+      console.log(event);
     } else if (e == 'password') {
       this.password = event.target.value;
     }
@@ -69,6 +61,9 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password
     }
+  }
+
+  loginUser() {  
     this.loginService.checkUser(this.data)
     .subscribe((data)=>{
       this.status = data['status'];
@@ -76,25 +71,6 @@ export class LoginComponent implements OnInit {
     (error) => {
       this.status = error['status'];
     }); 
-  }
-
-  onKeyRegister(event: any, e) {
-    if(e == 'firstname') {
-      this.firstname = event.target.value;
-      console.log(event.target.value);
-    } else if (e == 'email') {
-      this.email = event.target.value;
-      console.log(event.target.value);
-    } else if (e == 'country') {
-      this.country = event.target.value;
-      console.log(event.target.value);
-    } else if (e == 'region') {
-      this.region = event.target.value;
-      console.log(event.target.value);
-    }
-  }
-
-  loginUser() {  
     if(this.status == 200 ) {
       this.cookieService.set('username', this.data.username);
       this.router.navigate(['/']);  

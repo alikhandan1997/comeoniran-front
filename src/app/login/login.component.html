@@ -8,10 +8,10 @@
                 <div class="form">
                   <form class="login-form">
                     <h4>Account Login</h4>
-                    <input type="text" (keyup)="onKeyLogin($event,'username')" name="'username'" placeholder="username"/>
-                    <input type="password" (keyup)="onKeyLogin($event,'password')" placeholder="password"/>
+                    <input type="text" (keyup)="onKey($event,'username')" name="'username'" placeholder="username"/>
+                    <input type="password" (keyup)="onKey($event,'password')" placeholder="password"/>
                     <p class="forgot">Forgot <a href="/" onclick="return false;" (click)="urlChange('forgot')">pasword?</a></p>
-                    <a href="/" onclick="return false;"><button (click)="loginUser()">login</button></a>
+                    <input type="submit" class="button" (click)="loginUser()" value="Login"/>
                     <p class="message">Not registered? <a href="/" onclick="return false;" (click)="urlChange('register')">Create an account</a></p>
                   </form>
                 </div>
@@ -32,10 +32,10 @@
                         <h4>Account Register</h4>
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" (keyup)="onKeyRegister($event,'firstname')" placeholder="first name"/>
-                                <input type="email" (keyup)="onKeyRegister($event,'email')" placeholder="email"/>
-                                <input type="text" (keyup)="onKeyRegister($event,'country')" placeholder="country"/>
-                                <select (keyup)="onKeyRegister($event,'region')" class="form-control gender" name="gender" form="register-form">
+                                <input type="text" placeholder="first name"/>
+                                <input type="email" placeholder="email"/>
+                                <input type="text" placeholder="country"/>
+                                <select class="form-control gender" name="gender" form="register-form">
                                     <option value="" selected disabled hidden>region</option>
                                     <option value="central-america">central-america</option>
                                     <option value="north-america">north-america</option>
@@ -48,10 +48,10 @@
                                 </select>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" (keyup)="onKeyRegister($event,'last name')" placeholder="last name"/>
-                                <input type="password" (keyup)="onKeyRegister($event,'password')" placeholder="password"/>
-                                <input type="text" (keyup)="onKeyRegister($event,'confirmPassword')" id="age" placeholder="confirm password">
-                                <select class="form-control gender" (keyup)="onKeyRegister($event,'gender')" name="gender" form="register-form">
+                                <input type="text" placeholder="last name"/>
+                                <input type="password" placeholder="password"/>
+                                <input type="text" id="age" placeholder="confirm password">
+                                <select class="form-control gender" name="gender" form="register-form">
                                     <option value="" selected disabled hidden>gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
