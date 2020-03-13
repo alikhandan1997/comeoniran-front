@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit {
   showLogin: boolean = true;
   showDestinations: boolean = false;
   showTripTypes: boolean = false;
+  showLogged: boolean = false;
 
   showCollapse: boolean = false;
 

@@ -38,6 +38,13 @@
     float: right;
 }
 
+.header .header-head .header-head-left #logged {
+    margin-right: 30px;
+    color: black;
+    font-size: 15px;
+    float: right;
+}
+
 .header .header-head .header-head-left #collapse {
     margin-right: 30px;
     color: black;
