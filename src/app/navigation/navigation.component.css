@@ -1,6 +1,10 @@
 .header .header-head {
     height: 60px;
     border-bottom: 1px solid rgb(214, 212, 212);
+    background-color: white;
+    margin-left: -20px;
+    margin-right: -20px;
+    position: relative;
 }
 
 @media screen and (max-width:1125px) {
@@ -39,6 +43,7 @@
 }
 
 .header .header-head .header-head-left #logged {
+    position: relative;
     margin-right: 30px;
     color: black;
     font-size: 15px;
@@ -353,4 +358,3 @@
     margin-top: 20px;
     margin-left: 20px;
 }
-

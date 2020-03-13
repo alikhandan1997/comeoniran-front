@@ -32,9 +32,16 @@
             Sign in to my Account
           </a>
 
-          <a href="logged" class="header-head-link" id="logged" *ngIf="showLogged">
+          <a href="/" class="header-head-link" id="logged" *ngIf="showLogged">
             <i class="fa fa-user" style="font-size:18px;margin-right:10px;"></i>
-            admin
+            <span *ngIf="!showLoggedOptions" (mouseenter)="mouseEnter('logged')">
+              <a href="/" onclick="return false;" style="color: black;">admin</a>
+            </span>
+            <span *ngIf="showLoggedOptions"  (mouseleave)="mouseLeave('logged')">
+              <a href="/" onclick="return false;" style="color: black;padding-right: 5px;">Panel</a>
+              | 
+              <a style="color: black;padding-left: 5px;" (click)="clearCookie()">Log Out</a>
+            </span>
           </a>
 
       </div>
@@ -77,7 +84,7 @@
   <div class="header-view-container">
 
     <!-- start destinations content  -->
-    <div class="destination-content" *ngIf="showDestinations"(mouseleave)="mouseLeave('destination')">
+    <div class="destination-content" *ngIf="showDestinations" (mouseleave)="mouseLeave('destination')">
       <div class="row">
         <div class="cities">
           <ul class="cities-name">

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -15,6 +17,9 @@ export class NavigationComponent implements OnInit {
   showTripTypes: boolean = false;
   showLogged: boolean = false;
 
+  loggedContent: boolean = true;
+  showLoggedOptions: boolean = false;
+
   showCollapse: boolean = false;
 
   showTripTypesCollapse: boolean = false;
@@ -29,13 +34,20 @@ export class NavigationComponent implements OnInit {
 
   cityname: string = 'iran';
 
-  constructor() { }
+  constructor(
+    private cookieService: CookieService,
+    private router: Router
+    ) { }
 
   ngOnInit(){
     this.href = window.location.href;
     this.hrefPart = this.href.split('/');
     if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'resetpassword') {
       this.showLogin = !this.showLogin;
+    }
+    if(this.cookieService.get('username') !== '') {
+      this.showLogin = false;
+      this.showLogged = true;
     }
   }
 
@@ -47,6 +59,8 @@ export class NavigationComponent implements OnInit {
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
         this.showDestinations = false;
+      } else if(div == 'logged') {
+        this.showLoggedOptions = !this.showLoggedOptions;
       }
     }
   }
@@ -57,6 +71,8 @@ export class NavigationComponent implements OnInit {
         this.showDestinations = !this.showDestinations;
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
+      } else if( div == 'logged') {
+        this.showLoggedOptions = !this.showLoggedOptions;
       }
     }
   }
@@ -95,6 +111,11 @@ export class NavigationComponent implements OnInit {
 
   cityClick = (city: string) => {
     this.cityname = city;
+  }
+
+  clearCookie() {
+    this.cookieService.delete('username');
+    this.router.navigate(['/']);
   }
 
 }
