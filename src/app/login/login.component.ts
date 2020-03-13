@@ -78,7 +78,7 @@ export class LoginComponent implements OnInit {
     }); 
   }
 
-  onKeyRegister(event, e) {
+  onKeyRegister(event: any, e) {
     if(e == 'firstname') {
       this.firstname = event.target.value;
       console.log(event.target.value);

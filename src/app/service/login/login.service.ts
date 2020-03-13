@@ -14,7 +14,7 @@ export class LoginService {
   }
 
   registerUser(data: string): Observable<Object> {
-    return this.http.get('http://192.168.43.116:8585/api/register/', data);
+    return this.http.post('http://192.168.43.116:8585/api/register/', data);
   }
 
 }
