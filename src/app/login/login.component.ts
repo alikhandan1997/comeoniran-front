@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { LoginService } from '../service/login/login.service';
 import { Router } from '@angular/router';
-import { error } from 'protractor';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +10,8 @@ import { error } from 'protractor';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  private cookieValue: string;
 
   isLogin: boolean = true;
   isReset: boolean = false;
@@ -19,11 +21,20 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   status: number;
+  firstname;
+  lastname;
+  email;
+  regPassword;
+  confRegPassword;
+  country;
+  gender;
+  region;
 
   constructor(
     private location: Location,
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService
     ) { }
 
   ngOnInit() {
@@ -47,7 +58,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onKey(event, e) {
+  onKeyLogin(event, e) {
     if(e == 'username') {
       this.username = event.target.value;
       console.log(this.username);
@@ -60,17 +71,32 @@ export class LoginComponent implements OnInit {
     }
     this.loginService.checkUser(this.data)
     .subscribe((data)=>{
-      console.log(data);
       this.status = data['status'];
     },
     (error) => {
-      console.log(error);
       this.status = error['status'];
     }); 
   }
 
+  onKeyRegister(event, e) {
+    if(e == 'firstname') {
+      this.firstname = event.target.value;
+      console.log(event.target.value);
+    } else if (e == 'email') {
+      this.email = event.target.value;
+      console.log(event.target.value);
+    } else if (e == 'country') {
+      this.country = event.target.value;
+      console.log(event.target.value);
+    } else if (e == 'region') {
+      this.region = event.target.value;
+      console.log(event.target.value);
+    }
+  }
+
   loginUser() {  
     if(this.status == 200 ) {
+      this.cookieService.set('username', this.data.username);
       this.router.navigate(['/']);  
     }
   }
