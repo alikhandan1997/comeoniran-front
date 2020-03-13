@@ -58,7 +58,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button>create</button>
+                        <input (click)="registerUser()" type="submit" class="button" value="create">
                         <p class="message">Already registered? <a href="login" (click)="urlChange('register')">Sign In</a></p>
                     </form>
                 </div>
@@ -78,7 +78,7 @@
                   <form class="login-form">
                     <h4>Reset Password</h4>
                     <input type="email" placeholder="email"/>
-                    <button>Send</button>
+                    <input type="submit" class="button" value="Send">
                     <a href="/" onclick="return false;" class="closeReset" (click)="urlChange('reset')">Return</a>
                   </form>
                 </div>

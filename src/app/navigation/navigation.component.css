@@ -276,6 +276,14 @@
     padding-top: 10px;
 }
 
+.triptype-content .triptype-item table td a {
+    color: rgb(70, 68, 68);
+}
+
+.triptype-content .triptype-item table td a:hover {
+    color: black;
+}
+
 .triptype-content-collapse {
     display: none;
 }

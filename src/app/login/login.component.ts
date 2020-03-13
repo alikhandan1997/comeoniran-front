@@ -11,13 +11,14 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LoginComponent implements OnInit {
 
-  private cookieValue: string;
-
   isLogin: boolean = true;
   isReset: boolean = false;
   isRegister: boolean = false;
   isConfirm: boolean = false;
-  data: any;
+
+  userData: any;
+  registerData: any;
+
   username: string;
   password: string;
   status: number;
@@ -57,14 +58,14 @@ export class LoginComponent implements OnInit {
     } else if (e == 'password') {
       this.password = event.target.value;
     }
-    this.data = {
+    this.userData = {
       username: this.username,
       password: this.password
     }
   }
 
   loginUser() {  
-    this.loginService.checkUser(this.data)
+    this.loginService.checkUser(this.userData)
     .subscribe((data)=>{
       this.status = data['status'];
     },
@@ -72,9 +73,16 @@ export class LoginComponent implements OnInit {
       this.status = error['status'];
     }); 
     if(this.status == 200 ) {
-      this.cookieService.set('username', this.data.username);
+      this.cookieService.set('username', this.userData.username);
       this.router.navigate(['/']);  
     }
+  }
+
+  registerUser() {
+    this.loginService.registerUser(this.registerData)
+    .subscribe((data)=> {
+    })
+
   }
 
 }
