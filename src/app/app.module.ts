@@ -14,7 +14,6 @@ import { DestinationsComponent } from './destinations/destinations.component';
 import { TripTypesComponent } from './trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CitiesComponent } from './cities/cities.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DestinationsComponent,
     TripTypesComponent,
     AboutUsComponent,
-    CitiesComponent,
-    DashboardComponent
+    CitiesComponent
   ],
   imports: [
     BrowserModule,
