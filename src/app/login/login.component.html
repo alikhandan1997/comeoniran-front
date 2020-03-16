@@ -1,108 +1,24 @@
-<!-- login form  -->
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="login-page" *ngIf="isLogin">
-                <div class="form">
-                  <form class="login-form">
-                    <h4>Account Login</h4>
-                    <input type="text" (keyup)="onKey($event,'username')" name="'username'" placeholder="username"/>
-                    <input type="password" (keyup)="onKey($event,'password')" placeholder="password"/>
-                    <p class="forgot">Forgot <a href="/" onclick="return false;" (click)="urlChange('forgot')">pasword?</a></p>
-                    <input type="submit" class="button" (click)="loginUser()" value="Login"/>
-                    <p class="message">Not registered? <a href="/" onclick="return false;" (click)="urlChange('register')">Create an account</a></p>
-                  </form>
-                </div>
+<div class="container-fluid login-container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="logo-container">
+        <a href="/">Come<span>On</span>Iran</a>
+      </div>
+        <div class="login-page" *ngIf="isLogin">
+            <div class="form">
+              <form class="login-form" (submit)="loginUser()">
+                <h4>Account Login</h4>
+                <input type="text" (keyup)="onKey($event,'username')" name="'username'" placeholder="username"/>
+                <input type="password" (keyup)="onKey($event,'password')" placeholder="password"/>
+                <p class="forgot">Forgot <a href="reset-password">pasword?</a></p>
+                <input type="submit" class="button" value="Login"/>
+                <p class="message">Not registered? <a href="register">Create an account</a></p>
+                <p class="error" *ngIf="wrongData">*Wrong username and password</p>
+              </form>
             </div>
         </div>
     </div>
+  </div>
 </div>
 
-<!-- register form  -->
 
-<div class="container-fluid" *ngIf="isRegister">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <div class="register-page">
-                <div class="form">
-                    <form class="login-form">
-                        <h4>Account Register</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" placeholder="first name"/>
-                                <input type="email" placeholder="email"/>
-                                <input type="text" placeholder="country"/>
-                                <select class="form-control gender" name="gender" form="register-form">
-                                    <option value="" selected disabled hidden>region</option>
-                                    <option value="central-america">central-america</option>
-                                    <option value="north-america">north-america</option>
-                                    <option value="south-america">south-america</option>
-                                    <option value="africa">africa</option>
-                                    <option value="asia">asia</option>
-                                    <option value="middle-east">middle-east</option>
-                                    <option value="europe">europe</option>
-                                    <option value="ocenia">ocenia</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" placeholder="last name"/>
-                                <input type="password" placeholder="password"/>
-                                <input type="text" id="age" placeholder="confirm password">
-                                <select class="form-control gender" name="gender" form="register-form">
-                                    <option value="" selected disabled hidden>gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-                            </div>
-                        </div>
-                        <input (click)="registerUser()" type="submit" class="button" value="create">
-                        <p class="message">Already registered? <a href="login" (click)="urlChange('register')">Sign In</a></p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Forgot password -->
-
-<div class="container-fluid" *ngIf="isReset">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="login-page">
-                <div class="form">
-                  <form class="login-form">
-                    <h4>Reset Password</h4>
-                    <input type="email" placeholder="email"/>
-                    <input type="submit" class="button" value="Send">
-                    <a href="/" onclick="return false;" class="closeReset" (click)="urlChange('reset')">Return</a>
-                  </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- changing password  -->
-
-<div class="container-fluid" *ngIf="isConfirm">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <div class="login-page">
-                <div class="form">
-                  <form class="login-form">
-                    <h4>Change Password</h4>
-                    <input type="text" placeholder="new password"/>
-                    <input type="text" placeholder="confirm password"/>
-                    <button>Send</button>
-                  </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

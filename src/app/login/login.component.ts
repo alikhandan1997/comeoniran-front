@@ -11,6 +11,13 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LoginComponent implements OnInit {
 
+  constructor(
+    private location: Location,
+    private loginService: LoginService,
+    private router: Router,
+    private cookieService: CookieService
+    ) { }
+
   isLogin: boolean = true;
   isReset: boolean = false;
   isRegister: boolean = false;
@@ -22,13 +29,9 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   status: number;
+  errorMessage: any;
 
-  constructor(
-    private location: Location,
-    private loginService: LoginService,
-    private router: Router,
-    private cookieService: CookieService
-    ) { }
+  wrongData: boolean = false;
 
   ngOnInit() {
   }
@@ -51,10 +54,9 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onKey(event, e) {
+  onKey = (event, e) => {
     if(e == 'username') {
-      this.username = event.target.value;
-      console.log(event);
+      this.username = event.target.value;      
     } else if (e == 'password') {
       this.password = event.target.value;
     }
@@ -62,27 +64,29 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password
     }
+
+    console.log(this.userData);
+    
   }
 
-  loginUser() {  
+  loginUser = () => {  
     this.loginService.checkUser(this.userData)
     .subscribe((data)=>{
       this.status = data['status'];
+      if(this.status == 200 ) {
+        this.cookieService.set('username', this.userData.username);
+        this.router.navigate(['/']);  
+      }
     },
     (error) => {
       this.status = error['status'];
+      this.errorMessage = error['error']['messages'];
+      console.log(this.errorMessage[1]['message'])
+      if (this.errorMessage[1]['message'] != "" || this.errorMessage[0]['message'] != "") {
+        this.wrongData = true;
+      }
+      
     }); 
-    if(this.status == 200 ) {
-      this.cookieService.set('username', this.userData.username);
-      this.router.navigate(['/']);  
-    }
-  }
-
-  registerUser() {
-    this.loginService.registerUser(this.registerData)
-    .subscribe((data)=> {
-    })
-
   }
 
 }
