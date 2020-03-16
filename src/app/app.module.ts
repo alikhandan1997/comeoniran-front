@@ -14,6 +14,8 @@ import { DestinationsComponent } from './destinations/destinations.component';
 import { TripTypesComponent } from './trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CitiesComponent } from './cities/cities.component';
+import { RegisterComponent } from './register/register.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CitiesComponent } from './cities/cities.component';
     DestinationsComponent,
     TripTypesComponent,
     AboutUsComponent,
-    CitiesComponent
+    CitiesComponent,
+    RegisterComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
