@@ -1,0 +1,46 @@
+<!-- register form  -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="register-page">
+                <div class="form">
+                    <form class="login-form">
+                        <h4>Account Register</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="first name"/>
+                                <input type="email" placeholder="email"/>
+                                <input type="text" placeholder="country"/>
+                                <select class="form-control gender" name="gender" form="register-form">
+                                    <option value="" selected disabled hidden>region</option>
+                                    <option value="central-america">central-america</option>
+                                    <option value="north-america">north-america</option>
+                                    <option value="south-america">south-america</option>
+                                    <option value="africa">africa</option>
+                                    <option value="asia">asia</option>
+                                    <option value="middle-east">middle-east</option>
+                                    <option value="europe">europe</option>
+                                    <option value="ocenia">ocenia</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="last name"/>
+                                <input type="password" placeholder="password"/>
+                                <input type="text" id="age" placeholder="confirm password">
+                                <select class="form-control gender" name="gender" form="register-form">
+                                    <option value="" selected disabled hidden>gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="submit" class="button" value="create">
+                        <p class="message">Already registered? <a href="login">Sign In</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
