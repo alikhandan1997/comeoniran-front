@@ -1,0 +1,14 @@
+{
+    "api": {
+        "loginApi": {
+            "checkUser": "api/login/",
+            "registerUser": "api/register/"
+        },
+        "destinaionsApi": {
+
+        },
+        "triptypesApi": {
+
+        }
+    }
+}
