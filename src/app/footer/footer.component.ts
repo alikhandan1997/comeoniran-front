@@ -19,7 +19,7 @@ export class FooterComponent implements OnInit {
     this.hrefPart = this.href.split('/');
     console.log(this.href);
     
-    if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'resetpassword') {
+    if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'reset-password') {
       this.showFooter = !this.showFooter;
     }
   }
