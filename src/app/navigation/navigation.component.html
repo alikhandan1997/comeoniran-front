@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" *ngIf="showNav">
 
   <!-- start first naviagtion  -->
   <div class="container-fluid">
@@ -6,7 +6,7 @@
       <div class="header-head-left">
 
           <a href="/" class="header-head-logo">
-            <span class="logo-container">Logo container</span>
+            <span class="logo-container">Come<span class="On">On</span>Iran</span>
           </a>
   
           <a href="destinations" class="header-head-link" (mouseenter)="mouseEnter('destination')">
@@ -38,7 +38,7 @@
               <a href="/" onclick="return false;" style="color: black;">admin</a>
             </span>
             <span *ngIf="showLoggedOptions"  (mouseleave)="mouseLeave('logged')">
-              <a href="/" onclick="return false;" style="color: black;padding-right: 5px;">Panel</a>
+              <a href="http://192.168.43.116:8585/dashboard/" style="color: black;padding-right: 5px;">Panel</a>
               | 
               <a style="color: black;padding-left: 5px;" (click)="clearCookie()">Log Out</a>
             </span>

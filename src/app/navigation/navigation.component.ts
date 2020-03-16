@@ -14,6 +14,8 @@ export class NavigationComponent implements OnInit {
   href: string;
   hrefPart: string[];
 
+  showNav: boolean = true;
+
   showLogin: boolean = true;
   showDestinations: boolean = false;
   showTripTypes: boolean = false;
@@ -42,11 +44,15 @@ export class NavigationComponent implements OnInit {
     ) { }
 
   ngOnInit(){
+
     this.href = window.location.href;
     this.hrefPart = this.href.split('/');
-    if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'resetpassword') {
+
+    if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'reset-password') {
       this.showLogin = !this.showLogin;
+      this.showNav = !this.showNav;
     }
+
     if(this.cookieService.get('username') !== '') {
       this.showLogin = false;
       this.showLogged = true;

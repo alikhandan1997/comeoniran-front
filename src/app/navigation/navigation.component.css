@@ -2,9 +2,8 @@
     height: 60px;
     border-bottom: 1px solid rgb(214, 212, 212);
     background-color: white;
-    margin-left: -20px;
-    margin-right: -20px;
-    position: relative;
+    margin-left: -14px;
+    margin-right: -14px;
 }
 
 @media screen and (max-width:1125px) {
@@ -26,8 +25,13 @@
 .header .header-head .header-head-left .header-head-logo {
     margin-right: 30px;
     margin-left: 20px;
-    color: black;
-    font-size: 15px;
+    color: rgb(41, 40, 40);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.On{
+    color: rgb(39, 190, 249);
 }
 
 
@@ -51,7 +55,7 @@
 }
 
 .header .header-head .header-head-left #collapse {
-    margin-right: 30px;
+    margin-right: 40px;
     color: black;
     font-size: 30px;
     float: right;
