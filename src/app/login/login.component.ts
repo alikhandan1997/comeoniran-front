@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { LoginService } from '../service/login/login.service';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -12,19 +11,12 @@ import { CookieService } from 'ngx-cookie-service';
 export class LoginComponent implements OnInit {
 
   constructor(
-    private location: Location,
     private loginService: LoginService,
     private router: Router,
     private cookieService: CookieService
     ) { }
 
-  isLogin: boolean = true;
-  isReset: boolean = false;
-  isRegister: boolean = false;
-  isConfirm: boolean = false;
-
   userData: any;
-  registerData: any;
 
   username: string;
   password: string;
@@ -34,24 +26,6 @@ export class LoginComponent implements OnInit {
   wrongData: boolean = false;
 
   ngOnInit() {
-  }
-
-  urlChange = (a) => {
-    if (a == 'forgot'){
-      
-      this.location.replaceState('/resetpassword');
-      this.isReset = true;
-      this.isLogin = false;
-    } else if (a == 'register'){
-
-      this.location.replaceState('/register');
-      this.isLogin = !this.isLogin;
-      this.isRegister = !this.isRegister;
-    } else if (a == 'reset') {
-
-      this.isLogin = !this.isLogin;
-      this.isReset = !this.isReset;
-    }
   }
 
   onKey = (event, e) => {
@@ -81,7 +55,6 @@ export class LoginComponent implements OnInit {
     (error) => {
       this.status = error['status'];
       this.errorMessage = error['error']['messages'];
-      console.log(this.errorMessage[1]['message'])
       if (this.errorMessage[1]['message'] != "" || this.errorMessage[0]['message'] != "") {
         this.wrongData = true;
       }
