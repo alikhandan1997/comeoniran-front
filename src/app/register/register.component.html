@@ -26,6 +26,8 @@
                         <input type="password" (keyup)="onKey($event,'password')" placeholder="password"/>
                         <input type="password" id="age" (keyup)="onKey($event,'confpassword')" placeholder="confirm password">
 
+                        <span><p *ngIf="Select">*{{errorContent}}</p></span>
+
                         <select class="form-control region" name="region" (click)="onKey($event,'region')" [(ngModel)]="corporationObj1" form="register-form">
                             <option [ngValue]="region" selected disabled hidden>region</option>
                             <option value="0">central-america</option>

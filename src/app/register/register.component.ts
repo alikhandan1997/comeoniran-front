@@ -33,6 +33,7 @@ export class RegisterComponent implements OnInit {
   Fill: boolean; 
   Email: boolean;
   Pass: boolean; 
+  Select: boolean;
   errorContent: string;
 
   status: number;
@@ -45,6 +46,7 @@ export class RegisterComponent implements OnInit {
     this.Fill= false;
     this.Email = false;
     this.Pass = false;
+    this.Select = false;
     this.loginService.registerUser(this.userData)
     .subscribe((data)=>{
       this.status = data['status'];
@@ -63,14 +65,18 @@ export class RegisterComponent implements OnInit {
         console.log(this.errorMessage.length)
         for (let i = 0; i < this.errorMessage.length; i++){
           console.log(this.errorMessage[i]['field'])
-          if(this.errorMessage[i]['field'] == 'first_name' || this.errorMessage[i]['field'] == 'last_name') {
+          if(this.errorMessage[i]['field'] == 'first_name' || this.errorMessage[i]['field'] == 'last_name' || this.errorMessage[i]['field'] == 'email' || this.errorMessage[i]['field'] == 'country') {
             console.log('fuck');
             this.Fill = true;
-            this.errorContent = this.errorMessage[i]['message']
+            this.errorContent = this.errorMessage[i]['message'];
           }
           if(this.errorMessage[i]['field'] == "password" || this.errorMessage[i]['field'] == "confirm_password"){
             this.Pass = true;
-            this.errorContent = this.errorMessage[i]['message']
+            this.errorContent = this.errorMessage[i]['message'];
+          }
+          if(this.errorMessage[i]['field'] == 'region' || this.errorMessage[i]['field'] == 'gender') {
+            this.Select = true;
+            this.errorContent = this.errorMessage[i]['message'];
           }
         }
       }
