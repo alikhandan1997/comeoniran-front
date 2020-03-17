@@ -16,6 +16,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CitiesComponent } from './cities/cities.component';
 import { RegisterComponent } from './register/register.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { LeadersComponent } from './leaders/leaders.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { ToursComponent } from './tours/tours.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
     AboutUsComponent,
     CitiesComponent,
     RegisterComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    LeadersComponent,
+    HotelsComponent,
+    ToursComponent
   ],
   imports: [
     BrowserModule,
