@@ -4,15 +4,14 @@
     background-image: url(../../assets/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: 100% 70%;
-    /* background-position: center; */
     height: 800px;
     background-color: #ffcc00;
   }
   
   @media (max-width: 991px) {
     .banner_part {
-      height: 400px;
-      background-size: 100% 100%;
+      height: 500px;
+      background-size: 100% 90%;
     }
   }
   
@@ -24,16 +23,15 @@
   .banner_part .banner_text h5 {
     font-size: 40px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
     color: #fff;
     margin-bottom: 34px;
     margin-left: 10%;
   }
   
-  @media (max-width: 991px) {
+  @media (max-width: 756px) {
     .banner_part .banner_text h5 {
-      font-size: 25px;
-      margin-bottom: 20px;
+      font-size: 30px;
     }
   }
   /* banner part end  */
@@ -52,7 +50,7 @@
   .search_your_country {
     max-width: 100%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: rgb(250, 249, 248);
     box-shadow: -1.717px 8.835px 85.56px 6.44px rgba(170, 170, 170, 0.29);
     padding: 165px 0 100px;
     position: relative;
@@ -77,7 +75,7 @@
   }
   
   .search_your_country .search_form {
-    background-color: rgb(39, 190, 249);
+    background-color: #0297c9;
     padding: 20px 35px;
     margin-bottom: 50px;
     color: #fff;
@@ -115,9 +113,7 @@
 
   @media screen and (max-width:1125px) {
     .form-inline input {
-      width: 60%;
-      margin-left: 12%;
-      margin-top: 2%;
+      width: 80%;
     }
   }
 
@@ -142,10 +138,16 @@
     border-bottom-right-radius: 5px;
   }
 
-  @media screen and (max-width:1125px) {
+  @media screen and (max-width:1125px){
     .form-inline .submit {
-      margin-top: 2%;
+      width: 20%;
+    }
+  }
+
+  @media screen and (max-width:801px) {
+    .form-inline .submit {
       border-radius: 5px;
+      width: 100%;
     }
   }
 
@@ -161,8 +163,8 @@
 
   @media screen and (max-width:1125px) {
     .form-inline .triptypes {
-      width: 71%;
-      margin-left: 12%;
+      width: 100%;
+      margin-left: 0;
       margin-top: 2%;
       margin-bottom: 2%;
     }
@@ -175,7 +177,7 @@
 
   .form-inline .triptypes:hover {
     color: black;
-    font-size: 15px;
+    background-color: rgb(252, 252, 135);
   }
   
   @media (max-width: 800px) {
@@ -203,8 +205,91 @@
     }
   }
 
+  .top-item-header {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: -5%;
+  }
+
+  @media screen and (max-width:1125px) {
+    .top-item-header {
+      margin-top: 3%;
+      margin-bottom: -7%;
+    }
+  }
+
+  @media screen and (max-width:991px) {
+    .top-item-header {
+      margin-top: 15%;
+    }
+  }
+
+  @media screen and (max-width:802px) {
+    .top-item-header {
+      margin-top: 24%;
+    }
+  }
+
+  @media screen and (max-width:576px) {
+    .top-item-header {
+      margin-top: 40%;
+      margin-bottom: -100px;
+    }
+  }
+  
+  .top-item-content {
+    position: relative;
+    width: 100%;
+    margin-bottom: 7%;
+  }
+
+  .top-item-content h4 {
+    text-align: center;
+    margin-bottom: 7%;
+  }
+
+  .top-item-content img {
+    width: 100%;
+    height: 250px;
+    transition: margin .5s;
+    border-radius: 10px;
+  }
+
+  .top-item-content img:hover {
+    margin-top: -5%;
+    box-shadow: 5px 10px #a1a1a1;
+  }
+
+  .top-item-content:hover .desc a{
+    background-color: red;
+  }
+
+  .top-item-content:hover .desc h5 {
+    color: red;
+  }
+
+  .top-item-content h5, .top-item-content a {
+    display: inline;
+  }
+
+  .top-item-content .desc {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+  }
+
+  .top-item-content .desc a {
+    background-color: rgb(253, 188, 8);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 5px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 30px;
+  }
+
   .donation {
-      margin-top: 10px;
+      margin-top: 5%;
   }
 
   @media screen and (max-width:1125px) {
@@ -213,855 +298,338 @@
     }
   }
 
-  @media screen and (max-width:801px) {
+  @media screen and (max-width:756px) {
+    .donation {
+      margin-top: 10%;
+      padding: 10%;
+    }
+  }
+
+  @media screen and (max-width:576px) {
     .donation {
       margin-top: 33%;
-      padding: 10%;
     }
   }
   /* search part end  */
 
-  /* ---------------------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-  .feature_part {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .feature_part .feature_icon_1 {
-    position: absolute;
-    left: 10%;
-    top: 26%;
-  }
-  
-  .feature_part .feature_icon_2 {
-    position: absolute;
-    right: 10%;
-    bottom: 26%;
-  }
-  
-  .feature_part .feature_icon_3 {
-    position: absolute;
-    right: 40%;
-    bottom: 40%;
-  }
-  
-  @media (max-width: 576px) {
-    .feature_part .feature_img {
-      margin-bottom: 50px;
-    }
-  }
-  
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .feature_part .feature_img {
-      padding-left: 0;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .feature_part .feature_part_text {
-      padding-left: 0;
-    }
-  }
-  
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .feature_part .feature_part_text {
-      padding-left: 0;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .feature_part .feature_part_text {
-      padding-left: 0;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .feature_part .feature_part_text {
-      padding-left: 0;
-    }
-  }
-  
-  .feature_part .feature_part_text h2 {
-    font-size: 35px;
-    font-weight: 500;
-    margin: 42px 0 30px;
-    position: relative;
-    text-transform: capitalize;
-  }
-  
-  @media (max-width: 576px) {
-    .feature_part .feature_part_text h2 {
-      font-size: 25px;
-      margin-bottom: 10px;
-      line-height: 35px;
-      margin-top: 15px;
-    }
-  }
-  
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .feature_part .feature_part_text h2 {
-      font-size: 25px;
-      margin-bottom: 10px;
-      line-height: 35px;
-      margin-top: 20px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .feature_part .feature_part_text h2 {
-      font-size: 25px;
-      margin-bottom: 10px;
-      line-height: 35px;
-      margin-top: 20px;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .feature_part .feature_part_text h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      line-height: 40px;
-    }
-  }
-  
-  .feature_part .feature_part_text p {
-    margin-bottom: 13px;
-  }
-  
-  .feature_part .feature_part_text .feature_part_text_iner {
-    border: 1px solid #eeeeee;
-    text-align: center;
-    padding: 31px 15px 9px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  
-  @media (max-width: 991px) {
-    .feature_part .feature_part_text .feature_part_text_iner {
-      padding: 20px 15px 15px;
-      margin-bottom: 15px;
-    }
-  }
-  
-  .feature_part .feature_part_text .feature_part_text_iner img {
-    margin-bottom: 20px;
-  }
-  
-  .feature_part .feature_part_text .feature_part_text_iner h4 {
-    font-size: 20px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 0;
-  }
-  
-  .feature_part .feature_part_text .feature_part_text_iner:hover {
-    border: 1px solid #00c0ff;
-    background-color: #00c0ff;
-  }
-  
-  .feature_part .feature_part_text .feature_part_text_iner:hover h4 {
-    color: #fff;
-  }
-  
-  .feature_part .feature_part_text .feature_part_text_iner:hover p {
-    color: #fff;
-  }
-  
-  .feature_part .single_feature {
-    margin: 0 11px;
-  }
-  
-  @media (max-width: 991px) {
-    .feature_part .single_feature {
-      margin: 0;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .feature_part .single_feature {
-      margin: 0;
-    }
-  }
-  
-  .feature_part .single_feature:nth-child(2) {
-    margin-top: 60px;
-  }
-  
-  @media (max-width: 991px) {
-    .feature_part .single_feature:nth-child(2) {
-      margin-top: 30px;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .feature_part .single_feature:nth-child(2) {
-      margin-top: 30px;
-    }
-  }
-  
-  .feature_part .single_feature_part {
-    padding: 40px 25px 31px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0px 3px 81px 0px rgba(216, 216, 216, 0.45);
-    background-color: #fff;
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
-  }
-  
-  @media (max-width: 991px) {
-    .feature_part .single_feature_part {
-      padding: 25px 15px;
-      margin-top: 25px;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .feature_part .single_feature_part {
-      margin-top: 25px;
-    }
-  }
-  
-  .feature_part .single_feature_part img {
-    margin-bottom: 21px;
-    height: 65px;
-  }
-  
-  @media (max-width: 991px) {
-    .feature_part .single_feature_part img {
-      margin-bottom: 21px;
-    }
-  }
-  
-  .feature_part .single_feature_part img i {
-    color: #0c2e60;
-    font-size: 24px;
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
-  }
-  
-  .feature_part .single_feature_part h4 {
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 22px;
-  }
-  
-  @media (max-width: 576px) {
-    .feature_part .single_feature_part h4 {
-      margin-bottom: 15px;
-    }
-  }
-  
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .feature_part .single_feature_part h4 {
-      margin-bottom: 15px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .feature_part .single_feature_part h4 {
-      margin-bottom: 15px;
-    }
-  }
-  
-  .feature_part span {
-    font-style: italic;
-    font-weight: 300;
-    color: #000;
-    line-height: 30px;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 50px;
-    display: inline-block;
-  }
-
-.single_feature_padding {
-  padding-top: 140px;
-}
-
-@media (max-width: 576px) {
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
+/* amazing tour ends  */
 /* ------------------------------------------------------------------------------------------   */
 
 
+/* advantages start  */
+.advantages {
+  background-color: #0297c9;
+}
 
+.advantages .content{
+  width: 90%;
+  margin-left: 5%;
+}
 
+.advantages .content .head-icon {
+  margin-bottom: -30px;
+}
 
+@media screen and (max-width:576px) {
+  .advantages .content .head-icon {
+    margin-top: 10px;
+    margin-bottom: -1px;
+  }
+}
 
+.advantages .content .head-icon i{
+  color: white;
+  padding-top: 2%;
+  margin-right: 10px;
+  font-size: 10px;
+}
 
-.popular_place {
+.advantages .content .head h3{
+  color: white;
+  font-weight: 800;
+  padding-top: 3%;
+}
+
+.advantages .content-box {
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+.advantages .content-box i {
+  font-size: 60px;
+  color: white;
+}
+
+.advantages .content-box .desc {
+  margin-top: 10%;
+  padding-bottom: 30px;
+}
+.advantages .content-box .desc h4 {
+  font-weight: 800;
+  color: white;
+}
+
+.advantages .content-box .desc p {
+  color: white;
+  font-weight: 300;
+}
+
+.advantages .about-us-button {
+  background-color: #0297c9;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid white;
+  margin-left: 37%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  padding: 14px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.advantages .about-us-button:hover {
+  background-color: #03b2ec;
+}
+
+@media screen and (max-width:576px) {
+  .advantages .about-us-button {
+    margin: 0 0 5% 17%;
+  }
+}
+
+/* advantages part end  */
+
+/* ------------------------------------------------------------------------------------------------- */
+/* popular hotels start  */
+
+.popular_hotels .section_tittle h2 {
+  margin-top: -15%;
+  margin-bottom: 20%;
+}
+
+@media screen and (max-width:991px) {
+  .popular_hotels .section_tittle h2 {
+    margin-top: 3%;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .popular_hotels .section_tittle h2 {
+    font-size: 35px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+  }
+}
+
+.popular_hotels .donation {
+  margin-top: -1%;
+}
+
+.popular_hotels .donation .content {
+  margin-bottom: 3%;
+}
+
+.content:hover .price {
+  background-color: rgb(255, 68, 68);
+}
+
+.content:hover .desc h4 {
+  color: red;
+}
+
+.donation .content .image img {
+  width: 100%;
+  height: 250px;
   position: relative;
-  z-index: 1;
-  position: relative;
-  z-index: 99;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-/* line 8, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .feature_icon_1 {
+.donation .content .desc {
+  background-color: white;
+  border-left: 1px solid rgb(204, 203, 203);
+  border-right: 1px solid rgb(204, 203, 203);
+  border-bottom: 1px solid rgb(204, 203, 203);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10%;
+}
+
+.content .price {
   position: absolute;
-  left: 22%;
-  top: 42%;
-  z-index: -1;
+  top: 20px;
+  left: 30px;
+  background-color: rgb(253, 188, 8);
+  padding: 10px 30px 10px 30px;
+  border-radius: 30px;
 }
 
-/* line 15, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .feature_icon_2 {
-  right: 20%;
-  top: 50%;
-  position: absolute;
-  z-index: -1;
-}
-
-/* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .feature_icon_3 {
-  position: absolute;
-  left: 3%;
-  z-index: -1;
-  bottom: 70%;
-}
-
-/* line 27, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .feature_icon_4 {
-  position: absolute;
-  right: 15%;
-  top: 7%;
-  z-index: -1;
-}
-
-/* line 33, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .single_popular_place {
-  padding: 60px 25px 56px;
-  text-align: center;
-  border-radius: 0;
-  box-shadow: 0px 3px 81px 0px rgba(216, 216, 216, 0.45);
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  background-color: #fff;
-}
-
-@media (max-width: 576px) {
-  /* line 33, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place {
-    padding: 25px 10px;
-    margin-top: 25px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 33, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place {
-    padding: 30px 15px;
-    margin-top: 25px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 33, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place {
-    padding: 30px 25px;
-    margin-top: 25px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 33, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place {
-    margin-top: 25px;
-  }
-}
-
-/* line 59, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .single_popular_place img {
-  max-width: 150px;
-}
-
-/* line 62, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .single_popular_place h4 {
-  font-weight: 600;
-  font-size: 20px;
-  margin: 45px 0 20px;
-}
-
-@media (max-width: 576px) {
-  /* line 62, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place h4 {
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 62, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place h4 {
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 62, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place h4 {
-    margin-bottom: 15px;
-  }
-}
-
-/* line 81, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .single_popular_place p {
-  color: #7f7f7f;
-  line-height: 1.8;
+.content .price a {
+  color : white;
+  font-weight: 700;
   font-size: 15px;
 }
 
-/* line 86, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-.popular_place .single_popular_place .btn1 {
-  margin-top: 42px;
+.donation .content .desc .days {
+  float: right;
 }
 
-@media (max-width: 991px) {
-  /* line 86, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_popular_place.scss */
-  .popular_place .single_popular_place .btn1 {
-    margin-top: 20px;
+.popular_hotels .see-More {
+  margin-left: 43%;
+}
+
+@media screen and (max-width:576px) {
+  .popular_hotels .see-More {
+    margin-left: 30%;
   }
 }
+
+.popular_hotels .see-More button {
+  border:none;
+  background-color: rgb(255, 197, 38);
+  padding: 15px 25px 15px 25px;
+  border-radius: 10px;
+}
+
+.popular_hotels .see-More button:hover {
+  background-color: rgb(253, 186, 0);
+}
+
+/* popular hotel ends  */
 
 /* ------------------------------------------------------------------------------------------------ */
 
+.cta_part {
+  background-color: #0297c9;
+  margin-top: 10%;
+  width: 100%;
+}
 
+.cta_part .head h1{
+  font-weight: 700;
+  text-align: center;
+  margin-top: -10%;
+  color: white;
+}
 
+.cta_part .search-box input{
+  padding: 20px;
+  width: 70%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-left: 7%;
+}
 
+@media screen and (max-width:991px) {
+  .cta_part .search-box input {
+    width: 80%;
+  }
+}
 
+@media screen and (max-width:576px){
+  .cta_part .search-box input {
+    width: 100%;
+    margin: 0;
+  }
+}
 
+.cta_part .search-box button {
+  background-color: white;
+  color: rgb(54, 54, 54);
+  background-color:rgb(255, 206, 67);
+  border: none;
+  border-radius: 5px;
+  padding: 21px 20px;
+  margin-left: 2%;
+  cursor: pointer;
+}
 
-@media (max-width: 991px) {
-  /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
+@media screen and (max-width:991px) {
+  .cta_part .search-box button {
+    width: 30%;
+    margin-left: 30%;
+    margin-top: 2%;
+  }
+}
+
+@media screen and (max-width:576px) {
+  .cta_part .search-box button {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+}
+
+.cta_part .search-box button:hover {
+  background-color: rgb(253, 188, 8);
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+.tour_package {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -2%;
+}
+
+@media screen and (max-width:1125px) {
   .tour_package {
-    padding: 0 0 70px;
+    margin-top: 3%;
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .tour_package {
-    padding: 0 0 80px;
+.tour_package .content {
+  margin-bottom: 5%;
+}
+
+.tour_package .content .desc {
+    background-color: white;
+  border-left: 1px solid rgb(204, 203, 203);
+  border-right: 1px solid rgb(204, 203, 203);
+  border-bottom: 1px solid rgb(204, 203, 203);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10%;
+}
+
+.tour_package .content .image img{
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.tour_package .content .days {
+  margin-left: 26%;
+}
+
+.tour_package .see-More {
+  margin-left: 43%;
+  margin-top: 1%;
+}
+
+@media screen and (max-width:576px) {
+  .tour_package .see-More {
+    margin-left: 30%;
   }
 }
 
-/* line 10, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .single_tour_package .tour_pack_content {
-  background-color: #fafafa;
-  padding: 45px 48px;
+.tour_package .see-More button {
+  border:none;
+  background-color: rgb(255, 197, 38);
+  padding: 15px 25px 15px 25px;
+  border-radius: 10px;
 }
 
-@media (max-width: 991px) {
-  /* line 10, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .tour_package .single_tour_package .tour_pack_content {
-    padding: 20px 25px;
-  }
+.tour_package .see-More button:hover {
+  background-color: rgb(253, 186, 0);
 }
 
-/* line 16, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .single_tour_package .tour_pack_content h4 {
-  font-size: 24px;
-  text-transform: capitalize;
-  margin-bottom: 10px;
-}
-
-/* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .single_tour_package .tour_pack_content p {
-  margin-bottom: 50px;
-}
-
-/* line 26, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_content_rating {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* line 31, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_content_rating ul li {
-  display: inline-block;
-}
-
-/* line 33, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_content_rating ul li a {
-  color: #ffcc00;
-}
-
-/* line 38, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_content_rating .btn1 {
-  margin-top: 0;
-}
-
-@media (max-width: 991px) {
-  /* line 42, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .tour_package .tour_pack_content {
-    margin-bottom: 30px;
-  }
-}
-
-/* line 46, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_pack_content img {
-  margin-bottom: 40px;
-}
-
-@media (max-width: 991px) {
-  /* line 46, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .tour_package .tour_pack_content img {
-    margin-bottom: 15px;
-  }
-}
-
-/* line 52, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_pack_content h2 {
-  font-size: 36px;
-  margin-bottom: 32px;
-  text-transform: capitalize;
-}
-
-@media (max-width: 991px) {
-  /* line 52, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .tour_package .tour_pack_content h2 {
-    margin-bottom: 15px;
-    font-size: 30px;
-  }
-}
-
-/* line 61, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .tour_pack_content .btn_1 {
-  margin-top: 60px;
-}
-
-@media (max-width: 991px) {
-  /* line 61, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .tour_package .tour_pack_content .btn_1 {
-    margin-top: 25px;
-  }
-}
-
-/* line 68, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .owl-nav {
-  position: absolute;
-  right: -66px;
-  top: 38px;
-  transform: rotate(90deg);
-}
-
-/* line 73, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-.tour_package .owl-nav button {
-  text-transform: capitalize;
-  margin-right: 20px;
-}
-
-@media (max-width: 991px) {
-  /* line 79, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .single_pack {
-    padding: 70px 0;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 79, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_tour_package.scss */
-  .single_pack {
-    padding: 80px 0;
-  }
-}  
 
 /* -------------------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-.blog_part {
-  position: relative;
-}
-
-/* line 4, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .single_blog_part {
-  background-color: #fff;
-}
-
-@media (max-width: 991px) {
-  /* line 4, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part {
-    margin-bottom: 20px;
-  }
-  /* line 8, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part img {
-    width: 100%;
-  }
-}
-
-/* line 12, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .single_blog_part .blog_text {
-  padding: 43px 0;
-}
-
-@media (max-width: 991px) {
-  /* line 12, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part .blog_text {
-    padding: 20px 0;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 12, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part .blog_text {
-    padding: 20px 0;
-  }
-}
-
-/* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .single_blog_part .blog_text h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* line 25, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .single_blog_part .blog_text ul {
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-}
-
-@media (max-width: 991px) {
-  /* line 25, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part .blog_text ul {
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 25, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part .blog_text ul {
-    margin-top: 20px;
-  }
-}
-
-/* line 35, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .single_blog_part .blog_text ul li {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 35, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .single_blog_part .blog_text ul li {
-    margin-right: 20px;
-  }
-}
-
-/* line 42, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .single_blog_part .blog_text ul li i {
-  margin-right: 10px;
-}
-
-/* line 50, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-.blog_part .blog_img {
-  position: absolute;
-  right: 0;
-  top: 20%;
-}
-
-@media (max-width: 991px) {
-  /* line 50, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .blog_img {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 50, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .blog_img {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1440px) {
-  /* line 50, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_blog_part.scss */
-  .blog_part .blog_img {
-    display: none;
-  }
-}
-
-
-/* ------------------------------------------------------------------------------------------------------------------ */
-
-
-
-
-
-
-
-.cta_part {
-  position: relative;
-  background-image: url(../../assets/img/cta_bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 750px;
-}
-
-@media (max-width: 991px) {
-  /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part {
-    height: auto;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 2, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part {
-    height: auto;
-  }
-}
-
-/* line 15, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .cta_text h5 {
-  font-size: 20px;
-  font-family: "Kaushan Script", cursive;
-  color: #fff;
-  margin-bottom: 35px;
-}
-
-/* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .cta_text h2 {
-  font-size: 47px;
-  color: #fff;
-  margin-bottom: 65px;
-  line-height: 60px;
-}
-
-@media (max-width: 991px) {
-  /* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .cta_text h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    line-height: 35px;
-  }
-}
-
-@media (max-width: 576px) {
-  /* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .cta_text h2 {
-    font-size: 25px;
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 21, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .cta_text h2 {
-    font-size: 35px;
-    margin-bottom: 16px;
-  }
-}
-
-/* line 41, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .cta_text p {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 50px;
-}
-
-@media (max-width: 991px) {
-  /* line 41, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .cta_text p {
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 576px) {
-  /* line 41, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .cta_text p {
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 41, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .cta_text p {
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 991px) {
-  /* line 56, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .input-group {
-    justify-content: center;
-  }
-}
-
-/* line 60, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .input-group input {
-  height: 60px;
-  border: 0px solid transparent;
-  border-radius: 0;
-}
-
-/* line 64, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .input-group input:hover, .cta_part .input-group input:focus {
-  box-shadow: none;
-}
-
-@media (max-width: 991px) {
-  /* line 60, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .input-group input {
-    display: block;
-    width: 100%;
-  }
-}
-
-/* line 72, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .input-group .subs_btn {
-  background-color: #ffcc00;
-  padding: 19px 29px;
-  text-transform: uppercase;
-  color: #000;
-  margin-left: 10px;
-}
-
-@media (max-width: 991px) {
-  /* line 72, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-  .cta_part .input-group .subs_btn {
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-    margin-left: 0;
-  }
-}
-
-/* line 85, /Applications/MAMP/htdocs/palash/cl/july 2019/189 travel/189 travel html/sass/_cta_part.scss */
-.cta_part .input-group .form-control {
-  padding-left: 20px;
-}
