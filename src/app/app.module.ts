@@ -6,19 +6,22 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { LoginComponent } from './login/login/login.component';
+import { NavigationComponent } from './modules/navigation/navigation.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './modules/footer/footer.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { TripTypesComponent } from './trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CitiesComponent } from './cities/cities.component';
-import { RegisterComponent } from './register/register.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { LeadersComponent } from './leaders/leaders.component';
-import { HotelsComponent } from './hotels/hotels.component';
-import { ToursComponent } from './tours/tours.component';
+import { RegisterComponent } from './login/register/register.component';
+import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
+import { LeadersComponent } from './leaders/leaders/leaders.component';
+import { HotelsComponent } from './hotels/hotels/hotels.component';
+import { ToursComponent } from './tours/tours/tours.component';
+import { HotelsDetailComponent } from './hotels/hotels-detail/hotels-detail.component';
+import { ToursDetailComponent } from './tours/tours-detail/tours-detail.component';
+import { LeaderDetailComponent } from './leaders/leaders-detail/leader-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ToursComponent } from './tours/tours.component';
     ResetPasswordComponent,
     LeadersComponent,
     HotelsComponent,
-    ToursComponent
+    ToursComponent,
+    HotelsDetailComponent,
+    ToursDetailComponent,
+    LeaderDetailComponent
   ],
   imports: [
     BrowserModule,
