@@ -261,11 +261,11 @@
   }
 
   .top-item-content:hover .desc a{
-    background-color: red;
+    background-color: #0297c9;
   }
 
   .top-item-content:hover .desc h5 {
-    color: red;
+    color: #0297c9;
   }
 
   .top-item-content h5, .top-item-content a {
@@ -399,6 +399,38 @@
 }
 
 /* advantages part end  */
+/* ----------------------------------------------------------------------------------------------------- */
+.leaders {
+  margin-top: 5%;
+  width: 90%;
+}
+
+.leaders .leader-detail .head-icon {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 60px;
+}
+
+.leaders .leader-detail .title h2 {
+  text-align: center;
+}
+
+.leaders .leader-detail .desc {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.leaders .leader-detail .desc p {
+  text-align: center;
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.leaders .leader-detail .see-more {
+  margin-top: 5%;
+  margin-left: 30%;
+}
 
 /* ------------------------------------------------------------------------------------------------- */
 /* popular hotels start  */
@@ -432,11 +464,11 @@
 }
 
 .content:hover .price {
-  background-color: rgb(255, 68, 68);
+  background-color: #0297c9;
 }
 
 .content:hover .desc h4 {
-  color: red;
+  color: #0297c9;
 }
 
 .donation .content .image img {
