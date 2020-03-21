@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import ApiMap from '../../apiMap/apiMap.json';
+import ApiMap from '../apiMap/apiMap.json';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +14,13 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   checkUser(data: string): Observable<Object> {
-    this.apiUrl = ApiMap.api.loginApi.checkUser
+    this.apiUrl = ApiMap.api.loginApi.get.getUser
     return this.http.post(`${this.baseurl}${this.apiUrl}`, data);
     
   }
 
   registerUser(data: string): Observable<Object> {
-    this.apiUrl = ApiMap.api.loginApi.registerUser;
+    this.apiUrl = ApiMap.api.registerApi.post.postUser;
     return this.http.post(`${this.baseurl}${this.apiUrl}`, data);
   }
 

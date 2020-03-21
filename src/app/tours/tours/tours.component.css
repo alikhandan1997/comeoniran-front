@@ -1,0 +1,101 @@
+.design-trip {
+    position: relative;
+    background-image: url(../../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+
+@media screen and (max-width:1125px) {
+    .design-trip {
+        height: 500px;
+    }
+}
+
+.design-trip-box {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 7%;
+}
+
+.design-trip-box h6 {
+    width: 100%;
+    margin-left: 40%;
+    color: white;
+}
+
+.design-trip-content {
+    background-color: white;
+}
+
+.design-trip-content h4 {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.design-trip-content p {
+    text-align: center;
+    color: 15px;
+}
+
+.design-trip-form {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 7%;
+}
+
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+
+  .form-inline select {
+      width: 30%;
+      padding-left: 2%;
+      margin-right: 10px;
+  }
+
+  @media screen and (max-width:1125px) {
+      .form-inline select {
+          width: 100%;
+      }
+  }
+  
+  .form-inline button {
+    padding: 10px 10px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    height: 39px;
+  }
+
+  @media screen and (max-width:1125px) {
+      .form-inline button {
+        margin-left: 35%;
+        margin-top: 5%;
+      }
+  }
+  
+  .form-inline button:hover {
+    background-color: royalblue;
+  }
+  
+  @media (max-width: 800px) {
+    .form-inline input {
+      margin: 10px 0;
+    }
+    
+    .form-inline {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }

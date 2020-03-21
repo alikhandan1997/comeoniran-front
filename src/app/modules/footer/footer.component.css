@@ -1,0 +1,14 @@
+.footer_part {
+    background-color: #0297c9;
+}
+
+.footer_part h4 {
+    color: black;
+}
+
+.footer_part p, .footer_part li a {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+}
