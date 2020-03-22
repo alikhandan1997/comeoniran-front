@@ -264,8 +264,9 @@
     background-color: #0297c9;
   }
 
-  .top-item-content:hover .desc h5 {
-    color: #0297c9;
+  .top-item-content .desc h5 {
+    color: white;
+    font-weight: 600;
   }
 
   .top-item-content h5, .top-item-content a {
@@ -401,7 +402,7 @@
 /* advantages part end  */
 /* ----------------------------------------------------------------------------------------------------- */
 .leaders {
-  margin-top: 5%;
+  margin-top: 10%;
   width: 90%;
 }
 
@@ -430,6 +431,7 @@
 .leaders .leader-detail .see-more {
   margin-top: 5%;
   margin-left: 30%;
+  margin-bottom: 5%;
 }
 
 /* ------------------------------------------------------------------------------------------------- */
@@ -545,6 +547,12 @@
   text-align: center;
   margin-top: -10%;
   color: white;
+}
+
+.cta_part .head p {
+  text-align: center;
+  color: white;
+  font-weight: 500;
 }
 
 .cta_part .search-box input{

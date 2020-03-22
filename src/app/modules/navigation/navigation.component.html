@@ -52,7 +52,7 @@
   <!-- start navigation  -->
   <div class="header-head-collapse" *ngIf="showCollapse">
     <ul>
-      <li class="destination-collapse" *ngIf="!showTripTypesCollapse && showCollapse">
+      <li class="destination-collapse" *ngIf="!showTripTypesCollapse && showCollapse && !showAdmin">
         <a href="/" onclick="return false" (click)="collapseClick('destination')" >
           <i class="fa fa-angle-left" style="float: none;padding-right: 10px;" *ngIf="showDestinationsCollapse"></i>
           Destinations
@@ -60,7 +60,7 @@
           <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse"></i>
         </a>
       </li>
-      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse && TripTypeChild">
+      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse && TripTypeChild && !showAdmin">
         <a href="/" onclick="return false" (click)="collapseClick('triptypes')">
           <i class="fa fa-angle-left"  style="float: none;padding-right: 10px;" *ngIf="showTripTypesCollapse"></i>
           Trip Types
@@ -68,12 +68,17 @@
           <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse"></i>
         </a>
       </li>
-      <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse">
+      <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && !showAdmin">
         <a href="about-us">About Us</a>
       </li>
       <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && showLogin">
         <a href="login">
           Sign in to my Account
+        </a>
+      </li>
+      <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && showLogged">
+        <a href="/" onclick="return false" (click)="collapseClick('logged')">
+          admin
         </a>
       </li>
     </ul>
@@ -87,21 +92,39 @@
     <div class="destination-content" *ngIf="showDestinations" (mouseleave)="mouseLeave('destination')">
       <div class="row">
         <div class="cities">
-          <ul class="cities-name">
+          <!-- <ul class="cities-name">
             <li><a href="/" onclick="return false;" (click)="cityClick('Iran')">All</a></li>
             <li><a href="/" onclick="return false;" (click)="cityClick('Tehran')">Tehran</a></li>
             <li><a href="/" onclick="return false;" (click)="cityClick('Yazd')">Yazd</a></li>
             <li><a href="/" onclick="return false;" (click)="cityClick('Esfahan')">Esfahan</a></li>
-          </ul>
+          </ul> -->
           <div class="best-cities">
             <h4>Top destinations of the moment in {{cityname}}</h4>
             <div class="row best-cities-pic">
-              <span><img src="../../assets/city.jpg" alt=""></span>
-              <span><img src="../../assets/city.jpg" alt=""></span>
-              <span><img src="../../assets/city.jpg" alt=""></span>
-              <span><img src="../../assets/city.jpg" alt=""></span>
-              <span><img src="../../assets/city.jpg" alt=""></span>
-              <span><img src="../../assets/city.jpg" alt=""></span>
+              <span>
+                <a [routerLink]="['destinations', 'yazd']">
+                  <img src="../../assets/city.jpg" alt="">
+                </a>
+              </span>
+              <span>
+                <a href="">
+                  <img src="../../assets/city.jpg" alt="">
+                </a>
+              </span>
+              <span>
+                <a href="">
+                  <img src="../../assets/city.jpg" alt="">
+                </a>
+              </span>
+              <span>
+                <img src="../../assets/city.jpg" alt="">
+              </span>
+              <span>
+                <img src="../../assets/city.jpg" alt="">
+              </span>
+              <span>
+                <img src="../../assets/city.jpg" alt="">
+              </span>
             </div>
           </div>
           <br>
@@ -359,6 +382,23 @@
         </div>
       </div>
     <!-- end collapse trip types collapse content  -->
+
+      <!-- start collapse trip types content  -->
+    <div class="triptype-content-collapse" *ngIf="showAdmin">
+      <ul>
+        <li>
+          <a (click)="clearCookie()">
+            Log out
+          </a>
+        </li>
+        <li>
+          <a href="http://192.168.43.116:8585/dashboard/">
+            Panel
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- end collapse trip types content  -->
 
   </div>
   <!-- end content container  -->

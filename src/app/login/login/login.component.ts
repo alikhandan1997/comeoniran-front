@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
 
   wrongData: boolean = false;
 
+  admin: boolean = false;
+
   ngOnInit() {
   }
 
@@ -49,7 +51,7 @@ export class LoginComponent implements OnInit {
       this.status = data['status'];
       if(this.status == 200 ) {
         this.cookieService.set('username', this.userData.username);
-        this.router.navigate(['/']);  
+        window.location.replace('/');
       }
     },
     (error) => {

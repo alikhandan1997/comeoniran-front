@@ -10,10 +10,9 @@ import { LoginComponent } from './login/login/login.component';
 import { NavigationComponent } from './modules/navigation/navigation.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './modules/footer/footer.component';
-import { DestinationsComponent } from './destinations/destinations.component';
+import { DestinationsComponent } from './destinations/destinations/destinations.component';
 import { TripTypesComponent } from './trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { CitiesComponent } from './cities/cities.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
 import { LeadersComponent } from './leaders/leaders/leaders.component';
@@ -22,6 +21,7 @@ import { ToursComponent } from './tours/tours/tours.component';
 import { HotelsDetailComponent } from './hotels/hotels-detail/hotels-detail.component';
 import { ToursDetailComponent } from './tours/tours-detail/tours-detail.component';
 import { LeaderDetailComponent } from './leaders/leaders-detail/leader-detail.component';
+import { DestinationDetailComponent } from './destinations/destination-detail/destination-detail.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +33,6 @@ import { LeaderDetailComponent } from './leaders/leaders-detail/leader-detail.co
     DestinationsComponent,
     TripTypesComponent,
     AboutUsComponent,
-    CitiesComponent,
     RegisterComponent,
     ResetPasswordComponent,
     LeadersComponent,
@@ -41,7 +40,8 @@ import { LeaderDetailComponent } from './leaders/leaders-detail/leader-detail.co
     ToursComponent,
     HotelsDetailComponent,
     ToursDetailComponent,
-    LeaderDetailComponent
+    LeaderDetailComponent,
+    DestinationDetailComponent
   ],
   imports: [
     BrowserModule,

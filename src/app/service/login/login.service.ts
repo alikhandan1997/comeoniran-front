@@ -8,13 +8,13 @@ import ApiMap from '../apiMap/apiMap.json';
 })
 export class LoginService {
 
+  constructor(private http: HttpClient) { }
+
   private baseurl = 'http://192.168.43.116:8585/';
   apiUrl: string;
 
-  constructor(private http: HttpClient) { }
-
   checkUser(data: string): Observable<Object> {
-    this.apiUrl = ApiMap.api.loginApi.get.getUser
+    this.apiUrl = ApiMap.api.loginApi.get.getUser;
     return this.http.post(`${this.baseurl}${this.apiUrl}`, data);
     
   }

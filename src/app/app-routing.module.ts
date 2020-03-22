@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { DestinationsComponent } from './destinations/destinations.component';
+import { DestinationsComponent } from './destinations/destinations/destinations.component';
+import { DestinationDetailComponent } from './destinations/destination-detail/destination-detail.component';
 import { TripTypesComponent } from './trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { CitiesComponent } from './cities/cities.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
 import { LeadersComponent } from './leaders/leaders/leaders.component';
@@ -23,9 +23,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'reset-password', component: ResetPasswordComponent},
   { path: 'destinations', component: DestinationsComponent },
-  { path: 'where-to-go', component: TripTypesComponent },
+  { path: 'destinations/:cityName', component: DestinationDetailComponent },
+  { path: 'where-to-go', component: TripTypesComponent }, 
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'cities', component: CitiesComponent },
   { path: 'leaders', component: LeadersComponent },
   { path: 'leaders/:leaderName' , component: LeaderDetailComponent },
   { path: 'hotels', component: HotelsComponent },

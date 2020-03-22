@@ -36,6 +36,8 @@ export class NavigationComponent implements OnInit {
   showTripTypesThird: boolean = false;
   showTripTypesFourth: boolean = false;
 
+  showAdmin: boolean = false;
+
   cityname: string = 'iran';
 
   constructor(
@@ -98,6 +100,8 @@ export class NavigationComponent implements OnInit {
       this.showCollapse = !this.showCollapse;
       this.showDestinationsCollapse = false;
       this.showTripTypesCollapse = false;
+    } else if(e == 'logged'){
+      this.showAdmin = !this.showAdmin;
     }
   }
 
@@ -123,7 +127,7 @@ export class NavigationComponent implements OnInit {
 
   clearCookie() {
     this.cookieService.delete('username');
-    this.router.navigate(['/']);
+    window.location.reload();
   }
 
 }
