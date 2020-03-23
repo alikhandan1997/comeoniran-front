@@ -11,7 +11,7 @@ import { NavigationComponent } from './modules/navigation/navigation.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { DestinationsComponent } from './destinations/destinations/destinations.component';
-import { TripTypesComponent } from './trip-types/trip-types.component';
+import { TripTypesComponent } from './trip-types/trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
@@ -22,6 +22,7 @@ import { HotelsDetailComponent } from './hotels/hotels-detail/hotels-detail.comp
 import { ToursDetailComponent } from './tours/tours-detail/tours-detail.component';
 import { LeaderDetailComponent } from './leaders/leaders-detail/leader-detail.component';
 import { DestinationDetailComponent } from './destinations/destination-detail/destination-detail.component';
+import { TripTypeDetailComponent } from './trip-types/trip-type-detail/trip-type-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DestinationDetailComponent } from './destinations/destination-detail/de
     HotelsDetailComponent,
     ToursDetailComponent,
     LeaderDetailComponent,
-    DestinationDetailComponent
+    DestinationDetailComponent,
+    TripTypeDetailComponent
   ],
   imports: [
     BrowserModule,

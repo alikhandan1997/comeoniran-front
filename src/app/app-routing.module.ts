@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { DestinationsComponent } from './destinations/destinations/destinations.component';
 import { DestinationDetailComponent } from './destinations/destination-detail/destination-detail.component';
-import { TripTypesComponent } from './trip-types/trip-types.component';
+import { TripTypesComponent } from './trip-types/trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { RegisterComponent } from './login/register/register.component';
 import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
