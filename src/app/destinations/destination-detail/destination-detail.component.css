@@ -1,0 +1,117 @@
+.top-image {
+    position: relative;
+    background-image: url(../../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+
+.header h1 {
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.little-desc {
+    padding-top: 3%;
+}
+
+.little-desc p {
+    width: 80%;
+    color: black;
+    font-weight: 400;
+}
+
+.main-content {
+    margin-top: 3%;
+}
+
+.main-content .leader .desc {
+    background-color: white;
+    margin-bottom: 5%;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-left: 1px solid rgb(212, 212, 212);
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+.hotel-tour {
+    padding-left: 5%;
+}
+
+.hotel-tour .hotel-head {
+    padding: 5% 2% 2% 2%;
+    width: 100%;
+}
+
+.hotel-tour .hotel-head h3 {
+    font-weight: 600;
+}
+
+.hotel-tour .hotel-head h3 a {
+    font-size: 13px;
+    float: right;
+}
+
+.hotel-tour .tour-head {
+    padding: 13% 2% 2% 2%;
+}
+
+.hotel-tour .tour-head h3 a {
+    font-size: 13px;
+    float: right;
+}
+
+.hotel-tour .image img {
+    position: relative;
+}
+
+.hotel-tour .image .price {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: rgb(253, 188, 8);
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+}
+
+.hotel-tour .image .price a {
+    color : white;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.hotel-tour .image:hover .price {
+    background-color: #0297c9;
+}
+
+.hotel-tour .desc {
+    background-color: white;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-left: 1px solid rgb(212, 212, 212);
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+.hotel-tour .desc .days {
+    float: right;
+}
+
+.hotel-tour .desc .days a {
+    color: black;
+}
+
+.city-desc-map {
+    margin-top: 5%;
+}
+
+.time-head {
+    margin-top: 5%;
+}
