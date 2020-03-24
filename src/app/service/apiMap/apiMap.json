@@ -2,12 +2,12 @@
     "api": {
         "loginApi": {
             "get" : {
-                "getUser": "api/login/"
+                "getUser": "/api/login/"
             }
         },
         "registerApi": {
             "post" : {
-                "postUser": "api/register/"
+                "postUser": "/api/register/"
             }
         },
         "accountApi": {
