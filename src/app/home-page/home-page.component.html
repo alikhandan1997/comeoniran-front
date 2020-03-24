@@ -2,11 +2,29 @@
 <section class="banner_part">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-10">
+            <div class="col-lg" style="width: 100%;">
                 <div class="banner_text">
-                    <div class="banner_text_iner">
-                        <h5>Create tailor-made tours with local travel agents</h5>
-                    </div>
+                    <span class="up-head">
+                        <span>
+                            Discover
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                        </span>
+                        <span>
+                            Easy
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                        </span>
+                        <span>
+                            Travel
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                            <i class="fas fa-circle"></i>
+                        </span>
+                    </span>
+                    <h5>Create tailor-made tours with local travel agents</h5>
                 </div>
             </div>
         </div>
@@ -22,7 +40,7 @@
                 <div class="search_form">
                     <form class="form-inline">
                         <i class="fas fa-map-marked-alt"></i>
-                        <input type="email" id="email" placeholder="Where would you like to go?" onfocus="this.placeholder = ''">
+                        <input type="email" id="email" placeholder="Where would you like to go?">
                         <button class="submit" type="submit">Discover</button>
                         <button class="triptypes" type="submit">Not sure yet? Try our Trip Finder</button>
                       </form>
@@ -33,30 +51,36 @@
             <h1>Popular options</h1>
         </div>
         <div class="row donation">
-            <div class="col-lg-4 col-md">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="top-item-content">
                     <h4>Hotels</h4>
-                    <a href="hotels"><img src="../../assets/hotel-main.jpeg" alt="#"></a>
+                    <a href="hotels">
+                        <img src="../../assets/hotel-main.jpeg" alt="#">
+                    </a>
                     <div class="desc">
                         <h5>Yazd</h5>
                         <a href="/" onclick="return false">3 hotels</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="top-item-content">
                     <h4>Tours</h4>
-                    <a href="tours"><img src="../../assets/tour-main.jpg" alt="#"></a>
+                    <a href="tours">
+                        <img src="../../assets/tour-main.jpg" alt="#">
+                    </a>
                     <div class="desc">
                         <h5>Yazd</h5>
                         <a href="/" onclick="return false">3 tours</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="top-item-content">
                     <h4>Leaders</h4>
-                    <a href="leaders"><img src="../../assets/leader-main.jpg" alt="#"> </a> 
+                    <a href="leaders">
+                        <img src="../../assets/leader-main.jpg" alt="#">
+                    </a> 
                     <div class="desc">
                         <h5>Yazd</h5>
                         <a href="/" onclick="return false">3 leaders</a>
@@ -111,7 +135,9 @@
             </div>
         </div>
         <div class="about-us">
-            <a href="about-us"><button class="about-us-button" type="submit">Read more about ComeOnIran</button></a>
+            <a href="about-us">
+                <button class="about-us-button" type="submit">Read more about ComeOnIran</button>
+            </a>
         </div>
     </div>
 </section>
@@ -138,9 +164,9 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 leader-box">
                 <div class="image">
-                    <a [routerLink] = "['/hotels', 'hotelname']">
+                    <a [routerLink] = "['/leaders', 'leadername']">
                         <img src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
@@ -154,13 +180,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
-                        <span>(20 Reviews)</span>
                     </span>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="col-lg-3 col-md-3 col-sm-6 leader-box">
                 <div class="image">
-                    <a [routerLink] = "['/hotels', 'hotelname']">
+                    <a [routerLink] = "['/leaders', 'leadername']">
                         <img src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
@@ -174,7 +199,6 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
-                        <span>(20 Reviews)</span>
                     </span>
                 </div>
             </div>

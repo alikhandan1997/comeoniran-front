@@ -10,23 +10,65 @@
   
   @media (max-width: 991px) {
     .banner_part {
-      height: 500px;
+      height: 450px;
       background-size: 100% 90%;
     }
   }
   
   .banner_part .banner_text {
-    padding-top: 130px;
+    width: 100%;
+    padding-top: 10%;
+  }
+
+  @media screen and (max-width:576px) {
+    .banner_part .banner_text {
+      padding-top: 30%;
+    }
   }
   
+  .banner_part .banner_text .up-head {
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+  }
+
+  @media screen and (max-width:576px) {
+    .banner_part .banner_text .up-head {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .banner_part .banner_text .up-head span {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width:576px){
+    .banner_part .banner_text .up-head span {
+      margin: 0;
+    }
+  }
+
+  .banner_part .banner_text .up-head i {
+    font-size: 7px;
+    margin-right: 5px;
+  }
+
+  .banner_part .banner_text .up-head span:nth-child(even) i {
+    color: yellow;
+  }
+
+  .banner_part .banner_text .up-head span:nth-child(odd) i {
+    color: blue;
+  }
   
   .banner_part .banner_text h5 {
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 34px;
     margin-left: 10%;
+    margin-top: 3%;
   }
   
   @media (max-width: 756px) {
@@ -34,24 +76,20 @@
       font-size: 30px;
     }
   }
+
+  @media screen and (max-width:576px) {
+    .banner_part .banner_text h5 {
+      margin-left: 0;
+    }
+  }
   /* banner part end  */
 /*---------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
 
   /* search part start  */
   .search_your_country {
     max-width: 100%;
     margin: 0 auto;
     background-color: rgb(250, 249, 248);
-    box-shadow: -1.717px 8.835px 85.56px 6.44px rgba(170, 170, 170, 0.29);
     padding: 165px 0 100px;
     position: relative;
     margin-top: -254px;
@@ -255,6 +293,18 @@
     border-radius: 10px;
   }
 
+  @media screen and (max-width:640px) {
+    .top-item-content img {
+      height: 180px;
+    }
+  }
+
+  @media screen and (max-width:360px) {
+    .top-item-content img {
+      height: 200px;
+    }
+  }
+
   .top-item-content img:hover {
     margin-top: -5%;
     box-shadow: 5px 10px #a1a1a1;
@@ -327,13 +377,8 @@
   margin-left: 5%;
 }
 
-.advantages .content .head-icon {
-  margin-bottom: -30px;
-}
-
 @media screen and (max-width:576px) {
   .advantages .content .head-icon {
-    margin-top: 10px;
     margin-bottom: -1px;
   }
 }
@@ -393,9 +438,15 @@
   background-color: #03b2ec;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:670px) {
   .advantages .about-us-button {
-    margin: 0 0 5% 17%;
+    margin: 0 0 5% 27%;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .advantages .about-us-button {
+    margin: 0 0 5% 12%;
   }
 }
 
@@ -404,6 +455,12 @@
 .leaders {
   margin-top: 10%;
   width: 90%;
+}
+
+@media screen and (max-width:640px) {
+  .leaders .leader-detail {
+    margin-left: 5%;
+  }
 }
 
 .leaders .leader-detail .head-icon {
@@ -436,8 +493,14 @@
 
 @media screen and (max-width:576px) {
   .leaders .leader-detail .see-more {
-    margin-left: 20%;
+    margin-left: 10%;
   }
+}
+
+@media screen and (max-width:360px) {
+  .leaders .leader-box {
+    margin-left: 10%;
+  } 
 }
 
 /* ------------------------------------------------------------------------------------------------- */
