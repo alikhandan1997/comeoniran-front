@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
 
   admin: boolean = false;
 
+  cookieAccess: string;
+
   ngOnInit() {
   }
 
@@ -48,10 +50,13 @@ export class LoginComponent implements OnInit {
   loginUser = () => {  
     this.loginService.checkUser(this.userData)
     .subscribe((data)=>{
+      console.log(data['result']['access']);
+      this.cookieAccess = data['result']['access'];
       this.status = data['status'];
-      if(this.status == 200 ) {
-        this.cookieService.set('username', this.userData.username);
-        window.location.replace('/');
+
+      if(this.status == 200) {
+        this.cookieService.set('username', this.cookieAccess);
+        // window.location.replace('/');
       }
     },
     (error) => {
