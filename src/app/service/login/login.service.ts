@@ -10,7 +10,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  private baseurl = 'http://192.168.43.116:8585/';
+  private baseurl = 'http://192.168.43.116:8585';
   apiUrl: string;
 
   checkUser(data: string): Observable<Object> {
