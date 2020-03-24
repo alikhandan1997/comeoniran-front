@@ -1,15 +1,5 @@
 {
     "api": {
-        "loginApi": {
-            "get" : {
-                "getUser": "/api/login/"
-            }
-        },
-        "registerApi": {
-            "post" : {
-                "postUser": "/api/register/"
-            }
-        },
         "accountApi": {
             "get": {
                 "getManagers": "/api/account/managers/",
@@ -17,21 +7,6 @@
                 "getProvidersDetail": "/api/account/service-providers/{id}/",
                 "getUsers": "/api/account/users/",
                 "getUsersDetail": "/api/account/users/{id}/"
-            },
-            "post": {
-                "postManagers": "/api/account/managers/"
-            },
-            "put": {
-                "updateProvider": "/api/account/service-providers/{id}/",
-                "updateUser": "/api/account/users/{id}/"
-            },
-            "patch": {
-                "patchProvider": "/api/account/service-providers/{id}/",
-                "patchUser": "/api/account/users/{id}/"
-            },
-            "delete": {
-                "deleteProvider": "/api/account/service-providers/{id}/",
-                "deleteUser": "/api/account/users/{id}/"
             }
         },
         "servicesApi": {
@@ -41,20 +16,6 @@
                 "getServicesList": "/api/services/list/",
                 "getServicesDetail": "/api/services/list/{id}/",
                 "getTripType": "/api/services/trip-type/"
-            },
-            "post": {
-                "postServices": "/api/services/create/",
-                "postServicesImage": "/api/services/image/",
-                "postTripType": "/api/services/trip-type/"
-            },
-            "put": {
-                "putServicesList": "/api/services/list/{id}/"
-            },
-            "patch": {
-                "patchServicesList": "/api/services/list/{id}/"
-            },
-            "delete": {
-                "deleteServicesList": "/api/services/list/{id}/"
             }
         }
     }

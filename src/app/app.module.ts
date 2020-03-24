@@ -6,15 +6,12 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login/login.component';
 import { NavigationComponent } from './modules/navigation/navigation.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { DestinationsComponent } from './destinations/destinations/destinations.component';
 import { TripTypesComponent } from './trip-types/trip-types/trip-types.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { RegisterComponent } from './login/register/register.component';
-import { ResetPasswordComponent } from './login/reset-password/reset-password.component';
 import { LeadersComponent } from './leaders/leaders/leaders.component';
 import { HotelsComponent } from './hotels/hotels/hotels.component';
 import { ToursComponent } from './tours/tours/tours.component';
@@ -27,15 +24,12 @@ import { TripTypeDetailComponent } from './trip-types/trip-type-detail/trip-type
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     NavigationComponent,
     HomePageComponent,
     FooterComponent,
     DestinationsComponent,
     TripTypesComponent,
     AboutUsComponent,
-    RegisterComponent,
-    ResetPasswordComponent,
     LeadersComponent,
     HotelsComponent,
     ToursComponent,
