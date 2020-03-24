@@ -99,11 +99,12 @@
             <li><a href="/" onclick="return false;" (click)="cityClick('Esfahan')">Esfahan</a></li>
           </ul> -->
           <div class="best-cities">
-            <h4>Top destinations of the moment in {{cityname}}</h4>
+            <h4>Top destinations of the moment in iran</h4>
             <div class="row best-cities-pic">
               <span>
                 <a [routerLink]="['destinations', 'yazd']">
                   <img src="../../assets/city.jpg" alt="">
+                  <h6>Yazd</h6>
                 </a>
               </span>
               <span>
@@ -267,18 +268,15 @@
       <div class="destinations-content-collapse" *ngIf="showDestinationsCollapse && showCollapse">
         <div class="row">
           <div class="cities">
-            <ul class="cities-name">
+            <!-- <ul class="cities-name">
               <li><a href="/" onclick="return false;" (click)="cityClick('Iran')">All</a></li>
               <li><a href="/" onclick="return false;" (click)="cityClick('Tehran')">Tehran</a></li>
               <li><a href="/" onclick="return false;" (click)="cityClick('Yazd')">Yazd</a></li>
               <li><a href="/" onclick="return false;" (click)="cityClick('Esfahan')">Esfahan</a></li>
-            </ul>
+            </ul> -->
             <div class="best-cities">
-              <h4>Top destinations of the moment in {{cityname}}</h4>
+              <h4>Top destinations of the moment in iran</h4>
               <div class="row best-cities-pic">
-                <span><img src="../../assets/city.jpg" alt=""></span>
-                <span><img src="../../assets/city.jpg" alt=""></span>
-                <span><img src="../../assets/city.jpg" alt=""></span>
                 <span><img src="../../assets/city.jpg" alt=""></span>
                 <span><img src="../../assets/city.jpg" alt=""></span>
                 <span><img src="../../assets/city.jpg" alt=""></span>

@@ -176,10 +176,16 @@
 }
 
 .best-cities img {
+    position: relative;
     height: 120px;
     width: 120px;
     margin-top: 10px;
     margin-right: 20px;
+}
+
+.best-cities .city-name a {
+    color: black;
+    font-weight: 600;
 }
 
 .cities-name {

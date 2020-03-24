@@ -1,6 +1,7 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
+import { NavigationService } from 'src/app/service/navigation/navigation.service';
 
 @Component({
   selector: 'app-navigation',
@@ -38,11 +39,10 @@ export class NavigationComponent implements OnInit {
 
   showAdmin: boolean = false;
 
-  cityname: string = 'iran';
-
   constructor(
     private cookieService: CookieService,
-    private router: Router
+    private router: Router,
+    private navService: NavigationService
     ) { }
 
   ngOnInit(){
@@ -59,6 +59,8 @@ export class NavigationComponent implements OnInit {
       this.showLogin = false;
       this.showLogged = true;
     }
+
+    this.getCity();
   }
 
   mouseEnter = (div : string) => {
@@ -121,13 +123,16 @@ export class NavigationComponent implements OnInit {
     } 
   }
 
-  cityClick = (city: string) => {
-    this.cityname = city;
-  }
-
   clearCookie() {
     this.cookieService.delete('username');
     window.location.reload();
+  }
+
+  getCity = () => {
+    this.navService.getCity()
+    .subscribe((data)=> {
+      console.log(data['result']);
+    })
   }
 
 }
