@@ -5,6 +5,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { DestinationsComponent } from './destinations/destinations/destinations.component';
 import { DestinationDetailComponent } from './destinations/destination-detail/destination-detail.component';
 import { TripTypesComponent } from './trip-types/trip-types/trip-types.component';
+import { TripTypeDetailComponent } from './trip-types/trip-type-detail/trip-type-detail.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LeadersComponent } from './leaders/leaders/leaders.component';
 import { LeaderDetailComponent } from './leaders/leaders-detail/leader-detail.component';
@@ -14,11 +15,13 @@ import { ToursComponent } from './tours/tours/tours.component';
 import { ToursDetailComponent } from './tours/tours-detail/tours-detail.component';
 
 
+
 const routes: Routes = [
   { path: '' , component: HomePageComponent },
   { path: 'destinations', component: DestinationsComponent },
   { path: 'destinations/:cityName', component: DestinationDetailComponent },
-  { path: 'where-to-go', component: TripTypesComponent }, 
+  { path: 'trip-types', component: TripTypesComponent }, 
+  { path: 'trip-types/:trip-type', component: TripTypeDetailComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'leaders', component: LeadersComponent },
   { path: 'leaders/:leaderName' , component: LeaderDetailComponent },

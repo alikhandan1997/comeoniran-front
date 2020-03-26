@@ -14,7 +14,7 @@
             <i class="fa fa-angle-downfa fa-angle-down"></i>
           </a>
 
-          <a href="where-to-go" class="header-head-link" (mouseenter)="mouseEnter('triptypes')">
+          <a href="trip-types" class="header-head-link" (mouseenter)="mouseEnter('triptypes')">
             Trip Type
             <i class="fa fa-angle-downfa fa-angle-down"></i>
           </a>
@@ -101,30 +101,11 @@
           <div class="best-cities">
             <h4>Top destinations of the moment in iran</h4>
             <div class="row best-cities-pic">
-              <span>
-                <a [routerLink]="['destinations', 'yazd']">
-                  <img src="../../assets/city.jpg" alt="">
-                  <h6>Yazd</h6>
+              <span *ngFor="let item of cityData">
+                <a [routerLink]="['/destinations', item.city__name]">
+                  <img src ="http://192.168.43.116:8585/media/{{item.city__image}}" alt="">
+                  <h6>{{item.city__name}}</h6>
                 </a>
-              </span>
-              <span>
-                <a href="">
-                  <img src="../../assets/city.jpg" alt="">
-                </a>
-              </span>
-              <span>
-                <a href="">
-                  <img src="../../assets/city.jpg" alt="">
-                </a>
-              </span>
-              <span>
-                <img src="../../assets/city.jpg" alt="">
-              </span>
-              <span>
-                <img src="../../assets/city.jpg" alt="">
-              </span>
-              <span>
-                <img src="../../assets/city.jpg" alt="">
               </span>
             </div>
           </div>
@@ -142,7 +123,7 @@
           <h4>Browse our tour ideas by category</h4>
         </div>
         <div class="trip-types-head-button col-lg-6">
-          <a href="where-to-go"><input type="submit" value="See all tour ideas"></a>
+          <a href="trip-types"><input type="submit" value="See all tour ideas"></a>
         </div>
       </div>
       <div class="row">
@@ -154,7 +135,7 @@
                 <th colspan="3">Travel Style</th>
               </tr>
               <tr>
-                <td><a href="">Couples</a></td>
+                <td><a [routerLink]="['/trip-types', 'Couples']">Couples</a></td>
                 <td><a href="">Smith</a></td>
               </tr>
               <tr>
@@ -324,7 +305,7 @@
           </a>
         </li>
       </ul>
-      <a href="where-to-go" *ngIf="!showTripTypesFirst && !showTripTypesSeacond && !showTripTypesThird && !showTripTypesFourth"><input type="submit" value="See all tour ideas"></a>
+      <a href="trip-types" *ngIf="!showTripTypesFirst && !showTripTypesSeacond && !showTripTypesThird && !showTripTypesFourth"><input type="submit" value="See all tour ideas"></a>
     </div>
     <!-- end collapse trip types content  -->
 

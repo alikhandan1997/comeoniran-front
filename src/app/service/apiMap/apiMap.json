@@ -1,20 +1,19 @@
 {
     "api": {
-        "accountApi": {
-            "get": {
-                "getManagers": "/api/account/managers/",
-                "getProviders": "/api/account/service-providers/",
-                "getProvidersDetail": "/api/account/service-providers/{id}/",
-                "getUsers": "/api/account/users/",
-                "getUsersDetail": "/api/account/users/{id}/"
-            }
-        },
         "servicesApi": {
             "get": {
-                "getCity": "/api/services/destination/city/",
-                "getCountry": "/api/services/destination/country/",
+                "getService": "/api/services/",
+                "getCity": "/api/services/city/",
+                "getCountry": "/api/services/country/",
+                "getDestination": "/api/services/destination/",
+                "getDestinationCity": "/api/services/destination/city/",
+                "getServiceImage": "/api/services/image/",
+                "getServiceImageDetail": "/api/services/image/{id}/",
+                "getLeader": "/api/services/leaders/",
                 "getServicesList": "/api/services/list/",
                 "getServicesDetail": "/api/services/list/{id}/",
+                "getPossibilities": "/api/services/possibilities/",
+                "getServiceType": "/api/services/service-type/",
                 "getTripType": "/api/services/trip-type/"
             }
         }

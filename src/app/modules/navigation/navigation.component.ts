@@ -1,6 +1,5 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
 import { NavigationService } from 'src/app/service/navigation/navigation.service';
 
 @Component({
@@ -39,9 +38,12 @@ export class NavigationComponent implements OnInit {
 
   showAdmin: boolean = false;
 
+  cityData = [];
+  triptypeData = [];
+  leaderData = [];
+
   constructor(
     private cookieService: CookieService,
-    private router: Router,
     private navService: NavigationService
     ) { }
 
@@ -60,7 +62,8 @@ export class NavigationComponent implements OnInit {
       this.showLogged = true;
     }
 
-    this.getCity();
+    this.getDestinationCity();
+    this.getTripType();
   }
 
   mouseEnter = (div : string) => {
@@ -128,11 +131,17 @@ export class NavigationComponent implements OnInit {
     window.location.reload();
   }
 
-  getCity = () => {
-    this.navService.getCity()
-    .subscribe((data)=> {
-      console.log(data['result']);
+  getDestinationCity = () => {
+    this.navService.getDestinationCity().subscribe((data) => {
+      this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('cityData:', this.cityData);
     })
   }
 
+  getTripType = () => {
+    this.navService.getTripType().subscribe((data) => {
+      this.triptypeData = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('triptypeData:', this.triptypeData);
+    })
+  }
 }

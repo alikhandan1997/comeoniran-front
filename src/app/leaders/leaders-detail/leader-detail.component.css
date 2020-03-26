@@ -63,6 +63,16 @@
     height: 250px;
 }
 
+.tour-idea .desc-top h5 {
+    text-align: center;
+}
+
+.tour-idea .desc-top p {
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+}
+
 .tour-idea .desc h4 {
     text-align: left;
 }
@@ -98,6 +108,10 @@
     padding: 20px;
     width: 100%;
   }
+
+  .other-leader .head {
+      padding: 2% 0 2% 0;
+  }
   
   .other-leader .content .image img {
     width: 100%;
@@ -117,20 +131,4 @@
     margin-bottom: 10%;
   }
   
-  .other-leader .content .price {
-    position: absolute;
-    top:30px;
-    left: 30px;
-    background-color: rgb(115, 236, 245);
-    padding: 10px 30px 10px 30px;
-    border-radius: 30px;
-  }
-  
-  .other-leader .content .price a {
-    color : black;
-  }
-  
-  .other-leader .content .date {
-    float: right;
-  }
   

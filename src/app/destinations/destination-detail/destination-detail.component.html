@@ -1,6 +1,6 @@
-<section class="top-image">
+<section class="top-image" [ngStyle] = " {'background-image': 'url(' + cityImage + ')'}">
     <div class="header">
-        <h1>Travel to City</h1>
+        <h1>Travel to {{cityName}}</h1>
     </div>
 </section>
 
@@ -13,6 +13,7 @@
         <div class="main-content">
             <div class="row">
                 <div class="col-lg-3 leader">
+                    <h3>Yazd top leaders</h3>
                     <div class="image">
                         <a [routerLink] = "['/leaders', 'leadername']">
                             <img src="../../assets/city.jpg" alt="">

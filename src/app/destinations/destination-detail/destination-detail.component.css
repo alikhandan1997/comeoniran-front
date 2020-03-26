@@ -1,6 +1,6 @@
 .top-image {
     position: relative;
-    background-image: url(../../../assets/back-ground.jpg);
+    /* background-image: url(../../../assets/back-ground.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -27,6 +27,15 @@
 
 .main-content {
     margin-top: 3%;
+}
+
+.main-content .leader{
+    padding-top: 3%;
+}
+
+.main-content .leader h3 {
+    padding: 2% 0 5% 0;
+    font-weight: 600;
 }
 
 .main-content .leader .desc {

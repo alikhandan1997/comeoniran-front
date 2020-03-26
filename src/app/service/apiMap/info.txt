@@ -1,0 +1,3 @@
+getService => get all hotels and tours / ?tour get tour ?hotel get hotel / &top get top 6 hotel or tour 
+
+getCity => 
