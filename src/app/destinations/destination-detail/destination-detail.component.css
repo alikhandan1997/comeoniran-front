@@ -1,6 +1,6 @@
 .top-image {
     position: relative;
-    /* background-image: url(../../../assets/back-ground.jpg); */
+    background-image: url(../../../assets/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -47,6 +47,17 @@
     border-bottom: 1px solid rgb(212, 212, 212);
     border-left: 1px solid rgb(212, 212, 212);
     border-right: 1px solid rgb(212, 212, 212);
+}
+
+.main-content .leader .other-leader {
+    background-color: #0297c9;
+    text-align: center;
+    padding: 5%;
+}
+
+.main-content .leader .other-leader a {
+    color: white;
+    font-weight: 600;
 }
 
 .hotel-tour {

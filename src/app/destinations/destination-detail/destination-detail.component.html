@@ -1,4 +1,4 @@
-<section class="top-image" [ngStyle] = " {'background-image': 'url(' + cityImage + ')'}">
+<section class="top-image" [ngStyle] = " cityImage && {'background-image': 'url(' + cityImage + ')'}">
     <div class="header">
         <h1>Travel to {{cityName}}</h1>
     </div>
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="other-leader">
-                        <a href="">Other Leaders</a>
+                        <a [routerLink] = "['/leaders']">Other Leaders</a>
                     </div>
                 </div>
                 <div class="col-lg-9 hotel-tour">
