@@ -54,3 +54,36 @@
     font-weight: 600;
     padding-bottom: 2%;
 }
+
+.type-box .items .image img {
+    position: relative;
+}
+
+.type-box .items .image .price {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: rgb(253, 188, 8);
+    padding: 10px 30px 10px 30px;
+    border-radius: 30px;
+}
+
+.type-box .items .image .price a {
+    color : white;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.type-box .items .image:hover .price {
+    background-color: #0297c9;
+}
+
+.other-trip-type {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.other-trip-type .head h3 {
+    font-weight: 600;
+    padding-bottom: 3%;
+}
