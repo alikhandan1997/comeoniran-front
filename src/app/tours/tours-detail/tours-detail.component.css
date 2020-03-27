@@ -1,0 +1,149 @@
+.top-image {
+    position: relative;
+    background-image: url(../../../assets/back-ground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+
+.hotel-box {
+    margin-top: 5%;
+}
+
+.hotel-box .desc p {
+    color: black;
+    font-weight: 500;
+}
+
+.hotel-box .owner {
+    margin-top: 10%;
+}
+
+.hotel-box .owner .name h3 {
+    padding-bottom: 5%;
+    font-weight: 600;
+}
+
+.hotel-box .owner .desc {
+    background-color: white;
+    margin-bottom: 5%;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-left: 1px solid rgb(212, 212, 212);
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+.hotel-box .gallery {
+    margin-top: 3%;
+}
+
+.hotel-box .gallery .header h3 {
+    padding-bottom: 2%;
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-box .gallery .header h3 {
+        text-align: center;
+    }
+}
+
+.hotel-box .gallery .top-item-content {
+    padding: 5%;
+}
+
+.hotel-box .gallery .see-more {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.hotel-box .gallery .see-more a {
+    background-color: #0297c9;
+    color: white;
+    font-weight: 500;
+    padding: 2% 2% 2% 2%;
+    border-radius: 5px;
+}
+
+.tour-desc-map {
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+.tour-desc-map .possibilities h3 {
+    padding-bottom: 5%;
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .tour-desc-map .possibilities h3 {
+        text-align: center;
+    }
+}
+
+.tour-desc-map .head h3{
+    padding-bottom: 5%;
+    font-weight: 600;
+}
+
+.tour-desc-map .map-box h3{
+    font-weight: 600;
+    padding-bottom: 5%;
+}
+
+@media screen and (max-width:700px) {
+    .tour-desc-map .map-box h3 {
+        text-align: center;
+    }
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 10%;
+    border: 1px solid black;
+  }
+
+.tour-desc-map .poss div {
+    padding: 2% 2% 2% 0;
+    text-align: center;
+}
+
+.tour-desc-map .poss i {
+    font-size: 60px;
+    color: gray;
+}
+
+@media screen and (max-width:700px){
+    .tour-desc-map .poss i {
+        font-size: 30px;
+    }
+
+    .tour-desc-map .poss h4 {
+        font-size: 15px;
+    }
+}
+
+.other-hotels {
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width:700px) {
+    .other-hotels .other-head h3{
+        text-align: center;
+    }
+}
+
+.other-hotels .image {
+    position: relative;
+    padding: 5%;
+}
+
+.other-hotels .desc {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+}
