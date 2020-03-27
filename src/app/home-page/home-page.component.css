@@ -508,7 +508,7 @@
 
 .popular_hotels .section_tittle h2 {
   margin-top: -15%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 @media screen and (max-width:991px) {
@@ -581,13 +581,7 @@
 }
 
 .popular_hotels .see-More {
-  margin-left: 43%;
-}
-
-@media screen and (max-width:576px) {
-  .popular_hotels .see-More {
-    margin-left: 30%;
-  }
+  text-align: center;
 }
 
 .popular_hotels .see-More button {
@@ -715,18 +709,11 @@
 }
 
 .tour_package .content .days {
-  margin-left: 26%;
+  float: right;
 }
 
 .tour_package .see-More {
-  margin-left: 43%;
-  margin-top: 1%;
-}
-
-@media screen and (max-width:576px) {
-  .tour_package .see-More {
-    margin-left: 30%;
-  }
+  text-align: center;
 }
 
 .tour_package .see-More button {
