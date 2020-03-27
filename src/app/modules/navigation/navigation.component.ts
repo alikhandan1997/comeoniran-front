@@ -1,5 +1,4 @@
 import { Component, OnInit , Input} from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
 import { NavigationService } from 'src/app/service/navigation/navigation.service';
 
 @Component({
@@ -43,7 +42,6 @@ export class NavigationComponent implements OnInit {
   leaderData = [];
 
   constructor(
-    private cookieService: CookieService,
     private navService: NavigationService
     ) { }
 
@@ -124,11 +122,6 @@ export class NavigationComponent implements OnInit {
       this.showTripTypesFourth = !this.showTripTypesFourth;
       this.TripTypeChild = !this.TripTypeChild;
     } 
-  }
-
-  clearCookie() {
-    this.cookieService.delete('username');
-    window.location.reload();
   }
 
   getDestinationCity = () => {
