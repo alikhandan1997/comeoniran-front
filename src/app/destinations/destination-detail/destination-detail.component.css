@@ -21,6 +21,12 @@
     }
 }
 
+@media screen and (max-width:400px) {
+    .header h1 {
+        padding-top: 35%;
+    }
+}
+
 .little-desc {
     padding-top: 3%;
 }
@@ -49,6 +55,16 @@
     font-weight: 600;
 }
 
+@media screen and (max-width:700px){
+    .main-content .leader h3 {
+        text-align: center;
+    }
+}
+
+.main-content .leader .leader-box {
+    padding-bottom: 5%;
+}
+
 .main-content .leader .desc {
     background-color: white;
     margin-bottom: 5%;
@@ -70,6 +86,7 @@
 @media screen and (max-width:700px) {
     .main-content .leader .other-leader {
         padding: 2%;
+        margin-bottom: 5%;
     }
 }
 
@@ -83,22 +100,70 @@
     width: 100%;
 }
 
+@media screen and (max-width:400px) {
+    .hotel-tour .hotel-head {
+        padding-top: 10%;
+    }
+}
+
 .hotel-tour .hotel-head h3 {
     font-weight: 600;
 }
 
-.hotel-tour .hotel-head h3 a {
-    font-size: 13px;
-    float: right;
+@media screen and (max-width:700px) {
+    .hotel-tour .hotel-head h3 {
+        text-align: center;
+    }
 }
 
+.hotel-tour .hotel-head h3 a {
+    font-size: 13px;
+    margin-left: 45%;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-tour .hotel-head h3 a {
+        margin-left: 7%;
+        background-color: #0297c9;
+        color: white;
+        padding: 1%;
+        border-radius: 5px;
+    }
+}
+/* ---------------------------------------------- */
 .hotel-tour .tour-head {
     padding: 20% 2% 2% 2%;
 }
 
+.hotel-tour .tour-head h3 {
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-tour .tour-head h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-with:700px) {
+    .hotel-tour .tour-head {
+        padding-top: 5%;
+    }
+}
+
 .hotel-tour .tour-head h3 a {
     font-size: 13px;
-    float: right;
+    margin-left: 45%;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-tour .tour-head h3 a {
+        margin-left: 10%;
+        background-color: #0297c9;
+        color: white;
+        padding: 1%;
+        border-radius: 5px;
+    }
 }
 
 .hotel-tour .image img {
@@ -112,6 +177,22 @@
     background-color: rgb(253, 188, 8);
     padding: 10px 30px 10px 30px;
     border-radius: 30px;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-tour .image .price{
+        padding: 5px;
+        top: 10px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .hotel-tour .image .price {
+        padding: 10px 20px 10px 20px;
+        top: 20px;
+        left: 30px;
+    }
 }
 
 .hotel-tour .image .price a {
@@ -132,6 +213,12 @@
     border-bottom: 1px solid rgb(212, 212, 212);
     border-left: 1px solid rgb(212, 212, 212);
     border-right: 1px solid rgb(212, 212, 212);
+}
+
+@media screen and (max-width:400px) {
+    .hotel-tour .desc {
+        margin-bottom: 10%;
+    }
 }
 
 .hotel-tour .desc .days {
@@ -170,7 +257,11 @@
     .city-desc-map .about-head h3 {
         text-align: center;
     }
+    .city-desc-map .about-head p {
+        text-align: center;
+    }
 }
+
 
 .city-desc-map .month {
     text-align: center;

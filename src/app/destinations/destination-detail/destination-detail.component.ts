@@ -34,7 +34,7 @@ export class DestinationDetailComponent implements OnInit {
     this.href = window.location.href;
     this.hrefPart = this.href.split('/');
     this.pageCity = this.hrefPart[4];
-    this.getCity();    
+    this.getCity(); 
   }
 
   initilizeMap () {
