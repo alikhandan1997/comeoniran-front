@@ -15,12 +15,23 @@
     font-size: 50px;
 }
 
+@media screen and (max-width:700px) {
+    .header h1 {
+        padding-top: 25%;
+    }
+}
+
 .little-desc {
     padding-top: 3%;
 }
 
+@media screen and (max-width:700px){
+    .little-desc {
+        text-align: center;
+    }
+}
+
 .little-desc p {
-    width: 80%;
     color: black;
     font-weight: 400;
 }
@@ -34,7 +45,7 @@
 }
 
 .main-content .leader h3 {
-    padding: 2% 0 5% 0;
+    padding-bottom: 8%;
     font-weight: 600;
 }
 
@@ -53,6 +64,13 @@
     background-color: #0297c9;
     text-align: center;
     padding: 5%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:700px) {
+    .main-content .leader .other-leader {
+        padding: 2%;
+    }
 }
 
 .main-content .leader .other-leader a {
@@ -60,12 +78,8 @@
     font-weight: 600;
 }
 
-.hotel-tour {
-    padding-left: 5%;
-}
-
 .hotel-tour .hotel-head {
-    padding: 5% 2% 2% 2%;
+    padding: 5% 2% 2% 0;
     width: 100%;
 }
 
@@ -133,19 +147,56 @@
 }
 
 .time-head {
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
-.city-desc-map .month {
-    padding: 20px 30px 0 30px;
+.time-head .header h3 {
+    font-weight: 600;
+    padding: 5% 0 5% 0;
+}
+
+@media screen and (max-width:700px){
+    .time-head .header h3 {
+        text-align: center;
+    }
+}
+
+.city-desc-map .about-head h3 {
+    padding: 5% 0 2% 0;
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .city-desc-map .about-head h3 {
+        text-align: center;
+    }
 }
 
 .city-desc-map .month {
     text-align: center;
+    padding-bottom: 2%;
 }
 
 .city-desc-map .month i {
-    font-size: 30px;
+    font-size: 40px;
+    color: gray;
+}
+
+@media screen and (max-width:700px) {
+    .city-desc-map .month i{
+        font-size: 30px;
+    }
+}
+
+.map-desc h3 {
+    padding: 5% 0 5% 0;
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px){
+    .map-desc h3 {
+        text-align: center;
+    }
 }
 
 .map {
@@ -156,10 +207,27 @@
   }
 
 .other-destinations {
-    margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.other-destinations .other-head {
+.other-destinations .other-head h3{
     padding: 30px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .other-destinations .other-head {
+        text-align: center;
+    }
+}
+
+.other-destinations .image {
+    position: relative;
+    padding: 5%;
+}
+
+.other-destinations .desc {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
 }

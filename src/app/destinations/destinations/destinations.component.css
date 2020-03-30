@@ -12,10 +12,29 @@
     margin-top: 5%;
   }
 
+  @media screen and (max-width:700px) {
+    .search-box-head {
+      margin-top: 10%;
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    .search-box-head {
+      margin-top: 20%;
+    }
+  }
+
   .search-box-head h4 {
     font-size: 40px;
     color: white;
     font-weight: 800;
+  }
+
+  @media screen and (max-width:700px) {
+    .search-box-head h4 {
+      font-size: 30px;
+      padding-left: 15%;
+    }
   }
 
   .search-form {
@@ -24,12 +43,19 @@
     width: 80%;
   }
 
+  @media screen and (max-width:700px) {
+    .search-form {
+      width: 100%;
+      margin-left: 5%;
+    }
+  }
+
   .search-form input {
     width: 60%;
     height: 50px;
   }
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width:700px){
     .search-form input {
       width: 100%;
     }
@@ -61,14 +87,21 @@
     padding-bottom: 3%;
     width: 80%;
     background-color: white;
+    border-left: 1px solid rgb(206, 206, 206);
+    border-right: 1px solid rgb(206, 206, 206);
+    border-bottom: 1px solid rgb(206, 206, 206);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   .city-describe h2 {
-    padding: 2%;
+    padding: 2% 2% 0 2%;
+    font-weight: 700;
   }
 
   .city-describe p {
-    padding-left: 2%;
+    padding: 0 2% 2% 2%;
+    color: black;
   }
 
   .city-name {

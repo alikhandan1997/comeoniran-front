@@ -72,7 +72,7 @@
 }
 
 .header-view-container .destination-content {
-    height: 300px;
+    padding-bottom: 2%;
 }
 
 .header-view-container .triptype-content {
@@ -124,28 +124,10 @@
         display: none;
     }
 }
+
 .cities {
-    height: 300px;
     margin-top: 1%;
     margin-left: 10%;
-}
-
-@media screen and (max-width:1125px) {
-    .cities {
-        height: 450px;
-    }
-}
-
-@media screen and (max-width:730px) {
-    .cities {
-        height: 550px;
-    }
-}
-
-@media screen and (max-width:419px) {
-    .cities {
-        height: 800px;
-    }
 }
 
 .cities a {
@@ -334,18 +316,17 @@
     float: right;
 }
 
-.triptype-content-collapse input {
-    font-size: 14px;
+.triptype-content-collapse .see-all {
+    text-align: center;
+    padding: 5%;
+}
+
+.triptype-content-collapse .see-all a {
     background-color: rgb(19, 211, 19);
-    height: 40px;
-    width: 170px;
-    border-radius: 7px;
-    border: none;
     color: white;
-    font-weight: 700;
-    margin-left: 45%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 3%;
+    font-weight: 600;
+    border-radius: 7px;
 }
 
 .triptype-content-collapse-content ul {

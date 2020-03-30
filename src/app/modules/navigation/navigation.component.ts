@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/service/navigation/navigation.service';
 
 @Component({
@@ -8,62 +8,55 @@ import { NavigationService } from 'src/app/service/navigation/navigation.service
 })
 export class NavigationComponent implements OnInit {
 
-  @Input() Logged: any;
+  constructor(
+    private navService: NavigationService
+    ) { }
 
-  href: string;
-  hrefPart: string[];
-
+  // show nav variable 
   showNav: boolean = true;
 
+  // trip type content show variables 
   showLogin: boolean = true;
   showDestinations: boolean = false;
   showTripTypes: boolean = false;
-  showLogged: boolean = false;
 
-  loggedContent: boolean = true;
-  showLoggedOptions: boolean = false;
-
+  // show collapse nav varibale 
   showCollapse: boolean = false;
 
+  // show collapse content varible 
   showTripTypesCollapse: boolean = false;
   showDestinationsCollapse: boolean = false;
-
   TripTypeChild: boolean = true;
 
+  // show trip type content varibale 
   showTripTypesFirst: boolean = false;
   showTripTypesSeacond: boolean = false;
   showTripTypesThird: boolean = false;
   showTripTypesFourth: boolean = false;
 
-  showAdmin: boolean = false;
-
+  // api array varibale 
   cityData = [];
   triptypeData = [];
   leaderData = [];
 
-  constructor(
-    private navService: NavigationService
-    ) { }
+  // trip type content api variable 
+  travelStyleRight = [];
+  travelStyleLeft = [];
+  travelStyle = [];
+  interestRight = [];
+  interestLeft = [];
+  interest = [];
+  weatherRight = [];
+  weatherLeft = [];
+  weather = [];
 
   ngOnInit(){
-
-    this.href = window.location.href;
-    this.hrefPart = this.href.split('/');
-
-    if(this.hrefPart[3] == 'login' || this.hrefPart[3] == 'register' || this.hrefPart[3] == 'reset-password') {
-      this.showLogin = !this.showLogin;
-      this.showNav = !this.showNav;
-    }
-
-    if(this.cookieService.get('username') !== '') {
-      this.showLogin = false;
-      this.showLogged = true;
-    }
-
+    // calling api functions 
     this.getDestinationCity();
     this.getTripType();
   }
 
+  // show navigation content on hover 
   mouseEnter = (div : string) => {
     if(this.showCollapse == false) {
       if (div == 'destination') {
@@ -72,24 +65,22 @@ export class NavigationComponent implements OnInit {
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
         this.showDestinations = false;
-      } else if(div == 'logged') {
-        this.showLoggedOptions = !this.showLoggedOptions;
       }
     }
   }
 
+  // hide navigation content on hover out 
   mouseLeave = (div : string) => {
     if(this.showCollapse == false) {
       if (div == 'destination') {
         this.showDestinations = !this.showDestinations;
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
-      } else if( div == 'logged') {
-        this.showLoggedOptions = !this.showLoggedOptions;
       }
     }
   }
 
+  // clicking in collapse navigation 
   collapseClick = (e: string) => {
     if(e == 'collapse') {
       this.showCollapse = !this.showCollapse;
@@ -103,11 +94,14 @@ export class NavigationComponent implements OnInit {
       this.showCollapse = !this.showCollapse;
       this.showDestinationsCollapse = false;
       this.showTripTypesCollapse = false;
-    } else if(e == 'logged'){
-      this.showAdmin = !this.showAdmin;
+    } else if (e == 'items') {
+      this.showCollapse = false;
+      this.showTripTypesCollapse = false;
+      this.showDestinationsCollapse = false;
     }
   }
 
+  // click in  trip type content 
   tripTypesClick = (e: string) => {
     if(e == 'first') {
       this.showTripTypesFirst = !this.showTripTypesFirst;
@@ -124,17 +118,41 @@ export class NavigationComponent implements OnInit {
     } 
   }
 
+  // get city for destination navbar from api 
   getDestinationCity = () => {
     this.navService.getDestinationCity().subscribe((data) => {
       this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
-      console.log('cityData:', this.cityData);
     })
   }
 
+  // get trip type for destination from api 
   getTripType = () => {
     this.navService.getTripType().subscribe((data) => {
       this.triptypeData = Array.from(Object.keys(data['result']), k => data['result'][k]);
-      console.log('triptypeData:', this.triptypeData);
+      for(let i=0; i<this.triptypeData.length; i++){
+        if(this.triptypeData[i].type == 1) {
+          if((i%2 == 0)){
+            this.travelStyleLeft.push(this.triptypeData[i]);
+          } else {
+            this.travelStyleRight.push(this.triptypeData[i]);
+          }
+          this.travelStyle.push(this.triptypeData[i]);
+        } else if (this.triptypeData[i].type == 2) {
+          if((i%2 == 0)){
+            this.interestLeft.push(this.triptypeData[i]);
+          } else {
+            this.interestRight.push(this.triptypeData[i]);
+          }
+          this.interest.push(this.triptypeData[i]);
+        } else if (this.triptypeData[i].type == 3){
+          if((i%2 == 0)){
+            this.weatherLeft.push(this.triptypeData[i]);
+          } else {
+            this.weatherRight.push(this.triptypeData[i]);
+          }
+          this.weather.push(this.triptypeData[i]);
+        }
+      }
     })
   }
 }

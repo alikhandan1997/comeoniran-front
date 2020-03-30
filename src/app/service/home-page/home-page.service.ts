@@ -13,4 +13,11 @@ export class HomePageService {
   private baseurl = 'http://195.248.241.73';
   apiUrl: string;
 
+  getLeader(url): Observable<Object> {
+    this.apiUrl = ApiMap.api.servicesApi.get.getLeader;
+    return this.http.get(`${this.baseurl}${this.apiUrl}${url}`);
+  }
+
+  
+
 }

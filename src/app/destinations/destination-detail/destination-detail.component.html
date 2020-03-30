@@ -7,63 +7,73 @@
 <section class="city-content">
     <div class="container">
         <div class="little-desc">
-            <h3>What about this city?</h3>
+            <h3>What about {{cityName}}?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque consectetur ab rerum modi quos voluptates eius doloribus itaque exercitationem, necessitatibus soluta aut odio adipisci pariatur aliquam quis omnis ipsam beatae!</p>
         </div>
         <div class="main-content">
             <div class="row">
-                <div class="col-lg-3 leader">
-                    <h3>Yazd top leaders</h3>
-                    <div class="image">
-                        <a [routerLink] = "['/leaders', 'leadername']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
+                <div class="col-lg-3 col-md col-sm leader">
+                    <div class="header">
+                        <h3>{{cityName}} top leaders</h3>
                     </div>
-                    <div class="desc">
-                        <h4>leader name</h4>
-                        <p>leader address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                    </div>
-                    <div class="image">
-                        <a [routerLink] = "['/leaders', 'leadername']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="desc">
-                        <h4>leader name</h4>
-                        <p>leader address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                    </div>
-                    <div class="image">
-                        <a [routerLink] = "['/leaders', 'leadername']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="desc">
-                        <h4>leader name</h4>
-                        <p>leader address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-4 col-sm-4">
+                            <div class="image">
+                                <a [routerLink] = "['/leaders', 'leadername']">
+                                    <img src="../../assets/city.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <h4>leader name</h4>
+                                <p>leader address</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-4 col-sm-4">
+                            <div class="image">
+                                <a [routerLink] = "['/leaders', 'leadername']">
+                                    <img src="../../assets/city.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <h4>leader name</h4>
+                                <p>leader address</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-4 col-sm-4">
+                            <div class="image">
+                                <a [routerLink] = "['/leaders', 'leadername']">
+                                    <img src="../../assets/city.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <h4>leader name</h4>
+                                <p>leader address</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>  
+                        </div>
                     </div>
 
                     <div class="other-leader">
@@ -75,7 +85,7 @@
                         <div class="col-lg">
                             <div class="hotel-head">
                                 <h3>
-                                    City most popular hotels
+                                    {{cityName}} most popular hotels
                                     <a href="">
                                         SEE MORE HOTELS
                                         <i class="fa fa-angle-right"></i>
@@ -169,7 +179,7 @@
                         <div class="col-lg">
                             <div class="tour-head">
                                 <h3>
-                                    City most popular tours
+                                    {{cityName}} most popular tours
                                     <a href="">
                                         SEE MORE TOURS
                                         <i class="fa fa-angle-right"></i>
@@ -270,67 +280,67 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg about-head">
-                        <h4>What about the city?</h4>
+                    <div class="col-lg-12 about-head">
+                        <h3>What else about {{cityName}}?</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab magni corrupti autem esse quod laudantium, itaque explicabo, harum adipisci neque illum id. Molestias autem alias perspiciatis ipsa ducimus, doloremque iusto!</p>
                     </div>
                 </div>
                 <div class="row time-head">
-                    <div class="col-lg-12">
-                        <h4>Best time to travel to city</h4>
+                    <div class="col-lg-12 header">
+                        <h3>Best time to travel to {{cityName}}</h3>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Jan</h6>
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Feb</h6>
-                        <i class="far fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Mar</h6>
-                        <i class="far fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Apr</h6>
-                        <i class="far fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>May</h6>
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Jun</h6>
-                        <i class="far fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Jul</h6>
-                        <i class="far fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Aug</h6>
-                        <i class="far fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Sep</h6>
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Oct</h6>
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Nov</h6>
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-2 month">
                         <h6>Dec</h6>
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <h3>find it on the map</h3>
+            <div class="col-lg-4 map-desc">
+                <h3>find {{cityName}} on the map</h3>
                 <div class="map" id="map"></div>
             </div>
         </div>
@@ -341,27 +351,46 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 other-head">
-                <h3>Other destinations that might interest you</h3>
+                <h3>Other destinations you might like</h3>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 content">
+            <div class="col-lg-3 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/hotels', 'hotelname']">
                         <img src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
+                <div class="desc">
+                    <h4>CityName</h4>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 content">
+            <div class="col-lg-3 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/hotels', 'hotelname']">
                         <img src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
+                <div class="desc">
+                    <h4>CityName</h4>
+                </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 content">
+            <div class="col-lg-3 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/hotels', 'hotelname']">
                         <img src="../../assets/city.jpg" alt="">
                     </a>
+                </div>
+                <div class="desc">
+                    <h4>CityName</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 content">
+                <div class="image">
+                    <a [routerLink] = "['/hotels', 'hotelname']">
+                        <img src="../../assets/city.jpg" alt="">
+                    </a>
+                </div>
+                <div class="desc">
+                    <h4>CityName</h4>
                 </div>
             </div>
         </div>

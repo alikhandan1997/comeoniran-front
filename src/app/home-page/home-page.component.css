@@ -497,6 +497,16 @@
   }
 }
 
+.leaders .leader-box .desc {
+  background-color: white;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  border-left: 1px solid rgb(212, 212, 212);
+  border-right: 1px solid rgb(212, 212, 212);
+}
+
 @media screen and (max-width:360px) {
   .leaders .leader-box {
     margin-left: 10%;

@@ -48,12 +48,12 @@
             </div>
         </div>
         <div class="top-item-header">
-            <h1>Popular options</h1>
+            <h1>Top popular options</h1>
         </div>
         <div class="row donation">
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="top-item-content">
-                    <h4>Hotels</h4>
+                    <h4>Hotel</h4>
                     <a href="hotels">
                         <img src="../../assets/hotel-main.jpeg" alt="#">
                     </a>
@@ -61,7 +61,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="top-item-content">
-                    <h4>Tours</h4>
+                    <h4>Tour</h4>
                     <a href="tours">
                         <img src="../../assets/tour-main.jpg" alt="#">
                     </a>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="top-item-content">
-                    <h4>Leaders</h4>
+                    <h4>Leader</h4>
                     <a href="leaders">
                         <img src="../../assets/leader-main.jpg" alt="#">
                     </a> 
@@ -123,7 +123,7 @@
             </div>
         </div>
         <div class="about-us">
-            <a href="about-us">
+            <a [routerLink] = "['/about-us']">
                 <button class="about-us-button" type="submit">Read more about ComeOnIran</button>
             </a>
         </div>
@@ -152,41 +152,18 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 leader-box">
+            <div class="col-lg-3 col-md-3 col-sm-6 leader-box" *ngFor="let item of leaderData">
                 <div class="image">
-                    <a [routerLink] = "['/leaders', 'leadername']">
-                        <img src="../../assets/city.jpg" alt="">
+                    <a [routerLink] = "['/leaders', item.leader__last_name]">
+                        <img src="http://195.248.241.73/media/{{item.leader__image}}" alt="">
                     </a>
                 </div>
                 <div class="desc">
-                    <h4>leader name</h4>
-                    <p>leader address</p>
+                    <h5>{{item.leader__first_name}} {{item.leader__last_name}}</h5>
+                    <p>{{item.leader__description}}</p>
                     <span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 leader-box">
-                <div class="image">
-                    <a [routerLink] = "['/leaders', 'leadername']">
-                        <img src="../../assets/city.jpg" alt="">
-                    </a>
-                </div>
-                <div class="desc">
-                    <h4>leader name</h4>
-                    <p>leader address</p>
-                    <span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.leader__rank)"></i>
+                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.leader__rank)"></i>
                     </span>
                 </div>
             </div>
@@ -206,7 +183,7 @@
         </div>
         <div class="row donation">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 content">
+                <div class="col-lg-4 col-md-6 col-sm-6 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -225,7 +202,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <span>(20 Reviews)</span>
                         </span>
                         <span class="days">
                             <i class="far fa-clock"></i>
@@ -233,7 +209,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 content">
+                <div class="col-lg-4 col-md-6 col-sm-6 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -252,7 +228,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <span>(20 Reviews)</span>
                         </span>
                         <span class="days">
                             <i class="far fa-clock"></i>
@@ -260,7 +235,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 content">
+                <div class="col-lg-4 col-md-6 col-sm-6 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -279,7 +254,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <span>(20 Reviews)</span>
                         </span>
                         <span class="days">
                             <i class="far fa-clock"></i>
@@ -334,7 +308,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 content">
+            <div class="col-lg-4 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/tours', 'tourname']">
                         <img src="../../assets/city.jpg" alt="">
@@ -353,7 +327,6 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
-                        <span>(20 Reviews)</span>
                     </span>
                     <span class="days">
                         <i class="far fa-clock"></i>
@@ -361,7 +334,7 @@
                     </span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 content">
+            <div class="col-lg-4 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/tours', 'tourname']">
                         <img src="../../assets/city.jpg" alt="">
@@ -380,7 +353,6 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
-                        <span>(20 Reviews)</span>
                     </span>
                     <span class="days">
                         <i class="far fa-clock"></i>
@@ -388,7 +360,7 @@
                     </span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 content">
+            <div class="col-lg-4 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/tours', 'tourname']">
                         <img src="../../assets/city.jpg" alt="">
@@ -407,7 +379,6 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
-                        <span>(20 Reviews)</span>
                     </span>
                     <span class="days">
                         <i class="far fa-clock"></i>
