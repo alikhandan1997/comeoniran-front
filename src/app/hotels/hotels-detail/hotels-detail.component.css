@@ -7,13 +7,49 @@
     height: 350px;
 }
 
+.top-image .header h1 {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    padding-top: 10%;
+    font-size: 60px;
+}
+
+@media screen and (max-width:700px) {
+    .top-image .header h1 {
+        padding-top: 20%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .top-image .header h1 {
+        font-size: 50px;
+        padding-top: 40%;
+    }
+}
+
 .hotel-box {
     margin-top: 5%;
 }
 
+.hotel-box .head h2 {
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-box .head h2 {
+        text-align: center;
+    }
+}
+
 .hotel-box .desc p {
     color: black;
-    font-weight: 500;
+}
+
+@media screen and (max-width:700px) {
+    .hotel-box .desc p {
+        text-align: center;
+    }
 }
 
 .hotel-box .owner {
