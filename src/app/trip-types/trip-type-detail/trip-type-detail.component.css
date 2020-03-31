@@ -15,13 +15,25 @@
     font-size: 50px;
 }
 
+@media screen and (max-width:700px) {
+    .header h1 {
+        padding-top: 20%;
+    }
+}
+
 .type-box {
     margin-top: 7%;
 }
 
-.type-box .leaders h3 {
+.type-box .leaders .header h3 {
     font-weight: 600;
     padding-bottom: 5%;
+}
+
+@media screen and (max-width:700px) {
+    .type-box .header h3 {
+        text-align: center;
+    }
 }
 
 .type-box .leaders .desc {
@@ -39,6 +51,16 @@
     background-color: #0297c9;
     text-align: center;
     padding: 5%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:700px) {
+    .type-box .leaders .other-leader {
+        padding: 2%;
+        margin: 2% 0 2% 0;
+        border-radius: 5px;
+    }
 }
 
 .type-box .leaders .other-leader a {
@@ -50,10 +72,23 @@
     margin-bottom: 25%;
 }
 
+@media screen and (max-width:700px) {
+    .type-box .items .tours {
+        margin-bottom: 0;
+    }
+}
+
 .type-box .items .tours .header h3 {
     font-weight: 600;
     padding-bottom: 2%;
 }
+
+@media screen and (max-width:700px) {
+    .type-box .items .tours .header h3 {
+        text-align: center;
+        padding: 5%;
+    }
+} 
 
 .type-box .items .image img {
     position: relative;
@@ -68,6 +103,22 @@
     border-radius: 30px;
 }
 
+@media screen and (max-width:700px) {
+    .type-box .items .image .price {
+        padding: 5px 15px 5px 15px;
+        left: 20px;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .type-box .items .image .price {
+        padding: 10px 30px 10px 30px;
+        left: 30px;
+        top: 20px;
+    }
+}
+
 .type-box .items .image .price a {
     color : white;
     font-weight: 700;
@@ -78,6 +129,32 @@
     background-color: #0297c9;
 }
 
+.type-box .items .desc {
+    background-color: white;
+    margin-bottom: 5%;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-left: 1px solid rgb(212, 212, 212);
+    border-right: 1px solid rgb(212, 212, 212);
+}
+
+.type-box .items .desc .days {
+    float: right;
+}
+
+.type-box .items .desc .days a {
+    color: black;
+}
+
+@media screen and (max-width:700px) {
+    .type-box .items .hotels h3{
+        text-align: center;
+        padding: 10%;
+    }
+}
+
 .other-trip-type {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -86,4 +163,33 @@
 .other-trip-type .head h3 {
     font-weight: 600;
     padding-bottom: 3%;
+}
+
+@media screen and (max-width:700px) {
+    .other-trip-type .head h3 {
+        text-align: center;
+        padding: 5%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .other-trip-type .content {
+        padding-bottom: 10%;
+    }
+}
+
+.other-trip-type .image img {
+    position: relative;
+}
+
+.other-trip-type .image .name {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+}
+
+@media screen and (max-width:700px) {
+    .other-trip-type .image .name {
+        bottom: 60px;
+    }
 }
