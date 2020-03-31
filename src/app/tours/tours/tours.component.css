@@ -7,9 +7,9 @@
   height: 350px;
 }
 
-@media screen and (max-width:1125px) {
+@media screen and (max-width:700px) {
   .filter {
-      height: 500px;
+      height: 450px;
   }
 }
 
@@ -19,9 +19,15 @@
   margin-top: 7%;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:700px) {
   .hotel-box {
     width: 100%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .hotel-box {
     margin-left: 10%;
   }
 }
@@ -59,7 +65,7 @@
   align-items: center;
 }
 
-.form-inline label {
+.form-inline h5 {
   margin: 5px 10px 5px 0;
 }
 
@@ -71,7 +77,7 @@
   border-radius: 5px;
 }
 
-@media screen and (max-width:1125px) {
+@media screen and (max-width:700px) {
   .form-inline input {
     width: 100%;
   }
@@ -83,7 +89,7 @@
     margin-right: 10px;
 }
 
-@media screen and (max-width:1125px) {
+@media screen and (max-width:700px) {
     .form-inline select {
         width: 100%;
     }
@@ -91,7 +97,7 @@
 
 .form-inline button {
   padding: 10px 10px;
-  background-color: dodgerblue;
+  background-color: #0297c9;
   border: 1px solid #ddd;
   border-radius: 5px;
   color: white;
@@ -99,21 +105,21 @@
   height: 39px;
 }
 
-@media screen and (max-width:1125px) {
+@media screen and (max-width:700px) {
     .form-inline button {
       margin-left: 35%;
       margin-top: 5%;
     }
 }
 
-@media screen and (max-width:991px){
+@media screen and (max-width:700px){
   .form-inline button {
     width:60%;
     margin-left: 15%;
   }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:700px) {
   .form-inline button {
     width: 100%;
     margin-left: 0;
@@ -147,24 +153,11 @@
 .hotels .title .desc p{
   text-align: center;
   font-weight: 500;
+  padding-bottom: 3%;
 }
 
 .hotels .list {
-  width: 90%;
-  margin-left: 5%;
-}
-
-.hotels .list .content {
-  position: relative;
-  padding: 20px;
   width: 100%;
-}
-
-.hotels .list .content .image img {
-  width: 100%;
-  height: 250px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .hotels .list .content .desc {
@@ -174,25 +167,46 @@
   border-bottom: 1px solid rgb(204, 203, 203);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 10px;
+  padding: 2%;
   margin-bottom: 10%;
 }
 
 .hotels .list .content .price {
   position: absolute;
-  top:40px;
-  left: 40px;
-  background-color: rgb(115, 236, 245);
+  top:20px;
+  left: 30px;
+  background-color: rgb(253, 188, 8);
   padding: 10px 30px 10px 30px;
   border-radius: 30px;
 }
 
+@media screen and (max-width:700px) {
+  .hotels .list .content .price {
+    padding: 5px 10px 5px 10px;
+    top: 10px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .hotels .list .content .price {
+    padding: 10px 30px 10px 30px;
+    top: 20px;
+    left: 30px;
+  }
+}
+
 .hotels .list .content .price a {
-  color : black;
+  color : white;
+  font-weight: 600;
 }
 
 .hotels .list .content .date {
   float: right;
+}
+
+.hotels .list .content .date a {
+  color: black;
 }
 
 .hotels .header h1{
@@ -205,16 +219,25 @@
 .hotels .list .more-hotels{
   width: 100%;
   text-align: center;
-  margin-right: 80px;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 5%;
 }
 
 .hotels .list .more-hotels button {
-  background-color: rgb(253, 186, 0);
+  background-color: #0297c9;
   border: none;
-  padding: 15px 25px 15px 25px;
+  padding: 15px 0px 15px 0px;
   border-radius: 5px;
+  color: white;
+  width: 30%;
+  font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+  .hotels .list .more-hotels button {
+    width: 95%;
+    padding: 15px 65px 15px 65px;;
+  }
 }
 
 .hotel-box .list .more-hotels button:hover {

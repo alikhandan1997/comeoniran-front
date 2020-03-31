@@ -6,12 +6,12 @@
                     <h6>FIND HOTELS...</h6>
                     <div class="col-lg hotel-content">
                         <h4>Find your favorite hotels</h4>
-                        <p>Either find a hotels below, or send a general inquiry by clicking 'Start finding my hotel.'</p>
+                        <p>Either find a hotel below, or send a general inquiry by clicking 'Start finding my hotel.'</p>
                         <div class="design-trip-form">
                             <form class="form-inline" action="">
-                                <label for="email">City</label>
+                                <h5>City</h5>
                                 <input type="text" placeholder="Enter your city">
-                                <label for="pwd">Date </label>
+                                <h5>Date</h5>
                                 <select class="form-control date" name="date" form="form-inline">
                                     <option value="" selected="" disabled="" style="display:none;">Departure date</option>
                                     <option value="2020-04-01">April 2020</option>
@@ -48,7 +48,7 @@
 </section>
 
 <section class="hotels">
-    <div class="container-fluid">
+    <div class="container">
         <div class="title">
             <div class="head">
                 <h1>Popular Hotels</h1>
@@ -59,20 +59,19 @@
         </div>
         <div class="list">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
                         </a>
                         <div class="price">
-                            <a href="/" onclick="return false">$500</a>
+                            <a href="">$500</a>
                         </div>
                     </div>
                     <div class="desc">
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -85,7 +84,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -98,7 +97,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -111,7 +109,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -124,7 +122,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -143,7 +140,7 @@
                 <h1>Other hotels</h1>
             </div>
             <div class="row" *ngIf="showOthers">
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -156,7 +153,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -169,7 +165,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -182,7 +178,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -195,7 +190,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -208,7 +203,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -221,7 +215,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -234,7 +228,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -247,7 +240,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -260,7 +253,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -273,7 +265,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
+                <div class="col-lg-4 col-md-4 col-sm-4 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -286,163 +278,6 @@
                         <h4>hotel name</h4>
                         <p>hotel address</p>
                         <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
