@@ -1,76 +1,18 @@
 <section class="chose-box-container">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg">
-                <div class="row chose-box">
-                    <h2>Pick a destination with our trip finder!</h2>
-                    <div class="date-box col-lg-6">
-                        <h4>I WANT TO SET OFF IN...</h4>
-                        <div class="row month-box">
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Jan</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Feb</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Mar</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Apr</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">May</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Jun</a></div>
-                        </div>
-                        <div class="row month-box">
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Jul</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Aug</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Sept</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Oct</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Nov</a></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2"><a href="">Dec</a></div>
-                        </div>
-                    </div>
-                    <div class="type-box col-lg-6">
-                        <h4>I WANT MY TRIP TO INCLUDE...</h4>
-                        <div class="row culture-box">
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <a href="">
-                                    <i class="fas fa-umbrella-beach"></i>
-                                    <p>Relaxation</p>
-                                </a>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <a href="">
-                                    <i class="fa fa-bicycle"></i>
-                                    <p>Sports</p>
-                                </a>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <a href="">
-                                    <i class="fas fa-mosque"></i>
-                                    <p>Historical</p>
-                                </a>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <a href="">
-                                    <i class="fas fa-star-and-crescent"></i>
-                                    <p>Culture</p>
-                                </a>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2">
-                                <a href="">
-                                    <i class="fas fa-hamburger"></i>
-                                    <p>Cuisine</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
+    <div class="container">
+        <div class="title">
+            <h1>Find your favorite trip type</h1>
+        </div>
     </div>
 </section>
 
 <section>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg popular-trip">
                 <h3>Our most popular trip types</h3>
                 <div class="row popular-trip-box">
-                    <div class="col-lg-3 col-md-6 popular-trip-item">
+                    <div class="col-lg-3 col-md-6 col-sm-6 popular-trip-item">
                         <a [routerLink] = "['/trip-types', 'trip-type']">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -79,6 +21,8 @@
                                 </div>
                             </span>
                         </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -88,33 +32,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6 popular-trip-item">
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6  popular-trip-item">
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
+                    <div class="col-lg-3 col-md-6 col-sm-6  popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -124,15 +42,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6  popular-trip-item">
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
+                    <div class="col-lg-3 col-md-6 col-sm-6  popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -148,36 +58,32 @@
     </div>    
 </section>
 
-<section>
+<section  class="describtione">
     <div class="container-fluid">
-        <!-- first desc help  -->
         <div class="row">
-            <div class="describtione">
-                <div class="desc-content-box">
-                    <h3>At Evaneos we believe that travel is better when it brings people <br/> together.</h3>
-                    <p>
-                        There's not just one way to travel. There just as many different ways to explore a new place as there are travelers in the world.<br>
-    
-                        We've made this inspirational page to help you more clearly imagine and then create your ideal trip, making it easier to choose the perfect vacation that fits your needs.<br/>
-                        
-                        Would you rather travel solo and off the beaten path, or do you want a guide to take you through some of the most famous sites in the world? Can't imagine going more than a few hours cut off from the world, or are you dreaming of wide open spaces without another person in sight?<br/>
-                        
-                        Whatever you prefer, you can find it and more in the dozens of travel ideas for every continent prepared by our local agents. Take a look and find out which one inspires you!<br/>
-                    </p>
-                </div>
+            <div class="col-lg-12 desc-content-box">
+                <h3>At ComeOnIran we believe that travel is better when it brings people <br/> together.</h3>
+                <p>
+                    There's not just one way to travel. There just as many different ways to explore a new place as there are travelers in the world.<br>
+
+                    We've made this inspirational page to help you more clearly imagine and then create your ideal trip, making it easier to choose the perfect vacation that fits your needs.<br/>
+                    
+                    Would you rather travel solo and off the beaten path, or do you want a guide to take you through some of the most famous sites in the world? Can't imagine going more than a few hours cut off from the world, or are you dreaming of wide open spaces without another person in sight?<br/>
+                    
+                    Whatever you prefer, you can find it and more in the dozens of travel ideas for every continent prepared by our local agents. Take a look and find out which one inspires you!<br/>
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<section>
-    <div class="container-fluid">
-            <!-- our other trip type  -->
+<section class="other-popular-trip">
+    <div class="container">
         <div class="row">
-            <div class="col-lg other-popular-trip">
+            <div class="col-lg-12">
                 <h3>Our other trip types</h3>
                 <div class="row other-popular-trip-box">
-                    <div class="col-lg-3 col-md-6 other-popular-trip-item">
+                    <div class="col-lg-3 col-md-6 col-sm-6 other-popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -187,7 +93,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6 other-popular-trip-item">
+                    <div class="col-lg-3 col-md-6 col-sm-6 other-popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -197,7 +103,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6  other-popular-trip-item">
+                    <div class="col-lg-3 col-md-6 col-sm-6  other-popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -207,7 +113,7 @@
                             </span>
                         </a>
                     </div>
-                    <div class="col-lg-3 col-md-6  other-popular-trip-item">
+                    <div class="col-lg-3 col-md-6 col-sm-6  other-popular-trip-item">
                         <a href="">
                             <span>
                                 <img src="../../assets/city.jpg">
@@ -224,10 +130,9 @@
 </section>
 
 <section>
-    <div class="container-fluid">
-        <!-- last desc help  -->
+    <div class="container">
         <div class="row">
-            <div class="choose-help">
+            <div class="col-lg-12 choose-help">
                 <h3>Too hard to choose between all these inspiring ideas?</h3>
                 <p>
                     No problem, the local agents selected by Evaneos know how to create a customized trip based on your needs. Every one of these ideas can be completely personalized and changed to fit you. Evaneos gives you the freedom to travel like never before</p>

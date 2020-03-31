@@ -4,156 +4,35 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 350px;
     width: 100%;
 }
 
-@media screen and (max-width:576px) {
-    .chose-box-container {
-        height: 900px;
-    }
-}
-
-.chose-box {
-    width: 90%;
-    margin-top: 7%;
-    margin-left: 5%;
-}
-
-@media screen and (max-width:991px){
-    .chose-box {
-        margin-left: 10%;
-    }
-}
-
-@media screen and (max-width:576px) {
-    .chose-box {
-        margin-left: 20%;
-    }
-}
-
-.chose-box h2 {
+.chose-box-container .title h1 {
+    text-align: center;
     color: white;
-    width: 100%;
-    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 10%;
 }
 
-@media screen and (max-width:768px){
-    .chose-box h2 {
-        margin-left: 10%;
+@media screen and (max-width:700px) {
+    .chose-box-container .title h1 {
+        padding-top: 20%;
     }
-}
-
-@media screen and (max-width:576px) {
-    .chose-box h2 {
-        margin-left: -3%;
-    }
-}
-
-.chose-box .date-box h4 {
-    color: white;
-}
-
-@media screen and (max-width:991px) {
-    .chose-box .date-box h4 {
-        margin-top: 5%;
-    }
-}
-
-@media screen and (max-width:576px) {
-    .chose-box .date-box h4 {
-        margin-top: 5%;
-    }
-}
-
-.chose-box .date-box .month-box {
-    background-color: white;
-    width: 95%;
-}
-
-.chose-box .date-box .month-box div {
-    text-align: center;
-    padding: 10px 0 10px 0;
-}
-
-@media screen and (max-width:576px) {
-    .chose-box .date-box .month-box div {
-        width: 50%;
-        padding: 10px 0 10px 0;
-    }
-}
-
-.chose-box .date-box .month-box a {
-    color: black;
-}
-
-.chose-box .date-box .month-box a:hover {
-    color: gray;
-}
-
-.chose-box .type-box h4 {
-    color: white;
-}
-
-@media screen and (max-width:576px) {
-    .chose-box .type-box h4 {
-        margin-top: 10%;
-    }
-}
-
-.chose-box .type-box .culture-box {
-    background-color: white;
-    width: 95%;
-    padding: 6px 0 6px 0;
-}
-
-.chose-box .type-box .culture-box div {
-    margin-left: 3%;
-    margin-top: 2%;
-    text-align: center;
-}
-
-.chose-box .type-box .culture-box div i {
-    color: black;
-    font-size: 30px;
-}
-
-.chose-box .type-box .culture-box div i:hover {
-    color: rgb(97, 96, 96);
-}
-
-
-
-.popular-trip {
-    width: 80%;
-    text-align: center;
 }
 
 .popular-trip h3 {
     margin-top: 5%;
-    width: 100%;
+    text-align: center;
 }
 
-@media screen and (max-width:991px) {
-    .popular-trip h3 {
-        margin-left: 10%;
-    }
-}
-
-.popular-trip-box {
-    width: 80%;
-    margin-left: 10%;
-}
-
-@media screen and (max-width:991px) {
-    .popular-trip-box {
-        margin-left: 20%;
-    }
+.popular-trip .popular-trip-box {
+    margin-bottom: 5%;
 }
 
 .popular-trip .popular-trip-item {
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .popular-trip-item span {
@@ -193,9 +72,15 @@
     width: 100%;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:700px) {
     .describtione {
-        height: 1100px;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .describtione {
+        height: 850px;
     }
 }
 
@@ -206,6 +91,20 @@
     padding-bottom: 3%;
     left: 14%;
     top: 20%;
+}
+
+@media screen and (max-width:700px) {
+    .describtione .desc-content-box {
+        width: 90%;
+        left: 5%;
+        top: 10%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .describtione .desc-content-box {
+        top: 5%;
+    }
 }
 
 .describtione .desc-content-box h3 {
@@ -221,28 +120,16 @@
     font-size: 14px;
 }
 
-.other-popular-trip {
-    width: 80%;
-}
-
 .other-popular-trip h3 {
-    margin-left: 40%;
+    text-align: center;
     margin-top: 5%;
 }
 
-.other-popular-trip-box {
-    width: 80%;
-    margin-left: 10%;
-}
-
-@media screen and (max-width:991px) {
-    .other-popular-trip-box {
-        margin-left: 20%;
-    }
+.other-popular-trip .other-popular-trip-box {
+    margin-top: 5%;
 }
 
 .other-popular-trip .other-popular-trip-item {
-    margin-top: 10%;
     margin-bottom: 5%;
 }
 
@@ -276,9 +163,21 @@
 .choose-help {
     background-color: white;
     width: 70%;
-    margin-left: 15%;
     margin-bottom: 10%;
     border: 1px solid rgb(216, 213, 213);
+}
+
+@media screen and (max-width:700px) {
+    .choose-help {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .choose-help {
+        width: 90%;
+        margin-left: 5%;
+    }
 }
 
 .choose-help h3 {
