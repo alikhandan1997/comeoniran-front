@@ -2,19 +2,12 @@
     "api": {
         "servicesApi": {
             "get": {
-                "getService": "/api/services/",
-                "getCity": "/api/services/city/",
-                "getCountry": "/api/services/country/",
+                "getService": "/api/interface/services/",
                 "getDestination": "/api/services/destination/",
-                "getDestinationCity": "/api/services/destination/city/",
-                "getServiceImage": "/api/services/image/",
-                "getServiceImageDetail": "/api/services/image/{id}/",
-                "getLeader": "/api/services/leaders/",
-                "getServicesList": "/api/services/list/",
-                "getServicesDetail": "/api/services/list/{id}/",
-                "getPossibilities": "/api/services/possibilities/",
-                "getServiceType": "/api/services/service-type/",
-                "getTripType": "/api/services/trip-type/"
+                "getDestinationCity": "/api/interface/destination/city/",
+                "getDestinationCountry": "/api/interface/destination/country/",
+                "getLeader": "/api/interface/leaders/",
+                "getTripType": "/api/interface/trip-types/"
             }
         }
     }

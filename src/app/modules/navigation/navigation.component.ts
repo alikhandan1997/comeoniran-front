@@ -98,6 +98,8 @@ export class NavigationComponent implements OnInit {
       this.showCollapse = false;
       this.showTripTypesCollapse = false;
       this.showDestinationsCollapse = false;
+    } else if (e == 'type') {
+      this.showCollapse = false;
     }
   }
 
@@ -121,7 +123,7 @@ export class NavigationComponent implements OnInit {
   // get city for destination navbar from api 
   getDestinationCity = () => {
     this.navService.getDestinationCity().subscribe((data) => {
-      this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);      
     })
   }
 

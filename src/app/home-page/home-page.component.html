@@ -51,28 +51,99 @@
             <h1>Top popular options</h1>
         </div>
         <div class="row donation">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="top-item-content">
-                    <h4>Hotel</h4>
-                    <a href="hotels">
-                        <img src="../../assets/hotel-main.jpeg" alt="#">
+            <div class="col-lg-3 col-md-3 col-sm-6 content">
+                <div class="head">
+                    <h5>Hotel</h5>
+                </div>
+                <div class="image">
+                    <a [routerLink] = "['/hotels', 'hotelname']">
+                        <img src="../../assets/city.jpg" alt="">
                     </a>
+                    <div class="price">
+                        <a href="">$500</a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h4>hotel name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem earum consequatur non tempora nisi illum maslflkllkdflll</p>
+                    <span class="rank">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                    <span class="days">
+                        <i class="far fa-clock"></i>
+                        <a href="">5 Days</a>
+                    </span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="top-item-content">
-                    <h4>Tour</h4>
-                    <a href="tours">
-                        <img src="../../assets/tour-main.jpg" alt="#">
+            <div class="col-lg-3 col-md-3 col-sm-6 content">
+                <div class="head">
+                    <h5>Tour</h5>
+                </div>
+                <div class="image">
+                    <a [routerLink] = "['/tours', 'tourname']">
+                        <img src="../../assets/city.jpg" alt="">
                     </a>
+                    <div class="price">
+                        <a href="">$500</a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h4>tour name</h4>
+                    <p>tour description</p>
+                    <span class="rank">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                    <span class="days">
+                        <i class="far fa-clock"></i>
+                        <a href="">5 Days</a>
+                    </span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="top-item-content">
-                    <h4>Leader</h4>
-                    <a href="leaders">
-                        <img src="../../assets/leader-main.jpg" alt="#">
-                    </a> 
+            <div class="col-lg-3 col-md-3 col-sm-6 content">
+                <div class="head">
+                    <h5>Destination</h5>
+                </div>
+                <div class="image">
+                    <a [routerLink] = "['/destination', 'destname']">
+                        <img src="../../assets/city.jpg" alt="">
+                    </a>
+                </div>
+                <div class="desc">
+                    <h4>city name</h4>
+                    <p>city description</p>
+                    <span class="rank">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 content" *ngFor="let item of topLeader">
+                <div class="head">
+                    <h5>Leader</h5>
+                </div>
+                <div class="image">
+                    <a [routerLink] = "['/leaders', item.first_name]">
+                        <img src="{{item.image}}" alt="">
+                    </a>
+                </div>
+                <div class="desc">
+                    <h4>{{item.first_name}} {{item.last_name}}</h4>
+                    <p>{{item.description}}</p>
+                    <span class="rank">
+                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
+                    </span>
                 </div>
             </div> 
         </div>
@@ -124,7 +195,7 @@
         </div>
         <div class="about-us">
             <a [routerLink] = "['/about-us']">
-                <button class="about-us-button" type="submit">Read more about ComeOnIran</button>
+                Read more about ComeOnIran
             </a>
         </div>
     </div>
@@ -147,23 +218,23 @@
                 </div>
                 <div class="see-more">
                     <a href="leaders">
-                        LEARN MORE ABOUT OUR LEADERS 
+                        SEE MORE OF OUR LEADERS 
                         <i class="fa fa-angle-right"></i>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 leader-box" *ngFor="let item of leaderData">
+            <div class="col-lg-3 col-md-3 col-sm-6 leader-box" *ngFor="let item of lastLeaders">
                 <div class="image">
-                    <a [routerLink] = "['/leaders', item.leader__last_name]">
-                        <img src="http://195.248.241.73/media/{{item.leader__image}}" alt="">
+                    <a [routerLink] = "['/leaders', item.id]">
+                        <img src="{{item.image}}" alt="">
                     </a>
                 </div>
-                <div class="desc">
-                    <h5>{{item.leader__first_name}} {{item.leader__last_name}}</h5>
-                    <p>{{item.leader__description}}</p>
+                <div class="desc">  
+                    <h5>{{item.first_name}} {{item.last_name}}</h5>
+                    <p>{{item.description}}</p>
                     <span>
-                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.leader__rank)"></i>
-                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.leader__rank)"></i>
+                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                     </span>
                 </div>
             </div>
@@ -183,7 +254,29 @@
         </div>
         <div class="row donation">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6 content">
+                <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of lastHotels">
+                    <div class="image">
+                        <a [routerLink] = "['/hotels', item.id]">
+                            <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        </a>
+                        <div class="price">
+                            <a href="">${{item.price}}</a>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.description}}</p>
+                        <span class="rank">
+                            <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                            <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
+                        </span>
+                        <span class="days">
+                            <i class="far fa-clock"></i>
+                            <a href="" style="margin-left:3px;color:black">{{item.created_at}} days</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -195,8 +288,7 @@
                     <div class="desc">
                         <h4>hotel name</h4>
                         <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
+                        <span class="rank">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -209,7 +301,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 content">
+                <div class="col-lg-3 col-md-6 col-sm-6 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -221,8 +313,7 @@
                     <div class="desc">
                         <h4>hotel name</h4>
                         <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
+                        <span class="rank">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -235,7 +326,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 content">
+                <div class="col-lg-3 col-md-6 col-sm-6 content">
                     <div class="image">
                         <a [routerLink] = "['/hotels', 'hotelname']">
                             <img src="../../assets/city.jpg" alt="">
@@ -247,8 +338,7 @@
                     <div class="desc">
                         <h4>hotel name</h4>
                         <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
+                        <span class="rank">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -308,7 +398,33 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 content">
+            <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of lastTours">
+                <div class="image">
+                    <a [routerLink] = "['/tours', item.id]">
+                        <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
+                    </a>
+                    <div class="price">
+                        <a href="">${{item.price}}</a>
+                    </div>
+                </div>
+                <div class="desc">
+                    <h4>{{item.name}}</h4>
+                    <p>{{item.description}}</p>
+                    <span class="rank">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </span>
+                    <span class="days">
+                        <i class="far fa-clock"></i>
+                        <a href="">5 Days</a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/tours', 'tourname']">
                         <img src="../../assets/city.jpg" alt="">
@@ -320,8 +436,7 @@
                 <div class="desc">
                     <h4>tour name</h4>
                     <p>tour description</p>
-                    <span>
-                        <i class="fas fa-star"></i>
+                    <span class="rank">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -334,7 +449,7 @@
                     </span>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 content">
+            <div class="col-lg-3 col-md-6 col-sm-6 content">
                 <div class="image">
                     <a [routerLink] = "['/tours', 'tourname']">
                         <img src="../../assets/city.jpg" alt="">
@@ -346,34 +461,7 @@
                 <div class="desc">
                     <h4>tour name</h4>
                     <p>tour description</p>
-                    <span>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </span>
-                    <span class="days">
-                        <i class="far fa-clock"></i>
-                        <a href="" style="margin-left:3px;color:black">5 Days</a>
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 content">
-                <div class="image">
-                    <a [routerLink] = "['/tours', 'tourname']">
-                        <img src="../../assets/city.jpg" alt="">
-                    </a>
-                    <div class="price">
-                        <a href="">$500</a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h4>tour name</h4>
-                    <p>tour description</p>
-                    <span>
-                        <i class="fas fa-star"></i>
+                    <span class="rank">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>

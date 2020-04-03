@@ -83,6 +83,7 @@
     }
   }
   /* banner part end  */
+  
 /*---------------------------------------------------------------------------------------------------------------*/
 
   /* search part start  */
@@ -275,68 +276,54 @@
     }
   }
   
-  .top-item-content {
-    position: relative;
-    width: 100%;
-    margin-bottom: 7%;
-  }
-
-  .top-item-content h4 {
+  .search_your_country .donation .head h5 {
     text-align: center;
-    margin-bottom: 7%;
   }
 
-  .top-item-content img {
-    width: 100%;
+  .search_your_country .donation .image img {
     height: 250px;
-    transition: margin .5s;
-    border-radius: 10px;
   }
 
-  @media screen and (max-width:640px) {
-    .top-item-content img {
-      height: 180px;
+  .search_your_country .donation .desc {
+    position: relative;
+    height: 200px;
+  }
+
+  .search_your_country .donation .rank {
+    position: absolute;
+    bottom: 10%;
+  }
+
+  .search_your_country .donation .days {
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+  }
+
+  .search_your_country .donation .desc p {
+    color: black;
+    font-size: 15px;
+  }
+
+  .search_your_country .donation .price {
+    top: 50px;
+    left: 30px;
+  }
+
+  @media screen and (max-width:700px) {
+    .search_your_country .donation .price {
+      padding: 5px 10px 5px 10px;
+      top: 40px;
     }
   }
 
-  @media screen and (max-width:360px) {
-    .top-item-content img {
-      height: 200px;
-    }
-  }
-
-  .top-item-content img:hover {
-    margin-top: -5%;
-    box-shadow: 5px 10px #a1a1a1;
-  }
-
-  .top-item-content:hover .desc a{
-    background-color: #0297c9;
-  }
-
-  .top-item-content .desc h5 {
+  .search_your_country .donation .price a {
     color: white;
     font-weight: 600;
   }
 
-  .top-item-content h5, .top-item-content a {
-    display: inline;
-  }
-
-  .top-item-content .desc {
-    position: absolute;
-    bottom: 15px;
-    left: 10px;
-  }
-
-  .top-item-content .desc a {
-    background-color: rgb(253, 188, 8);
-    color: white;
-    font-size: 12px;
-    font-weight: 500;
-    margin-left: 5px;
-    padding: 5px 15px 5px 15px;
-    border-radius: 30px;
+  .search_your_country .donation .days a {
+    color: black;
   }
 
   .donation {
@@ -370,6 +357,13 @@
 /* advantages start  */
 .advantages {
   background-color: #0297c9;
+  padding-bottom: 3%;
+}
+
+@media screen and (max-width:700px) {
+  .advantages {
+    padding-bottom: 5%;
+  }
 }
 
 .advantages .content{
@@ -420,18 +414,28 @@
   font-weight: 300;
 }
 
-.advantages .about-us-button {
+.advantages .about-us a {
+  margin-left: 37%;
   background-color: #0297c9;
   color: white;
   font-size: 15px;
   font-weight: 700;
   border: 1px solid white;
-  margin-left: 37%;
-  margin-top: 3%;
-  margin-bottom: 5%;
   padding: 14px 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+@media screen and (max-width:700px) {
+  .advantages .about-us a {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .advantages .about-us a {
+    margin-left: 12%;
+  }
 }
 
 .advantages .about-us-button:hover {
@@ -499,7 +503,7 @@
 
 .leaders .leader-box .desc {
   background-color: white;
-  padding: 5px;
+  padding: 2%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-bottom: 1px solid rgb(212, 212, 212);
@@ -540,10 +544,6 @@
   margin-top: -1%;
 }
 
-.popular_hotels .donation .content {
-  margin-bottom: 3%;
-}
-
 .content:hover .price {
   background-color: #0297c9;
 }
@@ -554,10 +554,10 @@
 
 .donation .content .image img {
   width: 100%;
-  height: 250px;
   position: relative;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  height: 250px;
 }
 
 .donation .content .desc {
@@ -567,8 +567,21 @@
   border-bottom: 1px solid rgb(204, 203, 203);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 10px;
+  padding: 2%;
   margin-bottom: 10%;
+  height: 200px;
+  position: relative;
+}
+
+.donation .content .desc .rank {
+  position: absolute;
+  bottom: 10%;
+}
+
+.donation .content .desc .days {
+  position: absolute;
+  bottom: 10%;
+  left: 70%;
 }
 
 .content .price {
@@ -584,10 +597,6 @@
   color : white;
   font-weight: 700;
   font-size: 15px;
-}
-
-.donation .content .desc .days {
-  float: right;
 }
 
 .popular_hotels .see-More {
@@ -700,26 +709,39 @@
 }
 
 .tour_package .content .desc {
-    background-color: white;
+  background-color: white;
   border-left: 1px solid rgb(204, 203, 203);
   border-right: 1px solid rgb(204, 203, 203);
   border-bottom: 1px solid rgb(204, 203, 203);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 10px;
+  padding: 2%;
   margin-bottom: 10%;
+  height: 200px;
+  position: relative;
 }
 
 .tour_package .content .image img{
   width: 100%;
-  height: 250px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  height: 250px;
 
 }
 
+.tour_package .content .rank {
+  position: absolute;
+  bottom: 10%;
+}
+
 .tour_package .content .days {
-  float: right;
+  position: absolute;
+  bottom: 10%;
+  left: 70%;
+}
+
+.tour_package .content .days a {
+  color: black;
 }
 
 .tour_package .see-More {

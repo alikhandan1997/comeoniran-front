@@ -12,18 +12,49 @@ export class HomePageComponent implements OnInit {
     private homeService: HomePageService
     ) { }
 
-  leaderData = [];
-  leaderTop = [];
+  topLeader = [];
+  topHotel = [];
+  topTour = [];
+
+  lastLeaders = [];
+  lastHotels = [];
+  lastTours = [];
+
+  filter: string;
+
 
   ngOnInit() {
     this.getLeader();    
+    this.getHotels();
+    this.getTours();
   }
 
   getLeader = () => {
-    let url = '?top'
-    this.homeService.getLeader(url).subscribe((data) => {
-      this.leaderData = Array.from(Object.keys(data['result']), k => data['result'][k]);
-      this.leaderTop.push(this.leaderData[0]);
+    this.filter = '?top=1';
+    this.homeService.getLeader(this.filter).subscribe((data) => {
+      this.topLeader = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('top', this.topLeader);
+    })
+    this.filter = '?last=2';
+    this.homeService.getLeader(this.filter).subscribe((data) => {
+      this.lastLeaders = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('last', this.lastLeaders);
+    })
+  }
+
+  getHotels = () => {
+    this.filter = '?type=hotel&last=4';
+    this.homeService.getService(this.filter).subscribe((data) => {
+      this.lastHotels = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('hotels', this.lastHotels);
+    })
+  }
+
+  getTours = () => {
+    this.filter = '?type=tour&last=4';
+    this.homeService.getService(this.filter).subscribe((data) => {
+      this.lastTours = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('tours', this.lastTours);
     })
   }
 

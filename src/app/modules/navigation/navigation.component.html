@@ -57,10 +57,10 @@
         </a>
       </li>
       <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse">
-        <a href="about-us">About Us</a>
+        <a [routerLink] = "['/about-us']" (click)="collapseClick('items')">About Us</a>
       </li>
       <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && showLogin">
-        <a href="login">
+        <a href="http://192.168.43.116:8585/dashboard/login" (click)="collapseClick('items')">
           Sign in to my Account
         </a>
       </li>
@@ -78,9 +78,9 @@
             <h4>Top destinations in iran</h4>
             <div class="row best-cities-pic">
               <span *ngFor="let item of cityData">
-                <a [routerLink]="['/destinations', item.city__name]">
-                  <img src ="http://195.248.241.73/media/{{item.city__image}}" alt="">
-                  <h6>{{item.city__name}}</h6>
+                <a [routerLink]="['/destinations', item.name]">
+                  <img src ="{{item.image}}" alt="">
+                  <h5>{{item.name}}</h5>
                 </a>
               </span>
             </div>
@@ -116,12 +116,12 @@
               </div>
               <div class="row">
                 <div class="col-lg-6" *ngFor="let item of travelStyleLeft">
-                  <a href="">
+                  <a [routerLink]="['/trip-types', item.name]">
                     <p>{{item.name}}</p>
                   </a>
                 </div>
                 <div class="col-lg-6" *ngFor="let item of travelStyleRight">
-                  <a href="">
+                  <a [routerLink]="['/trip-types', item.name]">
                     <p>{{item.name}}</p>
                   </a>
                 </div>
@@ -142,12 +142,12 @@
               </div>
               <div class="row">
                 <div class="col-lg-6" *ngFor="let item of interestLeft">
-                  <a href="">
+                  <a [routerLink]="['/trip-types', item.name]">
                     <p>{{item.name}}</p>
                   </a>
                 </div>
                 <div class="col-lg-6" *ngFor="let item of interestRight">
-                  <a href="">
+                  <a [routerLink]="['/trip-types', item.name]">
                     <p>{{item.name}}</p>
                   </a>
                 </div>
@@ -228,12 +228,12 @@
               </div>
               <div class="row">
                 <div class="col-lg-6" *ngFor="let item of weatherLeft">
-                  <a href="">
+                  <a [routerLink]="['/trip-types', item.name]">
                     <p>{{item.name}}</p>
                   </a>
                 </div>
                 <div class="col-lg-6" *ngFor="let item of weatherRight">
-                  <a href="">
+                  <a [routerLink]="['/trip-types', item.name]">
                     <p>{{item.name}}</p>
                   </a>
                 </div>
@@ -253,9 +253,9 @@
               <h4>Top destinations in iran</h4>
               <div class="row best-cities-pic">
                 <span *ngFor="let item of cityData">
-                  <a [routerLink]="['/destinations', item.city__name]" (click)="collapseClick('items')">
-                    <img src ="http://195.248.241.73/media/{{item.city__image}}" alt="">
-                    <h6>{{item.city__name}}</h6>
+                  <a [routerLink]="['/destinations', item.name]" (click)="collapseClick('items')">
+                    <img src ="{{item.image}}" alt="">
+                    <h5>{{item.name}}</h5>
                   </a>
                 </span>
               </div>
@@ -312,21 +312,21 @@
         <div class="showTripTypesFirst">
           <ul *ngIf="showTripTypesFirst">
             <li *ngFor="let item of travelStyle">
-              <a href="">{{item.name}}</a>
+              <a [routerLink]="['/trip-types', item.name]" (click)="collapseClick('type')">{{item.name}}</a>
             </li>
           </ul>
         </div>
         <div class="showTripTypesSeacond">
           <ul *ngIf="showTripTypesSeacond">
             <li *ngFor="let item of interest">
-              <a href="">{{item.name}}</a>
+              <a [routerLink]="['/trip-types', item.name]" (click)="collapseClick('type')">{{item.name}}</a>
             </li>
           </ul>
         </div>
         <div class="showTripTypesThird">
           <ul *ngIf="showTripTypesThird">
             <li *ngFor="let item of weather">
-              <a href="">{{item.name}}</a>
+              <a [routerLink]="['/trip-types', item.name]" (click)="collapseClick('type')">{{item.name}}</a>
             </li>
           </ul>
         </div>
