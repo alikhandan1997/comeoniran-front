@@ -12,42 +12,12 @@
             <div class="col-lg popular-trip">
                 <h3>Our most popular trip types</h3>
                 <div class="row popular-trip-box">
-                    <div class="col-lg-3 col-md-6 col-sm-6 popular-trip-item">
-                        <a [routerLink] = "['/trip-types', 'trip-type']">
+                    <div class="col-lg-3 col-md-6 col-sm-6 popular-trip-item" *ngFor="let item of topType">
+                        <a [routerLink] = "['/trip-types', item.name]">
                             <span>
-                                <img src="../../assets/city.jpg">
+                                <img src="{{item.image}}">
                                 <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 popular-trip-item">
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6  popular-trip-item">
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
-                                </div>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6  popular-trip-item">
-                        <a href="">
-                            <span>
-                                <img src="../../assets/city.jpg">
-                                <div class="desc">
-                                    <p>Fucking fuck</p>
+                                    <p>{{item.name}}</p>
                                 </div>
                             </span>
                         </a>
