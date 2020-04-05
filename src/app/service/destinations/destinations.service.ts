@@ -13,7 +13,7 @@ export class DestinationsService {
   private baseurl = 'http://195.248.241.73';
   apiUrl: string;
 
-  getCity(): Observable<Object> {
+  getDestinationCity(): Observable<Object> {
     this.apiUrl = ApiMap.api.servicesApi.get.getDestinationCity;
     return this.http.get(`${this.baseurl}${this.apiUrl}`);
   }
