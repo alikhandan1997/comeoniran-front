@@ -51,59 +51,55 @@
             <h1>Top popular options</h1>
         </div>
         <div class="row donation">
-            <div class="col-lg-3 col-md-3 col-sm-6 content">
+            <div class="col-lg-3 col-md-3 col-sm-6 content" *ngFor="let item of topHotel">
                 <div class="head">
                     <h5>Hotel</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/hotels', 'hotelname']">
-                        <img src="../../assets/city.jpg" alt="">
+                    <a [routerLink] = "['/hotels', 'item.id']">
+                        <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                     <div class="price">
-                        <a href="">$500</a>
+                        <a href="">${{item.price}}</a>
                     </div>
                 </div>
                 <div class="desc">
-                    <h4>hotel name</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem earum consequatur non tempora nisi illum maslflkllkdflll</p>
+                    <h4>{{item.name}}</h4>
+                    <p>{{item.description}}</p>
                     <span class="rank">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                     </span>
                     <span class="days">
                         <i class="far fa-clock"></i>
-                        <a href="">5 Days</a>
+                        <a href=""> {{item.created_at}} Days</a>
                     </span>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 content">
+            <div class="col-lg-3 col-md-3 col-sm-6 content" *ngFor="let item of topTour">
                 <div class="head">
                     <h5>Tour</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/tours', 'tourname']">
-                        <img src="../../assets/city.jpg" alt="">
+                    <a [routerLink] = "['/tours', 'item.id']">
+                        <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                     <div class="price">
-                        <a href="">$500</a>
+                        <a href="">${{item.price}}</a>
                     </div>
                 </div>
                 <div class="desc">
-                    <h4>tour name</h4>
-                    <p>tour description</p>
+                    <h4>{{item.name}}</h4>
+                    <p>{{item.description}}</p>
                     <span class="rank">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                     </span>
                     <span class="days">
                         <i class="far fa-clock"></i>
-                        <a href="">5 Days</a>
+                        <a href=""> {{item.created_at}} Days</a>
                     </span>
                 </div>
             </div>
@@ -112,8 +108,9 @@
                     <h5>Destination</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/destination', 'destname']">
+                    <a [routerLink] = "['/destination', 'item.id']">
                         <img src="{{item.image}}" alt="">
+                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
                 <div class="desc">
@@ -133,8 +130,9 @@
                     <h5>Leader</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/leaders', item.first_name]">
+                    <a [routerLink] = "['/leaders', item.id]">
                         <img src="{{item.image}}" alt="">
+                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
                 <div class="desc">
