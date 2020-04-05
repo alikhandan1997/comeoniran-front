@@ -53,7 +53,7 @@ export class DestinationDetailComponent implements OnInit {
   }
 
   getCity = () => {
-    this.cityService.getDestinationCity().subscribe((data) => {
+    this.cityService.getCity().subscribe((data) => {
       this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
       for(let i=0; i<this.cityData.length; i++) {
         if(this.cityData[i].name == this.pageCity) {
