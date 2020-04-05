@@ -10,7 +10,7 @@ export class NavigationService {
 
   constructor(private http: HttpClient) { }
 
-  private baseurl = 'http://comeoniran.com';
+  private baseurl = 'http://195.248.241.73';
   apiUrl: string;
 
   getDestinationCity(): Observable<Object> {
