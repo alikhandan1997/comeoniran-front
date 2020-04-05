@@ -50,6 +50,11 @@ export class HomePageComponent implements OnInit {
       this.lastHotels = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('hotels', this.lastHotels);
     })
+    this.filter = '?type=hotel&top=1';
+    this.homeService.getService(this.filter).subscribe((data) => {
+      this.topHotel = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('top hotels', this.topHotel);
+    })
   }
 
   getTours = () => {
@@ -57,6 +62,11 @@ export class HomePageComponent implements OnInit {
     this.homeService.getService(this.filter).subscribe((data) => {
       this.lastTours = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('tours', this.lastTours);
+    })
+    this.filter = '?type=tour&top=1';
+    this.homeService.getService(this.filter).subscribe((data) => {
+      this.topTour = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('top tours', this.topTour);
     })
   }
 
