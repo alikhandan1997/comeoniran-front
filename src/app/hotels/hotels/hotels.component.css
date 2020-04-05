@@ -163,7 +163,7 @@
 }
 
 .hotels .list .image img {
-  height: 300px;
+  height: 250px;
   width: 100%;
 }
 
@@ -216,7 +216,7 @@
 .hotels .list .content .desc .date {
   position: absolute;
   bottom: 10%;
-  left: 80%;
+  left: 70%;
 }
 
 .hotels .list .content .price {
