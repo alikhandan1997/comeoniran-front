@@ -15,6 +15,7 @@ export class HomePageComponent implements OnInit {
   topLeader = [];
   topHotel = [];
   topTour = [];
+  topCity = [];
 
   lastLeaders = [];
   lastHotels = [];
@@ -27,6 +28,7 @@ export class HomePageComponent implements OnInit {
     this.getLeader();    
     this.getHotels();
     this.getTours();
+    this.getCity();
   }
 
   getLeader = () => {
@@ -55,6 +57,14 @@ export class HomePageComponent implements OnInit {
     this.homeService.getService(this.filter).subscribe((data) => {
       this.lastTours = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('tours', this.lastTours);
+    })
+  }
+
+  getCity = () => {
+    this.filter = '';
+    this.homeService.getCity(this.filter).subscribe((data) => {
+      this.topCity = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('city', this.topCity);
     })
   }
 
