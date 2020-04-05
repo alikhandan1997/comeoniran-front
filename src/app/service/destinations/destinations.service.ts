@@ -14,7 +14,7 @@ export class DestinationsService {
   apiUrl: string;
 
   getCity(): Observable<Object> {
-    this.apiUrl = ApiMap.api.servicesApi.get.getCity;
+    this.apiUrl = ApiMap.api.servicesApi.get.getDestinationCity;
     return this.http.get(`${this.baseurl}${this.apiUrl}`);
   }
 
