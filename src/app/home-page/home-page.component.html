@@ -225,6 +225,7 @@
                 <div class="image">
                     <a [routerLink] = "['/leaders', item.id]">
                         <img src="{{item.image}}" alt="">
+                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
                 <div class="desc">  
@@ -256,6 +257,7 @@
                     <div class="image">
                         <a [routerLink] = "['/hotels', item.id]">
                             <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                            <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                         </a>
                         <div class="price">
                             <a href="">${{item.price}}</a>
@@ -270,82 +272,7 @@
                         </span>
                         <span class="days">
                             <i class="far fa-clock"></i>
-                            <a href="" style="margin-left:3px;color:black">{{item.created_at}} days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="days">
-                            <i class="far fa-clock"></i>
-                            <a href="" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="days">
-                            <i class="far fa-clock"></i>
-                            <a href="" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="days">
-                            <i class="far fa-clock"></i>
-                            <a href="" style="margin-left:3px;color:black">5 Days</a>
+                            <a href="" style="margin-left:3px;color:black"> {{item.created_at}} days</a>
                         </span>
                     </div>
                 </div>
@@ -410,65 +337,12 @@
                     <h4>{{item.name}}</h4>
                     <p>{{item.description}}</p>
                     <span class="rank">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                        <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                     </span>
                     <span class="days">
                         <i class="far fa-clock"></i>
-                        <a href="">5 Days</a>
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 content">
-                <div class="image">
-                    <a [routerLink] = "['/tours', 'tourname']">
-                        <img src="../../assets/city.jpg" alt="">
-                    </a>
-                    <div class="price">
-                        <a href="">$500</a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h4>tour name</h4>
-                    <p>tour description</p>
-                    <span class="rank">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </span>
-                    <span class="days">
-                        <i class="far fa-clock"></i>
-                        <a href="" style="margin-left:3px;color:black">5 Days</a>
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 content">
-                <div class="image">
-                    <a [routerLink] = "['/tours', 'tourname']">
-                        <img src="../../assets/city.jpg" alt="">
-                    </a>
-                    <div class="price">
-                        <a href="">$500</a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h4>tour name</h4>
-                    <p>tour description</p>
-                    <span class="rank">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </span>
-                    <span class="days">
-                        <i class="far fa-clock"></i>
-                        <a href="" style="margin-left:3px;color:black">5 Days</a>
+                        <a href=""> {{item.created_at}} days</a>
                     </span>
                 </div>
             </div>
