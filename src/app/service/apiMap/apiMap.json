@@ -2,11 +2,10 @@
     "api": {
         "servicesApi": {
             "get": {
-                "getService": "/api/interface/services/",
-                "getDestination": "/api/services/destination/",
                 "getDestinationCity": "/api/interface/destination/city/",
                 "getDestinationCountry": "/api/interface/destination/country/",
                 "getLeader": "/api/interface/leaders/",
+                "getService": "/api/interface/services/",
                 "getTripType": "/api/interface/trip-types/"
             }
         }
