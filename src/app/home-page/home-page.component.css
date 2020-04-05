@@ -501,6 +501,11 @@
   }
 }
 
+.leaders .leader-box .image img {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
 .leaders .leader-box .desc {
   background-color: white;
   padding: 2%;

@@ -107,17 +107,17 @@
                     </span>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 content">
+            <div class="col-lg-3 col-md-3 col-sm-6 content" *ngFor="let item of topCity">
                 <div class="head">
                     <h5>Destination</h5>
                 </div>
                 <div class="image">
                     <a [routerLink] = "['/destination', 'destname']">
-                        <img src="../../assets/city.jpg" alt="">
+                        <img src="{{item.image}}" alt="">
                     </a>
                 </div>
                 <div class="desc">
-                    <h4>city name</h4>
+                    <h4>{{item.name}}</h4>
                     <p>city description</p>
                     <span class="rank">
                         <i class="fas fa-star"></i>

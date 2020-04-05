@@ -10,7 +10,7 @@ export class HomePageService {
 
   constructor(private http: HttpClient) { }
 
-  private baseurl = 'http://195.248.241.73';
+  private baseurl = 'http://comeoniran.com';
   apiUrl: string;
 
   getLeader(filter: string): Observable<Object> {
@@ -20,6 +20,11 @@ export class HomePageService {
 
   getService(filter: string): Observable<Object> {
     this.apiUrl = ApiMap.api.servicesApi.get.getService;
+    return this.http.get(`${this.baseurl}${this.apiUrl}${filter}`);
+  }
+
+  getCity(filter: string): Observable<Object> {
+    this.apiUrl = ApiMap.api.servicesApi.get.getDestinationCity;
     return this.http.get(`${this.baseurl}${this.apiUrl}${filter}`);
   }
 
