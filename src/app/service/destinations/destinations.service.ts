@@ -13,7 +13,7 @@ export class DestinationsService {
   private baseurl = 'http://comeoniran.com';
   apiUrl: string;
 
-  getDestinationCity(): Observable<Object> {
+  getCity(): Observable<Object> {
     this.apiUrl = ApiMap.api.servicesApi.get.getDestinationCity;
     return this.http.get(`${this.baseurl}${this.apiUrl}`);
   }
