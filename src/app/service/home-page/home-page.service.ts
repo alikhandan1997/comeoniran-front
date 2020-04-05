@@ -23,4 +23,9 @@ export class HomePageService {
     return this.http.get(`${this.baseurl}${this.apiUrl}${filter}`);
   }
 
+  getCity(filter: string): Observable<Object> {
+    this.apiUrl = ApiMap.api.servicesApi.get.getDestinationCity;
+    return this.http.get(`${this.baseurl}${this.apiUrl}${filter}`);
+  }
+
 }
