@@ -13,7 +13,7 @@
                 <h3>Our most popular trip types</h3>
                 <div class="row popular-trip-box">
                     <div class="col-lg-3 col-md-6 col-sm-6 popular-trip-item" *ngFor="let item of topType">
-                        <a [routerLink] = "['/trip-types', item.name]">
+                        <a [routerLink] = "['/trip-types', item.id]">
                             <span>
                                 <img src="{{item.image}}">
                                 <div class="desc">
@@ -54,7 +54,7 @@
                 <h3>Our other trip types</h3>
                 <div class="row other-popular-trip-box">
                     <div class="col-lg-3 col-md-6 col-sm-6 other-popular-trip-item">
-                        <a href="">
+                        <a [routerLink] = "['/trip-types', 'item.id']">
                             <span>
                                 <img src="../../assets/city.jpg">
                                 <div class="other-desc">
