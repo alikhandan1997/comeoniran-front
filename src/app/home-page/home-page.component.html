@@ -57,7 +57,7 @@
                 </div>
                 <div class="image">
                     <a [routerLink] = "['/hotels', item.id]">
-                        <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        <img *ngIf="item.image[0]" src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                     <div class="price">
@@ -83,7 +83,7 @@
                 </div>
                 <div class="image">
                     <a [routerLink] = "['/tours', item.id]">
-                        <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        <img *ngIf="item.image[0]" src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                     <div class="price">
@@ -109,7 +109,7 @@
                 </div>
                 <div class="image">
                     <a [routerLink] = "['/destinations', item.id]">
-                        <img src="{{item.image}}" alt="">
+                        <img *ngIf="item.image" src="{{item.image}}" alt="">
                         <img *ngIf="!item.image" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="image">
                     <a [routerLink] = "['/leaders', item.id]">
-                        <img src="{{item.image}}" alt="">
+                        <img *ngIf="item.image" src="{{item.image}}" alt="">
                         <img *ngIf="!item.image" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
@@ -224,7 +224,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 leader-box" *ngFor="let item of lastLeaders">
                 <div class="image">
                     <a [routerLink] = "['/leaders', item.id]">
-                        <img src="{{item.image}}" alt="">
+                        <img *ngIf="item.image[0]" src="{{item.image}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
@@ -256,7 +256,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of lastHotels">
                     <div class="image">
                         <a [routerLink] = "['/hotels', item.id]">
-                            <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                            <img *ngIf="item.image[0]" src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                             <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                         </a>
                         <div class="price">
@@ -326,7 +326,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of lastTours">
                 <div class="image">
                     <a [routerLink] = "['/tours', item.id]">
-                        <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                        <img *ngIf="item.image[0]" src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                     <div class="price">
