@@ -56,7 +56,7 @@
                     <h5>Hotel</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/hotels', 'item.id']">
+                    <a [routerLink] = "['/hotels', item.id]">
                         <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
@@ -82,7 +82,7 @@
                     <h5>Tour</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/tours', 'item.id']">
+                    <a [routerLink] = "['/tours', item.id]">
                         <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
@@ -108,7 +108,7 @@
                     <h5>Destination</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/destination', 'item.id']">
+                    <a [routerLink] = "['/destination', item.id]">
                         <img src="{{item.image}}" alt="">
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
