@@ -35,7 +35,7 @@ export class TripTypeDetailComponent implements OnInit {
       this.types = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('toptype', this.types);
       for(let i=0; i<this.types.length; i++) {
-        if(this.types[i].name == this.pageCity) {
+        if(this.types[i].id == this.pageCity) {
           this.typeName = this.types[i].name;
           this.typeImage = this.types[i].image;
         }
