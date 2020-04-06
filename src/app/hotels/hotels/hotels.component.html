@@ -81,284 +81,31 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem earum consequatur non tempora nisi illum maslflkllkdflll</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem earum consequatur non tempora nisi illum maslflkllkdflll</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
             </div>
 
             <div class="header" *ngIf="showOthers">
                 <h1>Other hotels</h1>
             </div>
             <div class="row" *ngIf="showOthers">
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
+                <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of otherHotels">
                     <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
+                        <a [routerLink] = "['/hotels', item.name]">
+                            <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         </a>
                         <div class="price">
-                            <a href="/" onclick="return false">$500</a>
+                            <a href="">${{item.price}}</a>
                         </div>
                     </div>
                     <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.description}}</p>
                         <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                            <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                         </span>
                         <span class="date">
                             <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span class="rank">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false" style="margin-left:3px;color:black">5 Days</a>
+                            <a>{{item.created_at}} Days</a>
                         </span>
                     </div>
                 </div>
