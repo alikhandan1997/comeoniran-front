@@ -15,7 +15,7 @@
     font-size: 50px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .header h1 {
         padding-top: 25%;
     }
@@ -31,7 +31,7 @@
     padding-top: 3%;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
     .little-desc {
         text-align: center;
     }
@@ -55,7 +55,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
     .main-content .leader h3 {
         text-align: center;
     }
@@ -83,7 +83,7 @@
     border-radius: 5px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .main-content .leader .other-leader {
         padding: 2%;
         margin-bottom: 5%;
@@ -110,7 +110,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .hotel-tour .hotel-head h3 {
         text-align: center;
     }
@@ -121,7 +121,7 @@
     margin-left: 45%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .hotel-tour .hotel-head h3 a {
         margin-left: 7%;
         background-color: #0297c9;
@@ -139,13 +139,13 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .hotel-tour .tour-head h3 {
         text-align: center;
     }
 }
 
-@media screen and (max-with:700px) {
+@media screen and (max-with:800px) {
     .hotel-tour .tour-head {
         padding-top: 5%;
     }
@@ -156,7 +156,7 @@
     margin-left: 45%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .hotel-tour .tour-head h3 a {
         margin-left: 10%;
         background-color: #0297c9;
@@ -179,7 +179,7 @@
     border-radius: 30px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .hotel-tour .image .price{
         padding: 5px;
         top: 10px;
@@ -242,7 +242,7 @@
     padding: 5% 0 5% 0;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
     .time-head .header h3 {
         text-align: center;
     }
@@ -253,7 +253,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .city-desc-map .about-head h3 {
         text-align: center;
     }
@@ -273,7 +273,7 @@
     color: gray;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .city-desc-map .month i{
         font-size: 30px;
     }
@@ -284,7 +284,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
     .map-desc h3 {
         text-align: center;
     }
@@ -306,7 +306,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .other-destinations .other-head {
         text-align: center;
     }

@@ -45,7 +45,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .hotel-box .gallery .header h3 {
         text-align: center;
     }
@@ -78,7 +78,7 @@
     font-weight: 600;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .tour-desc-map .possibilities h3 {
         text-align: center;
     }
@@ -94,7 +94,7 @@
     padding-bottom: 5%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .tour-desc-map .map-box h3 {
         text-align: center;
     }
@@ -117,7 +117,7 @@
     color: gray;
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:800px){
     .tour-desc-map .poss i {
         font-size: 30px;
     }
@@ -131,7 +131,7 @@
     margin-bottom: 5%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .other-hotels .other-head h3{
         text-align: center;
     }

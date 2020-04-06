@@ -15,7 +15,7 @@
     font-size: 50px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .header h1 {
         padding-top: 20%;
     }
@@ -30,7 +30,7 @@
     padding-bottom: 5%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .type-box .header h3 {
         text-align: center;
     }
@@ -55,7 +55,7 @@
     font-size: 16px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .type-box .leaders .other-leader {
         padding: 2%;
         margin: 2% 0 2% 0;
@@ -72,7 +72,7 @@
     margin-bottom: 25%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .type-box .items .tours {
         margin-bottom: 0;
     }
@@ -83,7 +83,7 @@
     padding-bottom: 2%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .type-box .items .tours .header h3 {
         text-align: center;
         padding: 5%;
@@ -103,7 +103,7 @@
     border-radius: 30px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .type-box .items .image .price {
         padding: 5px 15px 5px 15px;
         left: 20px;
@@ -148,7 +148,7 @@
     color: black;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .type-box .items .hotels h3{
         text-align: center;
         padding: 10%;
@@ -165,14 +165,14 @@
     padding-bottom: 3%;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .other-trip-type .head h3 {
         text-align: center;
         padding: 5%;
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .other-trip-type .content {
         padding-bottom: 10%;
     }
@@ -188,7 +188,7 @@
     left: 30px;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
     .other-trip-type .image .name {
         bottom: 60px;
     }

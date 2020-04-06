@@ -27,7 +27,7 @@
             <i class="fa fa-reorder"></i>
           </a>
 
-          <a href="http://192.168.43.116:8585/dashboard/login" class="header-head-link" id="login" *ngIf="showLogin">
+          <a href="http://195.248.241.73/dashboard/" class="header-head-link" id="login" *ngIf="showLogin">
             <i class="fa fa-user" style="font-size:18px;margin-right:10px;"></i>
             Sign in to my Account
           </a>
@@ -60,7 +60,7 @@
         <a [routerLink] = "['/about-us']" (click)="collapseClick('items')">About Us</a>
       </li>
       <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && showLogin">
-        <a href="http://192.168.43.116:8585/dashboard/login" (click)="collapseClick('items')">
+        <a href="http://195.248.241.73/dashboard/" (click)="collapseClick('items')">
           Sign in to my Account
         </a>
       </li>
