@@ -63,6 +63,7 @@
                     <div class="image">
                         <a [routerLink] = "['/hotels', item.name]">
                             <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                            <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                         </a>
                         <div class="price">
                             <a href="">${{item.price}}</a>
@@ -91,6 +92,7 @@
                     <div class="image">
                         <a [routerLink] = "['/hotels', item.name]">
                             <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
+                            <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                         </a>
                         <div class="price">
                             <a href="">${{item.price}}</a>
