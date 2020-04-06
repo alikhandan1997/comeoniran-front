@@ -68,6 +68,7 @@ export class HomePageComponent implements OnInit {
     this.filter = '?last=1';
     this.homeService.getCity(this.filter).subscribe((data) => {
       this.topCity = Array.from(Object.keys(data['result']), k => data['result'][k]);
+      console.log('topcity', this.topCity)
     })
   }
 

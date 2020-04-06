@@ -108,9 +108,9 @@
                     <h5>Destination</h5>
                 </div>
                 <div class="image">
-                    <a [routerLink] = "['/destination', item.id]">
+                    <a [routerLink] = "['/destinations', item.id]">
                         <img src="{{item.image}}" alt="">
-                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
+                        <img *ngIf="!item.image" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
                 <div class="desc">
@@ -132,7 +132,7 @@
                 <div class="image">
                     <a [routerLink] = "['/leaders', item.id]">
                         <img src="{{item.image}}" alt="">
-                        <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
+                        <img *ngIf="!item.image" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
                 <div class="desc">
