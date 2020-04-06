@@ -10,7 +10,7 @@ export class ServicesService {
 
   constructor(private http: HttpClient) { }
 
-  private baseurl = 'http://195.248.241.73';
+  private baseurl = ApiMap.api.baseUrl;
   apiUrl: string;
 
   getService(filter: string): Observable<Object> {

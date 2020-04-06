@@ -1,5 +1,6 @@
 {
     "api": {
+        "baseUrl" : "http://195.248.241.73",
         "servicesApi": {
             "get": {
                 "getDestinationCity": "/api/interface/destination/city/",
