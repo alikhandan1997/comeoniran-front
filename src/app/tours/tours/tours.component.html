@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-lg">
                 <div class="row hotel-box">
-                    <h6>FIND TOURS...</h6>
+                    <h6>FIND HOTELS...</h6>
                     <div class="col-lg hotel-content">
-                        <h4>Find your favorite tours</h4>
-                        <p>Either find a tour below, or send a general inquiry by clicking 'Start finding my tour.'</p>
+                        <h4>Find your favorite hotels</h4>
+                        <p>Either find a hotel below, or send a general inquiry by clicking 'Start finding my hotel.'</p>
                         <div class="design-trip-form">
                             <form class="form-inline" action="">
                                 <h5>City</h5>
@@ -37,7 +37,7 @@
                                     <option value="2021-12-01">December 2021</option>
                                     <option value="2022-01-01">January 2022</option>
                                 </select>
-                                <button type="submit">Start finding my tour</button>
+                                <button type="submit">Start finding my hotel</button>
                               </form>
                         </div>
                     </div>
@@ -51,242 +51,61 @@
     <div class="container">
         <div class="title">
             <div class="head">
-                <h1>Popular Tours</h1>
+                <h1>Popular Hotels</h1>
             </div>
             <div class="desc">
-                <p>You can find some of our popular tours down here</p>
+                <p>You can find some of our popular hotels down here</p>
             </div>
         </div>
         <div class="list">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
+                <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of topHotels">
                     <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
+                        <a [routerLink] = "['/hotels', item.name]">
+                            <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         </a>
                         <div class="price">
-                            <a href="">$500</a>
+                            <a href="">${{item.price}}</a>
                         </div>
                     </div>
                     <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.description}}</p>
+                        <span class="rank">
+                            <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                            <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                         </span>
                         <span class="date">
                             <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
+                            <a>{{item.created_at}} Days</a>
                         </span>
                     </div>
                 </div>
             </div>
 
             <div class="header" *ngIf="showOthers">
-                <h1>Other tours</h1>
+                <h1>Other hotels</h1>
             </div>
             <div class="row" *ngIf="showOthers">
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
+                <div class="col-lg-3 col-md-6 col-sm-6 content" *ngFor="let item of otherHotels">
                     <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
+                        <a [routerLink] = "['/hotels', item.name]">
+                            <img src="http://comeoniran.com/media/{{item.image[0]}}" alt="">
                         </a>
                         <div class="price">
-                            <a href="/" onclick="return false">$500</a>
+                            <a href="">${{item.price}}</a>
                         </div>
                     </div>
                     <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.description}}</p>
+                        <span class="rank">
+                            <i class="fas fa-star" *ngFor="let item of [].constructor(item.rank)"></i>
+                            <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                         </span>
                         <span class="date">
                             <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 content">
-                    <div class="image">
-                        <a [routerLink] = "['/hotels', 'hotelname']">
-                            <img src="../../assets/city.jpg" alt="">
-                        </a>
-                        <div class="price">
-                            <a href="/" onclick="return false">$500</a>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h4>hotel name</h4>
-                        <p>hotel address</p>
-                        <span>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </span>
-                        <span class="date">
-                            <i class="far fa-clock"></i>
-                            <a href="/" onclick="return false">5 Days</a>
+                            <a>{{item.created_at}} Days</a>
                         </span>
                     </div>
                 </div>
@@ -294,7 +113,7 @@
 
             <div class="row">
                 <div class="more-hotels">
-                    <button (click)="showOther()">{{lessMore}} Tours</button>
+                    <button (click)="showOther()">{{lessMore}} Hotels</button>
                 </div>
             </div>
         </div>
