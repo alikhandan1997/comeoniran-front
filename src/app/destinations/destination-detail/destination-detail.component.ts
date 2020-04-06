@@ -56,7 +56,7 @@ export class DestinationDetailComponent implements OnInit {
     this.cityService.getCity().subscribe((data) => {
       this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
       for(let i=0; i<this.cityData.length; i++) {
-        if(this.cityData[i].name == this.pageCity) {
+        if(this.cityData[i].id == this.pageCity) {
           this.cityName = this.cityData[i].name;
           this.cityImage = this.cityData[i].image;
         }
