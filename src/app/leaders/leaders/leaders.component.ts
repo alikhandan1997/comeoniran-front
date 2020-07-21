@@ -8,12 +8,12 @@ import { ServicesService } from 'src/app/service/serviceis/services.service';
 })
 export class LeadersComponent implements OnInit {
 
-  constructor(private leaderService: ServicesService) { }
+  constructor(private http: ServicesService) { }
 
   showOthers: boolean = false;
   lessMore:string = 'More';
 
-  filter: string;
+  apiData: string = '';
 
   topLeaders = [];
   otherLeaders = [];
@@ -33,13 +33,13 @@ export class LeadersComponent implements OnInit {
   }
 
   getLeaders = () => {
-    this.filter = '?top=4';
-    this.leaderService.getLeader(this.filter).subscribe((data) => {
+    this.apiData = '?top=4';
+    this.http.getLeader(this.apiData).subscribe((data) => {
       this.topLeaders = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('top', this.topLeaders);
     })
-    this.filter = '';
-    this.leaderService.getLeader(this.filter).subscribe((data) => {
+    this.apiData = '';
+    this.http.getLeader(this.apiData).subscribe((data) => {
       this.otherLeaders = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('last', this.otherLeaders);
     })

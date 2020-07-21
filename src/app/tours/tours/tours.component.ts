@@ -8,12 +8,12 @@ import { ServicesService } from 'src/app/service/serviceis/services.service';
 })
 export class ToursComponent implements OnInit {
 
-  constructor(private tourService: ServicesService) { }
+  constructor(private http: ServicesService) { }
 
   showOthers: boolean = false;
   lessMore: string = 'More';
 
-  filter: string;
+  apiData: string = '';
 
   topTours = [];
   otherTours = [];
@@ -33,13 +33,13 @@ export class ToursComponent implements OnInit {
   }
 
   getTours = () => {
-    this.filter = '?type=tour&top=4';
-    this.tourService.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=tour&top=4';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.topTours = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('top', this.topTours);
     })
-    this.filter = '?type=tour';
-    this.tourService.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=tour';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.otherTours = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('last', this.otherTours);
     })

@@ -1,9 +1,9 @@
 import {Component, OnInit } from '@angular/core';
-import { DestinationsService } from 'src/app/service/destinations/destinations.service';
 import Map from 'ol/Map';
 import Tile from 'ol/layer/Tile';
 import OSM from  'ol/source/OSM';
 import View from 'ol/View';
+import { ServicesService } from 'src/app/service/serviceis/services.service';
 
 
 @Component({
@@ -14,6 +14,8 @@ import View from 'ol/View';
 export class DestinationDetailComponent implements OnInit {
 
   map;
+
+  apiData: string = '';
 
   href: string;
   hrefPart: string[];
@@ -26,7 +28,7 @@ export class DestinationDetailComponent implements OnInit {
 
 
   constructor(
-    private cityService: DestinationsService
+    private http: ServicesService
   ) {}
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class DestinationDetailComponent implements OnInit {
     this.href = window.location.href;
     this.hrefPart = this.href.split('/');
     this.pageCity = this.hrefPart[4];
-    this.getCity(); 
+    this.getCity();
   }
 
   initilizeMap () {
@@ -53,7 +55,7 @@ export class DestinationDetailComponent implements OnInit {
   }
 
   getCity = () => {
-    this.cityService.getCity().subscribe((data) => {
+    this.http.getDestinationCity(this.apiData).subscribe((data) => {
       this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
       for(let i=0; i<this.cityData.length; i++) {
         if(this.cityData[i].id == this.pageCity) {

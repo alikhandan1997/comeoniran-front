@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TripTypesService } from 'src/app/service/trip-types/trip-types.service';
+import { ServicesService } from 'src/app/service/serviceis/services.service';
 
 @Component({
   selector: 'app-trip-type-detail',
@@ -8,13 +8,13 @@ import { TripTypesService } from 'src/app/service/trip-types/trip-types.service'
 })
 export class TripTypeDetailComponent implements OnInit {
 
-  constructor(private typeService: TripTypesService) { }
+  constructor(private http: ServicesService) { }
 
   href: string;
   hrefPart: string[];
   pageCity: string;
 
-  filter: string;
+  apiData: string = '';
 
   types = [];
 
@@ -30,8 +30,8 @@ export class TripTypeDetailComponent implements OnInit {
   }
 
   getTripTypes = () => {
-    this.filter = '';
-    this.typeService.getTripTypes(this.filter).subscribe((data) => {
+    this.apiData = '';
+    this.http.getTripType(this.apiData).subscribe((data) => {
       this.types = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('toptype', this.types);
       for(let i=0; i<this.types.length; i++) {

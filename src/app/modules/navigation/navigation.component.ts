@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationService } from 'src/app/service/navigation/navigation.service';
+import { ServicesService } from 'src/app/service/serviceis/services.service';
 
 @Component({
   selector: 'app-navigation',
@@ -9,37 +9,39 @@ import { NavigationService } from 'src/app/service/navigation/navigation.service
 export class NavigationComponent implements OnInit {
 
   constructor(
-    private navService: NavigationService
+    private http: ServicesService
     ) { }
 
-  // show nav variable 
+  apiData: string = '';
+
+  // show nav variable
   showNav: boolean = true;
 
-  // trip type content show variables 
+  // trip type content show variables
   showLogin: boolean = true;
   showDestinations: boolean = false;
   showTripTypes: boolean = false;
 
-  // show collapse nav varibale 
+  // show collapse nav varibale
   showCollapse: boolean = false;
 
-  // show collapse content varible 
+  // show collapse content varible
   showTripTypesCollapse: boolean = false;
   showDestinationsCollapse: boolean = false;
   TripTypeChild: boolean = true;
 
-  // show trip type content varibale 
+  // show trip type content varibale
   showTripTypesFirst: boolean = false;
   showTripTypesSeacond: boolean = false;
   showTripTypesThird: boolean = false;
   showTripTypesFourth: boolean = false;
 
-  // api array varibale 
+  // api array varibale
   cityData = [];
   triptypeData = [];
   leaderData = [];
 
-  // trip type content api variable 
+  // trip type content api variable
   travelStyleRight = [];
   travelStyleLeft = [];
   travelStyle = [];
@@ -51,12 +53,12 @@ export class NavigationComponent implements OnInit {
   weather = [];
 
   ngOnInit(){
-    // calling api functions 
+    // calling api functions
     this.getDestinationCity();
     this.getTripType();
   }
 
-  // show navigation content on hover 
+  // show navigation content on hover
   mouseEnter = (div : string) => {
     if(this.showCollapse == false) {
       if (div == 'destination') {
@@ -69,7 +71,7 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  // hide navigation content on hover out 
+  // hide navigation content on hover out
   mouseLeave = (div : string) => {
     if(this.showCollapse == false) {
       if (div == 'destination') {
@@ -80,7 +82,7 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  // clicking in collapse navigation 
+  // clicking in collapse navigation
   collapseClick = (e: string) => {
     if(e == 'collapse') {
       this.showCollapse = !this.showCollapse;
@@ -103,7 +105,7 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  // click in  trip type content 
+  // click in  trip type content
   tripTypesClick = (e: string) => {
     if(e == 'first') {
       this.showTripTypesFirst = !this.showTripTypesFirst;
@@ -117,19 +119,19 @@ export class NavigationComponent implements OnInit {
     } else if (e == 'fourth') {
       this.showTripTypesFourth = !this.showTripTypesFourth;
       this.TripTypeChild = !this.TripTypeChild;
-    } 
+    }
   }
 
-  // get city for destination navbar from api 
+  // get city for destination navbar from api
   getDestinationCity = () => {
-    this.navService.getDestinationCity().subscribe((data) => {
-      this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);      
+    this.http.getDestinationCity(this.apiData).subscribe((data) => {
+      this.cityData = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
   }
 
-  // get trip type for destination from api 
+  // get trip type for destination from api
   getTripType = () => {
-    this.navService.getTripType().subscribe((data) => {
+    this.http.getTripType(this.apiData).subscribe((data) => {
       this.triptypeData = Array.from(Object.keys(data['result']), k => data['result'][k]);
       for(let i=0; i<this.triptypeData.length; i++){
         if(this.triptypeData[i].type == 1) {

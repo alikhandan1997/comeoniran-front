@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomePageService } from '../service/home-page/home-page.service';
+import { ServicesService } from '../service/serviceis/services.service';
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +9,7 @@ import { HomePageService } from '../service/home-page/home-page.service';
 export class HomePageComponent implements OnInit {
 
   constructor(
-    private homeService: HomePageService
+    private http: ServicesService
     ) { }
 
   topLeader = [];
@@ -21,52 +21,52 @@ export class HomePageComponent implements OnInit {
   lastHotels = [];
   lastTours = [];
 
-  filter: string;
+  apiData: string = '';
 
 
   ngOnInit() {
-    this.getLeader();    
+    this.getLeader();
     this.getHotels();
     this.getTours();
     this.getCity();
   }
 
   getLeader = () => {
-    this.filter = '?top=1';
-    this.homeService.getLeader(this.filter).subscribe((data) => {
+    this.apiData = '?top=1';
+    this.http.getLeader(this.apiData).subscribe((data) => {
       this.topLeader = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
-    this.filter = '?last=2';
-    this.homeService.getLeader(this.filter).subscribe((data) => {
+    this.apiData = '?last=2';
+    this.http.getLeader(this.apiData).subscribe((data) => {
       this.lastLeaders = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
   }
 
   getHotels = () => {
-    this.filter = '?type=hotel&last=4';
-    this.homeService.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=hotel&last=4';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.lastHotels = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
-    this.filter = '?type=hotel&top=1';
-    this.homeService.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=hotel&top=1';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.topHotel = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
   }
 
   getTours = () => {
-    this.filter = '?type=tour&last=4';
-    this.homeService.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=tour&last=4';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.lastTours = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
-    this.filter = '?type=tour&top=1';
-    this.homeService.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=tour&top=1';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.topTour = Array.from(Object.keys(data['result']), k => data['result'][k]);
     })
   }
 
   getCity = () => {
-    this.filter = '?last=1';
-    this.homeService.getCity(this.filter).subscribe((data) => {
+    this.apiData = '?last=1';
+    this.http.getDestinationCity(this.apiData).subscribe((data) => {
       this.topCity = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('topcity', this.topCity)
     })

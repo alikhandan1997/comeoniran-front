@@ -8,18 +8,18 @@ import { ServicesService } from 'src/app/service/serviceis/services.service';
 })
 export class HotelsComponent implements OnInit {
 
-  constructor(private Service: ServicesService) { }
+  constructor(private http: ServicesService) { }
 
   showOthers: boolean = false;
   lessMore:string = 'More';
 
-  filter: string;
+  apiData: string = '';
 
   topHotels = [];
   otherHotels = [];
 
   ngOnInit() {
-    this.getHotels(); 
+    this.getHotels();
   }
 
   showOther = () => {
@@ -33,13 +33,13 @@ export class HotelsComponent implements OnInit {
   }
 
   getHotels = () => {
-    this.filter = '?type=hotel&top=4';
-    this.Service.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=hotel&top=4';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.topHotels = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('top', this.topHotels);
     })
-    this.filter = '?type=hotel';
-    this.Service.getService(this.filter).subscribe((data) => {
+    this.apiData = '?type=hotel';
+    this.http.getService(this.apiData).subscribe((data) => {
       this.otherHotels = Array.from(Object.keys(data['result']), k => data['result'][k]);
       console.log('last', this.otherHotels);
     })
