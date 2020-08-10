@@ -1,55 +1,19 @@
 .top-image {
     position: relative;
-    background-image: url(../../../assets/back-ground.jpg);
+    background-image: url(../../../../assets/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 350px;
 }
 
-.top-image .header h1 {
-    text-align: center;
-    font-weight: 600;
-    color: white;
-    padding-top: 10%;
-    font-size: 60px;
-}
-
-@media screen and (max-width:800px) {
-    .top-image .header h1 {
-        padding-top: 20%;
-    }
-}
-
-@media screen and (max-width:400px) {
-    .top-image .header h1 {
-        font-size: 50px;
-        padding-top: 40%;
-    }
-}
-
 .hotel-box {
     margin-top: 5%;
 }
 
-.hotel-box .head h2 {
-    font-weight: 600;
-}
-
-@media screen and (max-width:800px) {
-    .hotel-box .head h2 {
-        text-align: center;
-    }
-}
-
 .hotel-box .desc p {
     color: black;
-}
-
-@media screen and (max-width:800px) {
-    .hotel-box .desc p {
-        text-align: center;
-    }
+    font-weight: 500;
 }
 
 .hotel-box .owner {

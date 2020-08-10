@@ -1,6 +1,6 @@
 .top-image {
     position: relative;
-    background-image: url(../../../assets/back-ground.jpg);
+    background-image: url(../../../../assets/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -88,7 +88,7 @@
         text-align: center;
         padding: 5%;
     }
-} 
+}
 
 .type-box .items .image img {
     position: relative;
