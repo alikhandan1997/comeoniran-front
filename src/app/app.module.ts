@@ -20,6 +20,7 @@ import { ToursDetailComponent } from './modules/tours/tours-detail/tours-detail.
 import { LeaderDetailComponent } from './modules/leaders/leaders-detail/leader-detail.component';
 import { DestinationDetailComponent } from './modules/destinations/destination-detail/destination-detail.component';
 import { TripTypeDetailComponent } from './modules/trip-types/trip-type-detail/trip-type-detail.component';
+import { MainComponent } from './layouts/main/main.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TripTypeDetailComponent } from './modules/trip-types/trip-type-detail/t
     ToursDetailComponent,
     LeaderDetailComponent,
     DestinationDetailComponent,
-    TripTypeDetailComponent
+    TripTypeDetailComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

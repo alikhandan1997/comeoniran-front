@@ -13,23 +13,75 @@ import { HotelsComponent } from './modules/hotels/hotels/hotels.component';
 import { HotelsDetailComponent } from './modules/hotels/hotels-detail/hotels-detail.component';
 import { ToursComponent } from './modules/tours/tours/tours.component';
 import { ToursDetailComponent } from './modules/tours/tours-detail/tours-detail.component';
+import { MainComponent } from './layouts/main/main.component';
 
 
 
 const routes: Routes = [
-  { path: '' , component: HomePageComponent },
-  { path: 'destinations', component: DestinationsComponent },
-  { path: 'destinations/:cityName', component: DestinationDetailComponent },
-  { path: 'trip-types', component: TripTypesComponent },
-  { path: 'trip-types/:trip-type', component: TripTypeDetailComponent },
-  { path: 'about-us', component: AboutUsComponent },
-  { path: 'leaders', component: LeadersComponent },
-  { path: 'leaders/:leaderName' , component: LeaderDetailComponent },
-  { path: 'hotels', component: HotelsComponent },
-  { path: 'hotels/:hotelName', component: HotelsDetailComponent },
-  { path: 'tours', component: ToursComponent },
-  { path: 'tours/:tourName', component: ToursDetailComponent }
-
+  {
+    path: '',
+    component: MainComponent,
+    children: [
+      {
+        path: '',
+        component: HomePageComponent,
+      },
+      {
+        path: 'destinations',
+        component: DestinationsComponent,
+        children: [
+          {
+            path: ':cityname',
+            component: DestinationDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'trip-types',
+        component: TripTypesComponent,
+        children: [
+          {
+            path: ':type',
+            component: TripTypeDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'leaders',
+        component: LeadersComponent,
+        children: [
+          {
+            path: ':leadername',
+            component: LeaderDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'hotels',
+        component: HotelsComponent,
+        children: [
+          {
+            path: ':hotelname',
+            component: HotelsDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'tours',
+        component: ToursComponent,
+        children: [
+          {
+            path: ':tourname',
+            component: ToursDetailComponent
+          }
+        ]
+      },
+      {
+        path: 'about-us',
+        component: AboutUsComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({
