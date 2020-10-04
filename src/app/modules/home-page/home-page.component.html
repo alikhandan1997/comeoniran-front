@@ -32,20 +32,21 @@
 </section>
 <!-- banner part start-->
 
-<!-- banner part start-->
+<!-- search and top items start  -->
 <section class="search_your_country">
     <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <div class="search_form">
-                    <form class="form-inline">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <input type="email" id="email" placeholder="Where would you like to go?">
-                        <button class="submit" type="submit">Discover</button>
-                        <button class="triptypes" type="submit">Not sure yet? Try our Trip Finder</button>
-                      </form>
-                </div>
-            </div>
+      <!-- the search part for finding trip type  -->
+      <div class="row align-items-center">
+          <div class="col-lg-12">
+              <div class="search_form">
+                  <form class="form-inline">
+                      <i class="fas fa-map-marked-alt"></i>
+                      <input type="email" id="email" placeholder="Where would you like to go?">
+                      <button class="submit" type="submit">Discover</button>
+                      <button class="triptypes" type="submit">Not sure yet? Try our Trip Finder</button>
+                    </form>
+              </div>
+          </div>
         </div>
         <div class="top-item-header">
             <h1>Top popular options</h1>
@@ -143,12 +144,13 @@
                         <i class="far fa-star" *ngFor="let item of [].constructor(5 - item.rank)"></i>
                     </span>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 </section>
-<!-- banner part start-->
+<!-- search and top items end  -->
 
+<!-- the advantages section part start  -->
 <section class="advantages">
     <div class="content">
         <div class="head">
@@ -198,7 +200,9 @@
         </div>
     </div>
 </section>
+<!-- the advantages section part end  -->
 
+<!-- leader section start  -->
 <section class="leaders">
     <div class="container-fluid">
         <div class="row">
@@ -216,7 +220,7 @@
                 </div>
                 <div class="see-more">
                     <a href="leaders">
-                        SEE MORE OF OUR LEADERS 
+                        SEE MORE OF OUR LEADERS
                         <i class="fa fa-angle-right"></i>
                     </a>
                 </div>
@@ -228,7 +232,7 @@
                         <img *ngIf="!item.image[0]" src="../../assets/city.jpg" alt="">
                     </a>
                 </div>
-                <div class="desc">  
+                <div class="desc">
                     <h5>{{item.first_name}} {{item.last_name}}</h5>
                     <p>{{item.description}}</p>
                     <span>
@@ -240,8 +244,9 @@
         </div>
     </div>
 </section>
+<!-- leader section end  -->
 
-<!-- use sasu part end-->
+<!-- popular hotel start  -->
 <section class="popular_hotels padding_top">
     <div class="container">
         <div class="row justify-content-center">
@@ -289,9 +294,9 @@
         </div>
     </div>
 </section>
-<!-- use sasu part end-->
+<!-- popular hotel end  -->
 
-<!-- cta part start-->
+<!-- subscription part start  -->
 <section class="cta_part section_padding">
     <div class="container">
         <div class="row">
@@ -309,10 +314,10 @@
             </div>
         </div>
     </div>
-</section> 
-<!-- cta part end-->
+</section>
+<!-- subscription part end  -->
 
-<!-- pricing part start-->
+<!-- popular tour section start  -->
 <section class="tour_package section_padding">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -358,4 +363,4 @@
         </div>
     </div>
 </section>
-<!-- pricing part end-->
+<!-- popular tour section end  -->

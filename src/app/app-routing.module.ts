@@ -14,6 +14,7 @@ import { HotelsDetailComponent } from './modules/hotels/hotels-detail/hotels-det
 import { ToursComponent } from './modules/tours/tours/tours.component';
 import { ToursDetailComponent } from './modules/tours/tours-detail/tours-detail.component';
 import { MainComponent } from './layouts/main/main.component';
+import { ListServicesComponent } from './modules/list-services/list-services.component';
 
 
 
@@ -79,6 +80,10 @@ const routes: Routes = [
       {
         path: 'about-us',
         component: AboutUsComponent
+      },
+      {
+        path: 'list',
+        component: ListServicesComponent
       }
     ]
   }

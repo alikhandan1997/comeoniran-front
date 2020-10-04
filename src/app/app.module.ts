@@ -21,6 +21,7 @@ import { LeaderDetailComponent } from './modules/leaders/leaders-detail/leader-d
 import { DestinationDetailComponent } from './modules/destinations/destination-detail/destination-detail.component';
 import { TripTypeDetailComponent } from './modules/trip-types/trip-type-detail/trip-type-detail.component';
 import { MainComponent } from './layouts/main/main.component';
+import { ListServicesComponent } from './modules/list-services/list-services.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MainComponent } from './layouts/main/main.component';
     LeaderDetailComponent,
     DestinationDetailComponent,
     TripTypeDetailComponent,
-    MainComponent
+    MainComponent,
+    ListServicesComponent
   ],
   imports: [
     BrowserModule,
