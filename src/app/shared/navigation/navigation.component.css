@@ -71,6 +71,10 @@
     }
 }
 
+.header-view-container {
+  width: 98%;
+}
+
 .header-view-container .destination-content {
     padding-bottom: 2%;
 }
@@ -90,7 +94,7 @@
     height: 60px;
     border-bottom: 1px solid rgb(214, 212, 212);
 }
-  
+
 .header-head-collapse li a {
     display: block;
     color: #000;
@@ -186,7 +190,7 @@
 .cities-name a {
     color: black;
 }
-  
+
 .cities-name li {
     float: left;
 }
@@ -197,7 +201,7 @@
 
 .cities .cities-name li:hover {
     border: 1px solid rgb(114, 112, 112);
-} 
+}
 
 /* ---------------------------------------------trip type content------------------------------------------------- */
 
