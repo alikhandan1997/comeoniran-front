@@ -1,15 +1,10 @@
+/* =================================== main header css =========================================== */
 .header .header-head {
     height: 60px;
     border-bottom: 1px solid rgb(214, 212, 212);
     background-color: white;
     margin-left: -14px;
     margin-right: -14px;
-}
-
-@media screen and (max-width:1125px) {
-    .header-head-left .header-head-link{
-        display: none;
-    }
 }
 
 .header .header-head .header-head-left {
@@ -69,7 +64,14 @@
     .header .header-head .header-head-left #collapse{
         display: block;
     }
+
+    .header-head-left .header-head-link{
+      display: none;
+  }
 }
+
+
+/* ================================================================================== */
 
 .header-view-container {
   width: 98%;
@@ -161,18 +163,27 @@
     color: white;
 }
 
+.best-cities .image-link {
+  position: relative;
+}
+
 .best-cities img {
-    position: relative;
     height: 120px;
     width: 120px;
     margin-top: 10px;
-    margin-right: 20px;
+    margin-right: 40px;
+    border: 1px solid rgb(183, 183, 183);
 }
 
 .best-cities h5 {
-    color: black;
-    font-weight: 600;
-    padding: 5% 0% 0% 30%;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  text-align: left;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .best-cities .city-name a {
@@ -251,9 +262,10 @@
 }
 
 .triptype-content .triptype-item img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 140px;
     margin-left: 10%;
+    border: 1px solid rgb(183, 183, 183);
 }
 
 .triptype-content .triptype-item table {
@@ -278,6 +290,53 @@
 .triptype-content .triptype-item table td a:hover {
     color: black;
 }
+
+
+/* ----------------------------------------- services content ------------------------------ */
+
+.services_content .services_topic h4{
+  margin: 3% 0 2% 0;
+}
+
+.services_content .nav_buttons {
+  margin-bottom: 10px;
+}
+
+.services_content .nav_buttons button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(19, 211, 19);
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+.services_content .image_link {
+  position: relative;
+}
+
+.services_content .image_link img {
+  width: 120px;
+  height: 120px;
+  border: 1px solid rgb(183, 183, 183);
+  margin: 10px 40px 10px 0;
+}
+
+.services_content .image_link h5 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.services_content .items {
+   margin-bottom: 3%;
+}
+
+/* ------------------------------------------- end services content ------------------------------- */
 
 .triptype-content-collapse {
     display: none;
@@ -359,4 +418,36 @@
     font-size: 15px;
     margin-top: 20px;
     margin-left: 20px;
+}
+
+
+
+/* =========================== services collapse content ======================== */
+
+.service-collapse-content  .title h5{
+  text-align: center;
+  padding: 2%;
+}
+
+.service-collapse-content .content{
+  padding: 2% 0 5% 0;
+}
+
+.service-collapse-content .content .items {
+  margin-bottom: 5%;
+}
+
+.service-collapse-content .content .image_link {
+  position: relative;
+}
+
+.service-collapse-content .content .image_link img {
+  height: 120px;
+  width: 150px;
+}
+
+.service-collapse-content .content .image_link h5 {
+  position: absolute;
+  top: 45px;
+  left: 10px;
 }

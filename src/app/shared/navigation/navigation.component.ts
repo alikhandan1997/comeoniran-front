@@ -21,6 +21,7 @@ export class NavigationComponent implements OnInit {
   showLogin: boolean = true;
   showDestinations: boolean = false;
   showTripTypes: boolean = false;
+  showServices: boolean = false;
 
   // show collapse nav varibale
   showCollapse: boolean = false;
@@ -28,7 +29,9 @@ export class NavigationComponent implements OnInit {
   // show collapse content varible
   showTripTypesCollapse: boolean = false;
   showDestinationsCollapse: boolean = false;
+  showServicesCollapse: boolean = false;
   TripTypeChild: boolean = true;
+  servicesChild: boolean = true;
 
   // show trip type content varibale
   showTripTypesFirst: boolean = false;
@@ -52,6 +55,16 @@ export class NavigationComponent implements OnInit {
   weatherLeft = [];
   weather = [];
 
+  showAllServices: boolean = true;
+  showHotelServices: boolean = false;
+  showTourServices: boolean = false;
+  showLeaderServices: boolean = false;
+
+  showAllServicesCollapse: boolean = false;
+  showHotelServicesCollapse: boolean = false;
+  showTourServicesCollapse: boolean = false;
+  showLeaderServicesCollapse: boolean = false;
+
   ngOnInit(){
     // calling api functions
     this.getDestinationCity();
@@ -64,8 +77,14 @@ export class NavigationComponent implements OnInit {
       if (div == 'destination') {
         this.showDestinations = !this.showDestinations;
         this.showTripTypes = false;
+        this.showServices = false;
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
+        this.showDestinations = false;
+        this.showServices = false;
+      } else if(div =='services') {
+        this.showServices = !this.showServices;
+        this.showTripTypes = false;
         this.showDestinations = false;
       }
     }
@@ -78,6 +97,8 @@ export class NavigationComponent implements OnInit {
         this.showDestinations = !this.showDestinations;
       } else if(div == 'triptypes') {
         this.showTripTypes = !this.showTripTypes;
+      } else if(div == 'services') {
+        this.showServices = !this.showServices;
       }
     }
   }
@@ -89,13 +110,20 @@ export class NavigationComponent implements OnInit {
     } else if(e == 'destination') {
       this.showDestinationsCollapse = !this.showDestinationsCollapse;
       this.showTripTypesCollapse = false;
+      this.showServicesCollapse = false;
     } else if(e == 'triptypes') {
       this.showTripTypesCollapse = !this.showTripTypesCollapse;
       this.showDestinationsCollapse = false;
+      this.showServicesCollapse = false;
+    } else if(e == 'services'){
+      this.showServicesCollapse = !this.showServicesCollapse;
+      this.showDestinationsCollapse = false;
+      this.showTripTypesCollapse = false;
     } else if(e == 'close') {
       this.showCollapse = !this.showCollapse;
       this.showDestinationsCollapse = false;
       this.showTripTypesCollapse = false;
+      this.showServicesCollapse = false;
     } else if (e == 'items') {
       this.showCollapse = false;
       this.showTripTypesCollapse = false;
@@ -119,6 +147,46 @@ export class NavigationComponent implements OnInit {
     } else if (e == 'fourth') {
       this.showTripTypesFourth = !this.showTripTypesFourth;
       this.TripTypeChild = !this.TripTypeChild;
+    }
+  }
+
+  servicesNav(type: string) {
+    if(type == 'all') {
+      this.showAllServices = true;
+      this.showHotelServices = false;
+      this.showTourServices = false;
+      this.showLeaderServices = false;
+    } else if(type == 'hotels') {
+      this.showHotelServices = true;
+      this.showAllServices = false;
+      this.showTourServices = false;
+      this.showLeaderServices = false;
+    } else if(type == 'tours') {
+      this.showTourServices = true;
+      this.showAllServices = false;
+      this.showHotelServices = false;
+      this.showLeaderServices = false;
+    } else if(type == 'leaders') {
+      this.showLeaderServices = true;
+      this.showAllServices = false;
+      this.showHotelServices = false;
+      this.showTourServices = false;
+    }
+  }
+
+  servicesClick(type: string) {
+    if(type == 'all') {
+      this.showAllServicesCollapse = !this.showAllServicesCollapse;
+      this.servicesChild = !this.servicesChild;
+    } else if(type == 'hotel') {
+      this.showHotelServicesCollapse = !this.showHotelServicesCollapse;
+      this.servicesChild = !this.servicesChild;
+    } else if(type == 'tour') {
+      this.showTourServicesCollapse = !this.showTourServicesCollapse;
+      this.servicesChild = !this.servicesChild;
+    } else if(type == 'leader') {
+      this.showLeaderServicesCollapse = !this.showLeaderServicesCollapse;
+      this.servicesChild = !this.servicesChild;
     }
   }
 

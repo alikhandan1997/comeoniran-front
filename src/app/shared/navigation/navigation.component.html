@@ -1,6 +1,6 @@
 <div class="header" *ngIf="showNav">
 
-  <!-- start first naviagtion  -->
+  <!-- start big size naviagtion  -->
   <div class="container-fluid">
     <div class="header-head">
       <div class="header-head-left">
@@ -8,7 +8,7 @@
           <a [routerLink] = "['/']" class="header-head-logo">
             <span class="logo-container">Come<span class="On">On</span>Iran</span>
           </a>
-  
+
           <a [routerLink] = "['/destinations']" class="header-head-link" (mouseenter)="mouseEnter('destination')">
             Destinations
             <i class="fa fa-angle-downfa fa-angle-down"></i>
@@ -16,6 +16,12 @@
 
           <a [routerLink] = "['/trip-types']" class="header-head-link" (mouseenter)="mouseEnter('triptypes')">
             Trip Type
+            <i class="fa fa-angle-downfa fa-angle-down"></i>
+          </a>
+
+          <a [routerLink] = "['/list']" class="header-head-link"
+          (mouseenter)="mouseEnter('services')">
+            Services
             <i class="fa fa-angle-downfa fa-angle-down"></i>
           </a>
 
@@ -35,38 +41,52 @@
       </div>
     </div>
   </div>
-  <!-- end first navigation  -->
+  <!-- end big size navigation  -->
 
-  <!-- start navigation  -->
+  <!-- start mobile size navigation navigation  -->
   <div class="header-head-collapse" *ngIf="showCollapse">
     <ul>
-      <li class="destination-collapse" *ngIf="!showTripTypesCollapse && showCollapse">
+
+      <li class="destination-collapse" *ngIf="!showTripTypesCollapse && showCollapse && !showServicesCollapse">
         <a href="/" onclick="return false" (click)="collapseClick('destination')" >
           <i class="fa fa-angle-left" style="float: none;padding-right: 10px;" *ngIf="showDestinationsCollapse"></i>
           Destinations
           <i class="fa fa-close" (click)="collapseClick('close')" *ngIf="showDestinationsCollapse"></i>
-          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse"></i>
+          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && !showServicesCollapse"></i>
         </a>
       </li>
-      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse && TripTypeChild">
+
+      <li class="triptype-collapse" *ngIf=" !showDestinationsCollapse && showCollapse && !showServicesCollapse && TripTypeChild">
         <a href="/" onclick="return false" (click)="collapseClick('triptypes')">
           <i class="fa fa-angle-left"  style="float: none;padding-right: 10px;" *ngIf="showTripTypesCollapse"></i>
           Trip Types
           <i class="fa fa-close" (click)="collapseClick('close')" *ngIf="showTripTypesCollapse"></i>
-          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse"></i>
+          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && !showServicesCollapse"></i>
         </a>
       </li>
-      <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse">
+
+      <li class="services-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && servicesChild">
+        <a href="/" onclick="return false" (click)="collapseClick('services')">
+          <i class="fa fa-angle-left" style="float: none;padding-right: 10px;" *ngIf="showServicesCollapse"></i>
+          Services
+          <i class="fa fa-close" (click)="collapseClick('close')" *ngIf="showServicesCollapse"></i>
+          <i class="fa fa-angle-right" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && !showServicesCollapse"></i>
+        </a>
+      </li>
+
+      <li class="about-us-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && !showServicesCollapse">
         <a [routerLink] = "['/about-us']" (click)="collapseClick('items')">About Us</a>
       </li>
-      <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && showLogin">
+
+      <li class="login-collapse" *ngIf="!showDestinationsCollapse && !showTripTypesCollapse && !showServicesCollapse && showLogin">
         <a href="http://195.248.241.73/dashboard/" (click)="collapseClick('items')">
           Sign in to my Account
         </a>
       </li>
+
     </ul>
   </div>
-  <!-- end collapse navigation  -->
+  <!-- end mobile navigation navigation  -->
 
   <!-- start content container  -->
   <div class="header-view-container">
@@ -75,18 +95,52 @@
       <div class="row">
         <div class="cities">
           <div class="best-cities">
-            <h4>Top destinations in iran</h4>
+            <h3>Top destinations in iran</h3>
             <div class="row best-cities-pic">
-              <span *ngFor="let item of cityData">
+
+              <!-- <span *ngFor="let item of cityData">
                 <a [routerLink]="['/destinations', item.name]">
                   <img src ="{{item.image}}" alt="">
                   <h5>{{item.name}}</h5>
                 </a>
-              </span>
+              </span> -->
+
+              <a [routerLink]="['/destinations', 'name']" class="image-link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']" class="image-link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image-link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image-link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image-link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image-link">
+                <div style="width: 120px; height: 120px;border: 1px solid rgb(183, 183, 183);margin-top: 10px;"></div>
+                <h5>See top destinations</h5>
+              </a>
+
             </div>
           </div>
-          <br>
-          <a href="destinations">SEE ALL TRAVEL DESTINATIONS ></a>
         </div>
       </div>
     </div>
@@ -102,140 +156,272 @@
           <a href="trip-types"><input type="submit" value="See all tour ideas"></a>
         </div>
       </div>
-      <div class="row">
-        <div class="triptype-item col-lg-6">
-          <div class="row">
-            <div class="col-lg-3">
-              <span>
-                <img src="../../assets/city.jpg" alt="">
-              </span>
-            </div>
-            <div class="col-lg-9">
-              <div class="header">
-                <h4>Travel Style</h4>
+      <div class="container">
+        <div class="row">
+          <div class="triptype-item col-lg-6">
+            <div class="row">
+              <div class="col-lg-4">
+                <span>
+                  <img src="../../assets/city.jpg" alt="">
+                </span>
               </div>
-              <div class="row">
-                <div class="col-lg-6" *ngFor="let item of travelStyleLeft">
-                  <a [routerLink]="['/trip-types', item.name]">
-                    <p>{{item.name}}</p>
-                  </a>
+              <div class="col-lg-8">
+                <div class="header">
+                  <h4>Travel Style</h4>
                 </div>
-                <div class="col-lg-6" *ngFor="let item of travelStyleRight">
-                  <a [routerLink]="['/trip-types', item.name]">
-                    <p>{{item.name}}</p>
-                  </a>
+                <div class="row">
+
+                  <!-- <div class="col-lg-6" *ngFor="let item of travelStyleLeft">
+                    <a [routerLink]="['/trip-types', item.name]">
+                      <p>{{item.name}}</p>
+                    </a>
+                  </div> -->
+
+                  <div class="col-lg-6">
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                  </div>
+
+                  <!-- <div class="col-lg-6" *ngFor="let item of travelStyleRight">
+                    <a [routerLink]="['/trip-types', item.name]">
+                      <p>{{item.name}}</p>
+                    </a>
+                  </div> -->
+
+                  <div class="col-lg-6">
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>type name</p>
+                    </a>
+
+                  </div>
+
                 </div>
+
               </div>
             </div>
           </div>
-        </div>
-        <div class="triptype-item col-lg-6">
-          <div class="row">
-            <div class="col-lg-3">
-              <span>
-                <img src="../../assets/city.jpg" alt="">
-              </span>
-            </div>
-            <div class="col-lg-9">
-              <div class="header">
-                <h4>Interests and Activities</h4>
+          <div class="triptype-item col-lg-6">
+            <div class="row">
+              <div class="col-lg-4">
+                <span>
+                  <img src="../../assets/city.jpg" alt="">
+                </span>
               </div>
-              <div class="row">
-                <div class="col-lg-6" *ngFor="let item of interestLeft">
-                  <a [routerLink]="['/trip-types', item.name]">
-                    <p>{{item.name}}</p>
-                  </a>
+              <div class="col-lg-8">
+                <div class="header">
+                  <h4>Interests and Activities</h4>
                 </div>
-                <div class="col-lg-6" *ngFor="let item of interestRight">
-                  <a [routerLink]="['/trip-types', item.name]">
-                    <p>{{item.name}}</p>
-                  </a>
+                <div class="row">
+
+                  <!-- <div class="col-lg-6" *ngFor="let item of interestLeft">
+                    <a [routerLink]="['/trip-types', item.name]">
+                      <p>{{item.name}}</p>
+                    </a>
+                  </div> -->
+
+                  <div class="col-lg-6">
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                  </div>
+
+                  <!-- <div class="col-lg-6" *ngFor="let item of interestRight">
+                    <a [routerLink]="['/trip-types', item.name]">
+                      <p>{{item.name}}</p>
+                    </a>
+                  </div> -->
+
+                  <div class="col-lg-6">
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>interest name</p>
+                    </a>
+
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="triptype-item col-lg-6">
-          <div class="row">
-            <div class="col-lg-3">
-              <span>
-                <img src="../../assets/city.jpg" alt="">
-              </span>
-            </div>
-            <div class="col-lg-9">
-              <div class="header">
-                <h4>Tour Ideas by Month</h4>
+      <div class="container">
+        <div class="row">
+          <div class="triptype-item col-lg-6">
+            <div class="row">
+              <div class="col-lg-4">
+                <span>
+                  <img src="../../assets/city.jpg" alt="">
+                </span>
               </div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <a href="">
-                    <p>January</p>
-                  </a>
-                  <a href="">
-                    <p>April</p>
-                  </a>
-                  <a href="">
-                    <p>July</p>
-                  </a>
-                  <a href="">
-                    <p>October</p>
-                  </a>
+              <div class="col-lg-8">
+                <div class="header">
+                  <h4>Tour Ideas by Month</h4>
                 </div>
-                <div class="col-lg-4">
-                  <a href="">
-                    <p>February</p>
-                  </a>
-                  <a href="">
-                    <p>May</p>
-                  </a>
-                  <a href="">
-                    <p>August</p>
-                  </a>
-                  <a href="">
-                    <p>November</p>
-                  </a>
-                </div>
-                <div class="col-lg-4">
-                  <a href="">
-                    <p>March</p>
-                  </a>
-                  <a href="">
-                    <p>June</p>
-                  </a>
-                  <a href="">
-                    <p>September</p>
-                  </a>
-                  <a href="">
-                    <p>December</p>
-                  </a>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <a href="">
+                      <p>January</p>
+                    </a>
+                    <a href="">
+                      <p>April</p>
+                    </a>
+                    <a href="">
+                      <p>July</p>
+                    </a>
+                    <a href="">
+                      <p>October</p>
+                    </a>
+                  </div>
+                  <div class="col-lg-4">
+                    <a href="">
+                      <p>February</p>
+                    </a>
+                    <a href="">
+                      <p>May</p>
+                    </a>
+                    <a href="">
+                      <p>August</p>
+                    </a>
+                    <a href="">
+                      <p>November</p>
+                    </a>
+                  </div>
+                  <div class="col-lg-4">
+                    <a href="">
+                      <p>March</p>
+                    </a>
+                    <a href="">
+                      <p>June</p>
+                    </a>
+                    <a href="">
+                      <p>September</p>
+                    </a>
+                    <a href="">
+                      <p>December</p>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="triptype-item col-lg-6">
-          <div class="row">
-            <div class="col-lg-3">
-              <span>
-                <img src="../../assets/city.jpg" alt="">
-              </span>
-            </div>
-            <div class="col-lg-9">
-              <div class="header">
-                <h4>Weather</h4>
+          <div class="triptype-item col-lg-6">
+            <div class="row">
+              <div class="col-lg-4">
+                <span>
+                  <img src="../../assets/city.jpg" alt="">
+                </span>
               </div>
-              <div class="row">
-                <div class="col-lg-6" *ngFor="let item of weatherLeft">
-                  <a [routerLink]="['/trip-types', item.name]">
-                    <p>{{item.name}}</p>
-                  </a>
+              <div class="col-lg-8">
+                <div class="header">
+                  <h4>Weather</h4>
                 </div>
-                <div class="col-lg-6" *ngFor="let item of weatherRight">
-                  <a [routerLink]="['/trip-types', item.name]">
-                    <p>{{item.name}}</p>
-                  </a>
+                <div class="row">
+
+                  <!-- <div class="col-lg-6" *ngFor="let item of weatherLeft">
+                    <a [routerLink]="['/trip-types', item.name]">
+                      <p>{{item.name}}</p>
+                    </a>
+                  </div> -->
+
+                  <div class="col-lg-6">
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                  </div>
+
+                  <!-- <div class="col-lg-6" *ngFor="let item of weatherRight">
+                    <a [routerLink]="['/trip-types', item.name]">
+                      <p>{{item.name}}</p>
+                    </a>
+                  </div> -->
+
+                  <div class="col-lg-6">
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                    <a [routerLink]="['/trip-types', 'name']">
+                      <p>weather name</p>
+                    </a>
+
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -245,6 +431,198 @@
     </div>
     <!-- end trip types content  -->
 
+    <div class="services_content" *ngIf="showServices" (mouseleave)="mouseLeave('services')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 services_topic">
+            <h4 *ngIf="showAllServices">See all services</h4>
+            <h4 *ngIf="showHotelServices">See hotels services</h4>
+            <h4 *ngIf="showTourServices">See tours services</h4>
+            <h4 *ngIf="showLeaderServices">See leaders services</h4>
+          </div>
+          <div class="col-lg-12">
+            <div class="row nav_buttons">
+              <button (click)="servicesNav('all')">
+                All
+              </button>
+              <button (click)="servicesNav('hotels')">
+                Hotels
+              </button>
+              <button (click)="servicesNav('tours')">
+                Tours
+              </button>
+              <button (click)="servicesNav('leaders')">
+                Leaders
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-12">
+
+            <div class="row items" *ngIf="showAllServices">
+
+              <a [routerLink]="['/list', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>cityname</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <div style="width: 120px; height: 120px;border: 1px solid rgb(183, 183, 183);margin-top: 10px;"></div>
+                <h5>See top <br> services</h5>
+              </a>
+
+            </div>
+
+            <div class="row items" *ngIf="showHotelServices">
+
+              <a [routerLink]="['/list', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>hotel name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>hotel name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>hotel name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>hotel name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>hotel name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <div style="width: 120px; height: 120px;border: 1px solid rgb(183, 183, 183);margin-top: 10px;"></div>
+                <h5>See top <br> hotels</h5>
+              </a>
+
+            </div>
+
+            <div class="row items" *ngIf="showTourServices">
+
+              <a [routerLink]="['/list', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>tour name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>tour name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>tour name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>tour name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>tour name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <div style="width: 120px; height: 120px;border: 1px solid rgb(183, 183, 183);margin-top: 10px;"></div>
+                <h5>See top <br> tours</h5>
+              </a>
+
+            </div>
+
+            <div class="row items" *ngIf="showLeaderServices">
+
+              <a [routerLink]="['/list', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>leader name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>leader name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>leader name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>leader name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <img src="../../../assets/city.jpg" alt="">
+                <h5>leader name</h5>
+              </a>
+
+              <a [routerLink]="['/destinations', 'name']"
+              class="image_link">
+                <div style="width: 120px; height: 120px;border: 1px solid rgb(183, 183, 183);margin-top: 10px;"></div>
+                <h5>See top <br> leaders</h5>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- start collapse destinations content  -->
       <div class="destinations-content-collapse" *ngIf="showDestinationsCollapse && showCollapse">
         <div class="row">
@@ -252,16 +630,51 @@
             <div class="best-cities">
               <h4>Top destinations in iran</h4>
               <div class="row best-cities-pic">
-                <span *ngFor="let item of cityData">
+
+                <!-- <span *ngFor="let item of cityData">
                   <a [routerLink]="['/destinations', item.name]" (click)="collapseClick('items')">
                     <img src ="{{item.image}}" alt="">
                     <h5>{{item.name}}</h5>
                   </a>
-                </span>
+                </span> -->
+
+                <a [routerLink]="['/destinations', 'name']" class="image-link">
+                  <img src="../../../assets/city.jpg" alt="">
+                  <h5>cityname</h5>
+                </a>
+
+                <a [routerLink]="['/destinations', 'name']" class="image-link">
+                  <img src="../../../assets/city.jpg" alt="">
+                  <h5>cityname</h5>
+                </a>
+
+                <a [routerLink]="['/destinations', 'name']"
+                class="image-link">
+                  <img src="../../../assets/city.jpg" alt="">
+                  <h5>cityname</h5>
+                </a>
+
+                <a [routerLink]="['/destinations', 'name']"
+                class="image-link">
+                  <img src="../../../assets/city.jpg" alt="">
+                  <h5>cityname</h5>
+                </a>
+
+                <a [routerLink]="['/destinations', 'name']"
+                class="image-link">
+                  <img src="../../../assets/city.jpg" alt="">
+                  <h5>cityname</h5>
+                </a>
+
+                <a [routerLink]="['/destinations', 'name']"
+                class="image-link">
+                  <div style="width: 120px; height: 120px;border: 1px solid rgb(183, 183, 183);margin-top: 10px;"></div>
+                  <h5>See top destinations</h5>
+                </a>
+
               </div>
             </div>
             <br>
-            <a href="destinations">SEE ALL TRAVEL DESTINATIONS ></a>
           </div>
         </div>
       </div>
@@ -309,70 +722,495 @@
 
     <!-- start collapse trip types collapse content  -->
       <div class="triptype-content-collapse-content" *ngIf="showTripTypesCollapse && showCollapse">
+
         <div class="showTripTypesFirst">
           <ul *ngIf="showTripTypesFirst">
-            <li *ngFor="let item of travelStyle">
+
+            <!-- <li *ngFor="let item of travelStyle">
               <a [routerLink]="['/trip-types', item.name]" (click)="collapseClick('type')">{{item.name}}</a>
+            </li> -->
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
             </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">type name</a>
+            </li>
+
           </ul>
         </div>
+
         <div class="showTripTypesSeacond">
           <ul *ngIf="showTripTypesSeacond">
-            <li *ngFor="let item of interest">
+
+            <!-- <li *ngFor="let item of interest">
               <a [routerLink]="['/trip-types', item.name]" (click)="collapseClick('type')">{{item.name}}</a>
+            </li> -->
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
             </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">interest  name</a>
+            </li>
+
           </ul>
         </div>
+
         <div class="showTripTypesThird">
           <ul *ngIf="showTripTypesThird">
-            <li *ngFor="let item of weather">
+
+            <!-- <li *ngFor="let item of weather">
               <a [routerLink]="['/trip-types', item.name]" (click)="collapseClick('type')">{{item.name}}</a>
+            </li> -->
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
             </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
+            <li>
+              <a [routerLink]="['/trip-types', 'name']" (click)="collapseClick('type')">weather name</a>
+            </li>
+
           </ul>
         </div>
+
         <div class="showTripTypesFourth">
           <ul *ngIf="showTripTypesFourth">
+
             <li>
               <a href="">January</a>
             </li>
+
             <li>
               <a href="">February</a>
             </li>
+
             <li>
               <a href="">March</a>
             </li>
+
             <li>
               <a href="">April</a>
             </li>
+
             <li>
               <a href="">May</a>
             </li>
+
             <li>
               <a href="">June</a>
             </li>
+
             <li>
               <a href="">July</a>
             </li>
+
             <li>
               <a href="">August</a>
             </li>
+
             <li>
               <a href="">September</a>
             </li>
+
             <li>
               <a href="">October</a>
             </li>
+
             <li>
               <a href="">November</a>
             </li>
+
             <li>
               <a href="">August</a>
             </li>
+
           </ul>
         </div>
       </div>
     <!-- end collapse trip types collapse content  -->
 
+    <div class="triptype-content-collapse" *ngIf="showServicesCollapse && showCollapse">
+      <ul>
+        <li *ngIf="!showHotelServicesCollapse && !showTourServicesCollapse && !showLeaderServicesCollapse">
+          <a href="/" onclick="return false" (click)="servicesClick('all')">
+            All
+            <i class="fa fa-angle-left" *ngIf="showAllServicesCollapse"></i>
+            <i class="fa fa-angle-right" *ngIf="!showAllServicesCollapse"></i>
+          </a>
+        </li>
+        <li *ngIf="!showAllServicesCollapse && !showTourServicesCollapse && !showLeaderServicesCollapse">
+          <a href="/" onclick="return false" (click)="servicesClick('hotel')">
+            Hotels
+            <i class="fa fa-angle-left"  *ngIf="showHotelServicesCollapse"></i>
+            <i class="fa fa-angle-right" *ngIf="!showHotelServicesCollapse"></i>
+          </a>
+        </li>
+        <li *ngIf="!showAllServicesCollapse && !showHotelServicesCollapse && !showLeaderServicesCollapse">
+          <a href="/" onclick="return false" (click)="servicesClick('tour')">
+            Tours
+            <i class="fa fa-angle-left" *ngIf="showTourServicesCollapse"></i>
+            <i class="fa fa-angle-right" *ngIf="!showTourServicesCollapse"></i>
+          </a>
+        </li>
+        <li *ngIf="!showAllServicesCollapse && !showHotelServicesCollapse && !showTourServicesCollapse">
+          <a href="/" onclick="return false" (click)="servicesClick('leader')">
+            Leaders
+            <i class="fa fa-angle-left" *ngIf="showLeaderServicesCollapse"></i>
+            <i class="fa fa-angle-right" *ngIf="!showLeaderServicesCollapse"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="see-all" *ngIf="!showAllServicesCollapse && !showHotelServicesCollapse && !showTourServicesCollapse && !showLeaderServicesCollapse">
+        <a href="trip-types">
+          See all services
+        </a>
+      </div>
+    </div>
+
+    <!-- start collapse trip types collapse content  -->
+    <div class="service-collapse-content" *ngIf="showServicesCollapse && showCollapse">
+
+      <div class="showAllServicesCollapse">
+        <div class="container">
+          <div class="row" *ngIf="showAllServicesCollapse">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="title">
+                <h5>
+                  All services
+                </h5>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+              <div class="row content">
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <div style="width: 145px; height: 120px;border: 1px solid rgb(183, 183, 183);"></div>
+                    <h5>See all services</h5>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showHotelServicesCollapse">
+        <div class="container">
+          <div class="row" *ngIf="showHotelServicesCollapse">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="title">
+                <h5>
+                  Hotels services
+                </h5>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+              <div class="row content">
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <div style="width: 145px; height: 120px;border: 1px solid rgb(183, 183, 183);"></div>
+                    <h5>See hotels services</h5>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showTourServicesCollapse">
+        <div class="container">
+          <div class="row" *ngIf="showTourServicesCollapse">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="title">
+                <h5>
+                  Tours services
+                </h5>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+              <div class="row content">
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <div style="width: 145px; height: 120px;border: 1px solid rgb(183, 183, 183);"></div>
+                    <h5>See toures services</h5>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="showLeaderServicesCollapse">
+        <div class="container">
+          <div class="row" *ngIf="showLeaderServicesCollapse">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="title">
+                <h5>
+                  Leaders services
+                </h5>
+              </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+
+              <div class="row content">
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <img src="../../../assets/city.jpg" alt="">
+                    <h5>cityname</h5>
+                  </a>
+                </div>
+
+                <div class="col-md-4 co-sm-4 col-6 items">
+                  <a [routerLink]="['/destinations', 'name']" class="image_link">
+                    <div style="width: 145px; height: 120px;border: 1px solid rgb(183, 183, 183);"></div>
+                    <h5>See leaders services</h5>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  <!-- end collapse trip types collapse content  -->
+
   </div>
   <!-- end content container  -->
+
 </div>
